@@ -24,7 +24,7 @@ namespace MyFramework
             LuaDataAgent.UILayers.Layer_5 = layer5;
             LuaDataAgent.UILayers.Layer_Mask = mask;
             Canvas can = this.gameObject.GetComponent<Canvas>();
-            can.worldCamera = Main.Instance.UiCamera;
+            can.worldCamera = FrameworkMain.Instance.UiCamera;
         }
 
         void ChgReferenceResolution()
@@ -43,7 +43,7 @@ namespace MyFramework
             vDest.y = fy;
             canvasScalerTemp.referenceResolution = vDest;
 
-            Main.RealScreenSize = vDest;
+            FrameworkMain.RealScreenSize = vDest;
         }
     }
 }

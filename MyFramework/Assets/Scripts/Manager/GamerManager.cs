@@ -4,23 +4,27 @@ using UnityEngine;
 using MyFramework;
 using System;
 
-public class GamerManager : BaseClass
+namespace MyFramework
 {
-    #region 游戏管理类
-    public void Awake()
+    public class GamerManager : BaseClass
     {
-        HotManager_.Init();
-    }
-
-
-    private void Start()
-    {
-        if (LTDebugOutput.Instance != null)
+        #region 游戏管理类
+        public void Awake()
         {
-            LTDebugOutput.Instance.Init();
+            //HotManager_.Init();
         }
+
+
+        private void Start()
+        {
+            //if (LTDebugOutput.Instance != null)
+            //{
+            //    LTDebugOutput.Instance.Init();
+            //}
+        }
+
+
+        #endregion
     }
-
-
-    #endregion
 }
+

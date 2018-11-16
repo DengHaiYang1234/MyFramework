@@ -1,0 +1,4 @@
+﻿SDDebug##Error:11/16/2018 6:08:18 PM::CheckStage  OnEnter!
+SDDebug##Error:11/16/2018 6:08:18 PM::LoadAsset:DownLoadPanel
+SDDebug##Error:11/16/2018 6:08:18 PM::普通测试--------这是用来测试CustomSettings
+SDDebug##Error:11/16/2018 6:09:47 PM::若需拷贝资源至服务器。请稍等刷新一会在拷贝！！！！！！

@@ -3,70 +3,78 @@ using System.Collections.Generic;
 using UnityEngine;
 using MyFramework;
 
-/// <summary>
-/// 所有Manager的基类
-/// </summary>
-public class BaseClass : MonoBehaviour
+
+namespace MyFramework
 {
-    private ThreadManager m_ThreadMgr;
-    private LuaManager m_LuaMgr;
-    private HotManager m_hotFixMgr;
-    private GamerManager m_GameMgr;
-    private ResourceManager m_rescourMgr;
-
-    Facade facde = new Facade();
-
-    public ThreadManager ThreadManager_
+    /// <summary>
+    /// 获取Manager
+    /// </summary>
+    public class BaseClass : MonoBehaviour
     {
-        get
+        
+
+
+        private ThreadManager m_ThreadMgr;
+        private LuaManager m_LuaMgr;
+        private HotManager m_hotFixMgr;
+        private GamerManager m_GameMgr;
+        private ResourceManager m_rescourMgr;
+
+        Facade facde = new Facade();
+
+        public ThreadManager ThreadManager_
         {
-            if (m_ThreadMgr == null)
-                m_ThreadMgr = facde.GetManager<ThreadManager>(ManagersName.thread);
-            return m_ThreadMgr;
+            get
+            {
+                if (m_ThreadMgr == null)
+                    m_ThreadMgr = facde.GetManager<ThreadManager>(ManagersName.thread);
+                return m_ThreadMgr;
+            }
         }
-    }
 
-    public LuaManager LuaManager_
-    {
-        get
+        public LuaManager LuaManager_
         {
-            if (m_LuaMgr == null)
-                m_LuaMgr = facde.GetManager<LuaManager>(ManagersName.lua);
-            return m_LuaMgr;
+            get
+            {
+                if (m_LuaMgr == null)
+                    m_LuaMgr = facde.GetManager<LuaManager>(ManagersName.lua);
+                return m_LuaMgr;
+            }
         }
-    }
 
-    public HotManager HotManager_
-    {
-        get
+        public HotManager HotManager_
         {
-            if (m_hotFixMgr == null)
-                m_hotFixMgr = facde.GetManager<HotManager>(ManagersName.hot);
-            return m_hotFixMgr;
+            get
+            {
+                if (m_hotFixMgr == null)
+                    m_hotFixMgr = facde.GetManager<HotManager>(ManagersName.hot);
+                return m_hotFixMgr;
+            }
         }
-    }
 
 
-    public ResourceManager ResourceManager_
-    {
-        get
+        public ResourceManager ResourceManager_
         {
-            if (m_rescourMgr == null)
-                m_rescourMgr = facde.GetManager<ResourceManager>(ManagersName.resource);
+            get
+            {
+                if (m_rescourMgr == null)
+                    m_rescourMgr = facde.GetManager<ResourceManager>(ManagersName.resource);
 
-            return m_rescourMgr;
+                return m_rescourMgr;
+            }
         }
-    }
 
-    public GamerManager GamerManager_
-    {
-        get
+        public GamerManager GamerManager_
         {
-            if (m_GameMgr == null)
-                m_GameMgr = facde.GetManager<GamerManager>(ManagersName.game);
-            return m_GameMgr;
+            get
+            {
+                if (m_GameMgr == null)
+                    m_GameMgr = facde.GetManager<GamerManager>(ManagersName.game);
+                return m_GameMgr;
+            }
         }
+
+
     }
-
-
 }
+

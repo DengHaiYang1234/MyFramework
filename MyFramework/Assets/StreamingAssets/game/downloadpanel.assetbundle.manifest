@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1085587817
+CRC: 1894744799
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 67aecdc243d8ab058e93b1365636ba18
+    Hash: 85a30ebcf3ea696d7a8e65ca15f3a515
   TypeTreeHash:
     serializedVersion: 2
-    Hash: c04a6f24fbe076f87e592832a593948a
+    Hash: 58a158943c69964ce8d5397a7a0dac56
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -25,10 +25,13 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 128
   Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
 - Class: 222
   Script: {instanceID: 0}
 - Class: 224
   Script: {instanceID: 0}
 Assets:
 - Assets/Prefabs/DownLoadPanel.prefab
-Dependencies: []
+Dependencies:
+- d:/myframework/myframework/assets/StreamingAssets/vip_bg.assetbundle

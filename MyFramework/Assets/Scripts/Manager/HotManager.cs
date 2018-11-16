@@ -30,17 +30,20 @@ namespace MyFramework
         string updateWord = "";
         float updatePercent = 0;
         //缓存已下载的文件
-        public List<string> downLoadFiles = new List<string>();
+        public List<string> downLoadFiles;
+        private bool isComplete = false;
 
+        //初始化
         public void Init()
         {
-            CheckExtractResource();
+            downLoadFiles = new List<string>();
         }
 
         void CheckExtractResource()
         {
             bool isExists = Directory.Exists(Util.DataPath) && Directory.Exists(Util.DataPath + "lua/") && File.Exists(Util.DataPath + "files.txt");
-            Util.LogErr("isExists:" + isExists);
+            
+            
             if (isExists || AppConst.DebugMode)
             {
                 StartCoroutine(OnUpdateResource());
@@ -50,12 +53,24 @@ namespace MyFramework
             StartCoroutine(OnExtractResource());
         }
 
+        //更新资源
+        public void UpdateResource()
+        {
+            StartCoroutine(OnUpdateResource());
+        }
+
+        //解压资源
+        public void ExtractResource()
+        {
+            StartCoroutine(OnExtractResource());
+        }
+
         IEnumerator OnUpdateResource()
         {
             downLoadFiles.Clear();
             if(!AppConst.UpdateMode)
             {
-                Initialize(OnResourceInited);
+                Initialize(OnUpdateOver);
                 yield break;
             }
 
@@ -77,6 +92,8 @@ namespace MyFramework
 
             updateWord = "版本检测中：           " + (www.progress * 100).ToString() + "%";
             updatePercent = www.progress;
+
+            SDDebug.Log(updateWord);
 
             yield return www;
 
@@ -156,14 +173,15 @@ namespace MyFramework
                         //如果版本文件存在,并且版本文件不需要更新.那么就提示更新检测完毕.不需要更新.跳出循环
                         if(isCheckVer && !canUpdate)
                         {
-                            message = "更新检测完毕";
+                            updateWord = "更新检测完毕，进入游戏！";
+                            SDDebug.Log(updateWord);
                             updateWord = message;
                             updatePercent = 1;
                             //DownPanel.SetProgressAndFile(updatePercent, updateWord);
 
                             OnUpdateMessageComplete(message);
                             //开始初始化
-                            Initialize(OnResourceInited);
+                            Initialize(OnUpdateOver);
                             yield break;
                         }
                     }
@@ -184,8 +202,8 @@ namespace MyFramework
                 //如果是可更新的文件（不包含版本文件）
                 if(canUpdate && !isVerFile)
                 {
-                    message = "downloading>>>" + fileUrl;
-                    Util.LogErr(message);
+                    //updateWord = "downloading>>>" + fileUrl;
+                    
                     OnUpdateMessageDownLoad(message);
                     //开始下载文件
                     BeginDownload(fileUrl, localFile);
@@ -195,6 +213,7 @@ namespace MyFramework
                         updateWord = "开始下载资源  " + i.ToString() + "/" + files.Length.ToString() +
                                      "                                " + Math.Ceiling(updatePercent*100) + "%";
                         //DownPanel.SetProgressAndFile(updatePercent, updateWord);
+                        SDDebug.Log(updateWord);
                         yield return new WaitForEndOfFrame();
                     }
                 }
@@ -211,11 +230,12 @@ namespace MyFramework
             updatePercent = 100f;
             updateWord = "更新游戏完成         " + files.Length.ToString() + "/" + files.Length.ToString() +
                          "                                100%";
+            SDDebug.Log(updateWord);
             //DownPanel.SetProgressAndFile(updatePercent, updateWord);
             yield return new WaitForEndOfFrame();
-            Util.LogErr("更新完成!!!!!");
+            //Util.LogErr("更新完成!!!!!");
 
-            Initialize(OnResourceInited);
+            Initialize(OnUpdateOver);
         }
 
         IEnumerator OnExtractResource()
@@ -234,13 +254,15 @@ namespace MyFramework
             if (File.Exists(outfile))
                 File.Delete(outfile);
 
-            string message = "正在解包文件：>files.txt";
-            Util.Log(message);
+            updateWord = "开始解压资源...";
+            SDDebug.Log(updateWord);
+            //Util.Log(message);
 
             if (Application.platform == RuntimePlatform.Android)
             {
                 WWW www = new WWW(infile);
                 updateWord = "版本检测中   " + (www.progress*100).ToString() + "%";
+                SDDebug.Log(updateWord);
                 updatePercent = www.progress;
                 //DownPanel.SetProgressAndFile(updatePercent, updateWord);
                 yield return www;
@@ -268,8 +290,9 @@ namespace MyFramework
                 infile = resPath + fs[0];
                 outfile = dataPath + fs[0];
 
-                message = "正在解包文件:>" + fs[0];
-                Util.Log(message);
+                updateWord = "正在解包文件:>" + fs[0];
+                SDDebug.Log(updateWord);
+                //Util.Log(message);
 
                 string dir = Path.GetDirectoryName(outfile);
                 if (!Directory.Exists(dir))
@@ -294,6 +317,7 @@ namespace MyFramework
 
                 updatePercent = (float) index/files.Length;
                 updateWord = "解压文件中          " + Math.Ceiling((updatePercent*100)) + "%";
+                SDDebug.Log(updateWord);
                 //DownPanel.SetProgressAndFile(updatePercent, updateWord);
                 yield return new WaitForEndOfFrame();
             }
@@ -305,9 +329,10 @@ namespace MyFramework
 
         void OnUpdateFailed(string file)
         {
-            string message = "更新失败：=======================<" + file + ">";
+            updateWord = "更新失败：=======================<" + file + ">";
+            SDDebug.Log(updateWord);
             //Debug.LogError(message);
-            Util.LogErr(message);
+            //Util.LogErr(message);
             return;
         }
 
@@ -320,10 +345,16 @@ namespace MyFramework
             
         void OnUpdateMessageDownLoad(string file)
         {
-            string message = "更新下载：=======================<" + file + ">";
+            updateWord = "更新下载：=======================<" + file + ">";
+            SDDebug.Log(updateWord);
             //Debug.LogError(message);
             //Util.LogErr(message);
             return;
+        }
+
+        public void ShowDownOrExtractLog(string log)
+        {
+            SDDebug.Log(log);
         }
 
         /// <summary>
@@ -359,28 +390,40 @@ namespace MyFramework
             }
         }
 
+
+
         bool IsDownOk(string file)
         {
             return downLoadFiles.Contains(file);
         }
+
+
+        public bool IsComplete()
+        {
+            return isComplete;
+        }
+
         
         void Initialize(Action func)
         {
-            ResourceManager_.Initialize();
+            //ResourceManager_.Initialize();
             if (func != null)
                 func();
         }
 
-        void OnResourceInited()
+        void OnUpdateOver()
         {
-            string path = "game/DownLoadPanel";
-            //ResourceManager_.CacheBundle(path);
-            LoadInitPrefab(path);
-            LuaManager_.InitStart();
-            LuaManager_.DoFile("Main.lua"); //加载文件，编译文件，并且返回一个函数，不运行。 
+            isComplete = true;
 
-            Util.CallMethod("Main", "start");
-            Util.CallMethod("Main", "SetValue");
+
+            //string path = "game/DownLoadPanel";
+            ////ResourceManager_.CacheBundle(path);
+            //LoadInitPrefab(path);
+            //LuaManager_.InitStart();
+            //LuaManager_.DoFile("Main.lua"); //加载文件，编译文件，并且返回一个函数，不运行。 
+
+            //Util.CallMethod("Main", "start");
+            //Util.CallMethod("Main", "SetValue");
         }
 
         void LoadInitPrefab(string path)

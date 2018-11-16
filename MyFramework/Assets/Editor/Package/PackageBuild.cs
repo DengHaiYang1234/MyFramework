@@ -383,7 +383,7 @@ public class PackageBuild : MonoBehaviour
         {
             string file = files[i];
             Path.GetExtension(file);
-            if (file.EndsWith(".meta") || file.EndsWith(".manifest"))
+            if (file.EndsWith(".meta"))
                 continue;
 
             string md5 = Util.MD5File(file);
