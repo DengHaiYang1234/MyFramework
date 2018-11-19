@@ -101,6 +101,7 @@
     <Compile Include="Assets\Scripts\FSMTest\State_Dead.cs" />
     <Compile Include="Assets\Scripts\FSMTest\State_Walk.cs" />
     <Compile Include="Assets\Scripts\FrameworkMain.cs" />
+    <Compile Include="Assets\Scripts\GameResource\ResourceManifest.cs" />
     <Compile Include="Assets\Scripts\LogDebug\LTDebugOutput.cs" />
     <Compile Include="Assets\Scripts\LogDebug\LTDebugText.cs" />
     <Compile Include="Assets\Scripts\LogDebug\SDDebug.cs" />
@@ -114,9 +115,12 @@
     <Compile Include="Assets\Scripts\Manager\ThreadInfos\ThreadManager.cs" />
     <Compile Include="Assets\Scripts\State\CheckStage.cs" />
     <Compile Include="Assets\Scripts\State\GameUIState.cs" />
+    <Compile Include="Assets\Scripts\Tools\BuildToolsConstDefine.cs" />
+    <Compile Include="Assets\Scripts\Tools\FilePathTools.cs" />
     <Compile Include="Assets\Scripts\UGUI\Common\LuaDataAgent.cs" />
     <Compile Include="Assets\Scripts\UGUI\Utils\SceneGlobalUI.cs" />
     <Compile Include="Assets\Scripts\UGUI\Utils\SceneUIManager.cs" />
+    <Compile Include="Assets\Scripts\UGUI\Utils\UGUIAtlas.cs" />
     <Compile Include="Assets\Scripts\UGUI\Utils\UILayers.cs" />
     <Compile Include="Assets\Scripts\UI\DownPanel.cs" />
     <Compile Include="Assets\Source\Generate\DelegateFactory.cs" />
