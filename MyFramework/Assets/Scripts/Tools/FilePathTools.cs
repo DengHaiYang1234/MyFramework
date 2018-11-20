@@ -14,7 +14,11 @@ public class FilePathTools
     }
 
 
-    
+    /// <summary>
+    /// 将"\\"替换为"/"
+    /// </summary>
+    /// <param name="r"></param>
+    /// <returns></returns>
     public static string ConvertFilePathToBackslashStyle(string r)
     {
         if (string.IsNullOrEmpty(r))

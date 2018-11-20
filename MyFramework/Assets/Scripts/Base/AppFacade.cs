@@ -30,7 +30,6 @@ namespace MyFramework
             AddManager<LuaManager>(ManagersName.lua);
             AddManager<HotManager>(ManagersName.hot);
             AddManager<GamerManager>(ManagersName.game);
-            AddManager<ResourceManager>(ManagersName.resource);
         }
 
     }
