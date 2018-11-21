@@ -338,22 +338,16 @@ namespace Res
 
         #region ---------------------资源打包---------------------
         #region 打包其他项目资源（如场景，模型，特效等等）
-        public static void BuildAssetsResource(UnityEngine.Object mainAsset, UnityEngine.Object[] depens,string dataPath,string assetpath,BuildTarget target)
+        public static void BuildAssetsResource(BuildTarget target)
         {
-            string assetFolder = AppStreamPath + dataPath;
+            string assetFolder = AppStreamPath;
             if (!Directory.Exists(assetFolder))
                 Directory.CreateDirectory(assetFolder);
-
-
-            AssetImporter assetImporter = AssetImporter.GetAtPath(assetpath);
-            string assetName = assetpath.Substring(assetpath.LastIndexOf('/') + 1);
-            assetName = assetName.Replace(Path.GetExtension(assetName),BuildToolsConstDefine.BundleName);
-            assetImporter.assetBundleName = assetName;
 
             BuildAssetBundleOptions options = BuildAssetBundleOptions.CompleteAssets |
                                               BuildAssetBundleOptions.CollectDependencies |
                                               BuildAssetBundleOptions.DeterministicAssetBundle;
-            BuildPipeline.BuildAssetBundles(assetFolder, 0, target);
+            BuildPipeline.BuildAssetBundles(assetFolder, options, target);
             AssetDatabase.Refresh();
         }
 
@@ -398,7 +392,6 @@ namespace Res
             p += "BuildResult.txt";
             return p;
         }
-
 
         private static void WriteLog(bool res, Exception e)
         {
@@ -468,6 +461,7 @@ namespace Res
     public class AssetBuildTool
     {
         private static BuildTarget _buildTarget;
+
         private static string _buildTargetStr;
 
         private Dictionary<EResType, AssetPathContainer> _cachedResAssetPathDic;
@@ -481,11 +475,13 @@ namespace Res
         private void SetType()
         {
             _cachedResAssetPathDic = new Dictionary<EResType, AssetPathContainer>();
-            _cachedResAssetPathDic.Add(EResType.Atlas,new AssetPathContainer(ResPathDef.ResUGUIAtlasPackTag));
+            _cachedResAssetPathDic.Add(EResType.Atlas, new AssetPathContainer(ResPathDef.ResUGUIAtlasPackTag));
+            _cachedResAssetPathDic.Add(EResType.UIPrefab, new AssetPathContainer(ResPathDef.ResUGUIPrefabsPackTag));
+
             string rootPath = ResPathDef.GetRootResAssetPath();
             if (!Directory.Exists(rootPath))
             {
-                SDDebug.LogErrorFormat("rootFilePath {0} is invalid!",rootPath);
+                SDDebug.LogErrorFormat("rootFilePath {0} is invalid!", rootPath);
                 return;
             }
 
@@ -502,14 +498,16 @@ namespace Res
         {
             try
             {
+                ClearAssetBunldeNames();
+
                 BuildBaseAsset<UGUIAtlas>(EResType.Atlas, "UGUIAtlas");
+                BuildBaseAsset<GameObject>(EResType.UIPrefab, "GameObject");
             }
             catch (Exception e)
             {
                 throw new Exception(e.ToString());
             }
         }
-
 
         public void BuildBaseAsset<T>(EResType type, string typeName) where T : UnityEngine.Object
         {
@@ -519,7 +517,7 @@ namespace Res
                 var pD = pathC[j];
                 if (pD == null)
                 {
-                    SDDebug.LogErrorFormat("pathC[j] {0} is null !",j);
+                    SDDebug.LogErrorFormat("pathC[j] {0} is null !", j);
                     continue;
                 }
 
@@ -530,11 +528,12 @@ namespace Res
                     var asset = AssetDatabase.LoadAssetAtPath<T>(assetdataPath);
                     if (asset == null)
                         continue;
-                    string dataPath = BuildToolsConstDefine.GetBuildingFolderByResType(type);
 
-                    
-                    
-                    PackageBuild.BuildAssetsResource(asset,null, dataPath, assetdataPath, _buildTarget);
+
+                    string dataPath = BuildToolsConstDefine.GetBuildingFolderByResType(type);
+                    AssetImporter assetImporter = AssetImporter.GetAtPath(assetdataPath);
+                    SetAssetImport(dataPath, assetdataPath, assetImporter);
+                    AssetDatabase.Refresh();
                     switch (type)
                     {
                         case EResType.Atlas:
@@ -546,34 +545,26 @@ namespace Res
                             break;
                     }
                 }
+                PackageBuild.BuildAssetsResource(_buildTarget);
             }
         }
 
-
-        public static string GetBundleName(string assetPath,bool isBuild = true)
+        public static void SetAssetImport(string dataPath, string assetdataPath,AssetImporter assetImporter)
         {
-            string[] strArray = assetPath.Split('/');
-            if (strArray.Length > 0)
-            {
-                string fileName = strArray[strArray.Length - 1];
-                int index = fileName.LastIndexOf('.');
-                if (index > 0)
-                {
-                    fileName = fileName.Substring(0, index);
-                }
-                if (isBuild)
-                {
-                    return string.Format("{0}{1}", fileName, BuildToolsConstDefine.BundleName);
-                }
-                else
-                    return fileName;
+            string assetName = assetdataPath.Substring(assetdataPath.LastIndexOf('/') + 1);
+            assetName = assetName.Substring(0, (assetName.IndexOf('.')));
+            string assetBundleName = string.Format("{0}/{1}", dataPath, assetName);
+            assetImporter.SetAssetBundleNameAndVariant(assetBundleName, BuildToolsConstDefine.BundleName);
+            assetImporter.SaveAndReimport();
+        }
 
-            }
-            else
-            {
-                SDDebug.LogErrorFormat("GetBundleName called but assetPath is invalid! {0}", assetPath);
-                return "Err";
-            }
+        public static void ClearAssetBunldeNames()
+        {
+            string[] str = AssetDatabase.GetAllAssetBundleNames();
+            foreach (var i in str)
+                AssetDatabase.RemoveAssetBundleName(i, true);
+
+            AssetDatabase.Refresh();
         }
     }
 }

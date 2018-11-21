@@ -158,6 +158,8 @@
     <Compile Include="Assets\ToLua\Injection\Editor\ToluaInjectionBlackListPanel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\StreamingAssets\files.txt" />
+    <None Include="Assets\StreamingAssets\version.txt" />
     <None Include="Assets\ToLua\Injection\InjectionBlackList.txt" />
     <None Include="Assets\ToLua\Injection\InjectionBridgeEditorInfo.xml" />
     <None Include="Assets\ToLua\Injection\LuaInjectionSkipPaths.txt" />

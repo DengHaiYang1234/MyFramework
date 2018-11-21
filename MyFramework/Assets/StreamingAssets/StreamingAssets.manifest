@@ -1,0 +1,13 @@
+ManifestFileVersion: 0
+CRC: 3140997394
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: data/atlas/testatlas.assetbundle
+      Dependencies: {}
+    Info_1:
+      Name: data/atlas/test1atlas.assetbundle
+      Dependencies: {}
+    Info_2:
+      Name: data/uiprefab/downloadpanel.assetbundle
+      Dependencies: {}

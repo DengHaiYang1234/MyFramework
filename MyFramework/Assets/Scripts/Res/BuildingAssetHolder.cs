@@ -19,8 +19,12 @@ namespace Res
                 return _instance; }
         }
 
+        //缓存所有Sprite
         private Dictionary<string, Sprite> _cachedAllSprite;
+        //图片所对应图集名称
         private Dictionary<string,string> _cachedAllSpriteAtlasReleation;
+        //缓存所有UIPrefabs
+        private Dictionary<string, GameObject> _cachedAllUIPrefabs;
 
 
         public BuildingAssetHolder()
@@ -57,6 +61,8 @@ namespace Res
                 _cachedAllSpriteAtlasReleation.Add(sName, atlas.name);
             }
         }
+
+        
 
     }
 }

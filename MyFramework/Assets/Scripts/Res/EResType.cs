@@ -6,8 +6,8 @@ namespace Res
 {
     public enum EResType
     {
-        Atlas,
-
+        Atlas = 0,
+        UIPrefab,
     }
 }
 

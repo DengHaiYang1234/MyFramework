@@ -106,6 +106,7 @@
     <Compile Include="Assets\Scripts\LogDebug\LTDebugText.cs" />
     <Compile Include="Assets\Scripts\LogDebug\SDDebug.cs" />
     <Compile Include="Assets\Scripts\LogDebug\SDRootPath.cs" />
+    <Compile Include="Assets\Scripts\Manager\GameResourceManager.cs" />
     <Compile Include="Assets\Scripts\Manager\GamerManager.cs" />
     <Compile Include="Assets\Scripts\Manager\HotManager.cs" />
     <Compile Include="Assets\Scripts\Manager\LuaInfos\LuaLoader.cs" />
@@ -116,6 +117,7 @@
     <Compile Include="Assets\Scripts\Res\AssetPathContainer.cs" />
     <Compile Include="Assets\Scripts\Res\BuildingAssetHolder.cs" />
     <Compile Include="Assets\Scripts\Res\EResType.cs" />
+    <Compile Include="Assets\Scripts\Res\ResMain.cs" />
     <Compile Include="Assets\Scripts\Res\ResPathDef.cs" />
     <Compile Include="Assets\Scripts\Res\ResourceManifest.cs" />
     <Compile Include="Assets\Scripts\State\CheckStage.cs" />
@@ -291,6 +293,8 @@
     <Compile Include="Assets\ToLua\Reflection\LuaReflection.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\StreamingAssets\files.txt" />
+    <None Include="Assets\StreamingAssets\version.txt" />
     <None Include="Assets\ToLua\Injection\InjectionBlackList.txt" />
     <None Include="Assets\ToLua\Injection\InjectionBridgeEditorInfo.xml" />
     <None Include="Assets\ToLua\Injection\LuaInjectionSkipPaths.txt" />

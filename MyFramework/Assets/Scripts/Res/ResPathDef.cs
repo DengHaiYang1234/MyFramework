@@ -13,7 +13,7 @@ namespace Res
         public const string stream = "/StreamingAssets/";
 
         public const string ResUGUIAtlasPackTag = "[UIAtlas]";
-
+        public const string ResUGUIPrefabsPackTag = "[UIPrefab]";
 
 
         public static string GetRootResAssetPath()
