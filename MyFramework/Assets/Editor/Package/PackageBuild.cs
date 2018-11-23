@@ -521,6 +521,7 @@ namespace Res
                     continue;
                 }
 
+                string dataPath = BuildToolsConstDefine.GetBuildingFolderByResType(type);
                 string[] assetIDArray = AssetDatabase.FindAssets("t:" + typeName, new string[] {pD.AssetPath});
                 for (int i = 0; i < assetIDArray.Length; i++)
                 {
@@ -530,26 +531,20 @@ namespace Res
                         continue;
 
 
-                    string dataPath = BuildToolsConstDefine.GetBuildingFolderByResType(type);
+                    BuildingAssetHolder.Instance.AddAssetPath(type, FilePathTools.GetStreamAssetPathByFilePath(assetdataPath));
+
                     AssetImporter assetImporter = AssetImporter.GetAtPath(assetdataPath);
                     SetAssetImport(dataPath, assetdataPath, assetImporter);
                     AssetDatabase.Refresh();
-                    switch (type)
-                    {
-                        case EResType.Atlas:
-                            UGUIAtlas a = asset as UGUIAtlas;
-                            if (a != null)
-                            {
-                                BuildingAssetHolder.Instance.AddAtlas(a);
-                            }
-                            break;
-                    }
                 }
+
+
                 PackageBuild.BuildAssetsResource(_buildTarget);
             }
         }
 
-        public static void SetAssetImport(string dataPath, string assetdataPath,AssetImporter assetImporter)
+
+        public static void SetAssetImport(string dataPath, string assetdataPath, AssetImporter assetImporter)
         {
             string assetName = assetdataPath.Substring(assetdataPath.LastIndexOf('/') + 1);
             assetName = assetName.Substring(0, (assetName.IndexOf('.')));
@@ -566,6 +561,8 @@ namespace Res
 
             AssetDatabase.Refresh();
         }
+        
+
     }
 }
 

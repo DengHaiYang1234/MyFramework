@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using MyFramework;
 using System.IO;
+using Res;
 
 namespace MyFramework
 {
@@ -13,52 +14,88 @@ namespace MyFramework
         class BundleInfo
         {
             public string path;
-            public int referencedCount = 1;
+            public EResType type;
+            public int referencedCount = 1; //资源引用数量
             public AssetBundle bundle = null;
-            public List<Action<AssetBundle>> callbacks;
+            public List<Action<int>> callbacks;
             public bool isDone = false;
 
-            public BundleInfo(string bPath,AssetBundle bBundle = null)
+            public BundleInfo(string bPath,EResType type,AssetBundle bBundle = null)
             {
                 path = bPath;
                 bundle = bBundle;
-                callbacks = new List<Action<AssetBundle>>();
+                callbacks = new List<Action<int>>();
                 referencedCount = 1;
+                this.type = type;
             }
         }
+
 
         //资源AssetBundle缓存列表
         private Dictionary<string, BundleInfo> hashTable = null;
 
+        private Dictionary<string, AssetBundle> cacheAtlasBundle = null;
+
+        private Dictionary<string, AssetBundle> cacheUIPrefabBundle = null;
+
+        private Dictionary<string, Sprite> cacheAllSprite = null;
+
+
+        private EResType currentType;
+        
         public void Initialize(Action func = null)
         {
             hashTable = new Dictionary<string, BundleInfo>();
+            cacheAtlasBundle = new Dictionary<string, AssetBundle>();
+            cacheUIPrefabBundle = new Dictionary<string, AssetBundle>();
+            cacheAllSprite = new Dictionary<string, Sprite>();
+            currentType = EResType.isNull;
             if (func != null)
                 func();
         }
 
+        int GetCacheAllNum()
+        {
+            SDDebug.LogError("GetCacheAllNum:" + (cacheAtlasBundle.Count + cacheUIPrefabBundle.Count));
+            return cacheAtlasBundle.Count + cacheUIPrefabBundle.Count;
+        }
+
+        ///// <summary>
+        ///// 缓存assetBundle
+        ///// </summary>
+        ///// <param name="path"> assetPath </param>
+        ///// <param name="callBack"> 回调 </param>
+        //public void CacheBundle(string path, Action<AssetBundle> callBack = null)
+        //{
+        //    LoadAsset(path, callBack);
+        //}
+
+
         /// <summary>
         /// 缓存assetBundle
         /// </summary>
-        /// <param name="path"></param>
-        /// <param name="callBack"></param>
-        public void CacheBundle(string path, Action<AssetBundle> callBack = null)
+        /// <param name="path"> assetPath </param>
+        /// <param name="callBack"> 回调 </param>
+        public void CacheBundle(string path,EResType type,Action<int> callBack = null)
         {
-            LoadAsset(path, callBack);
+            currentType = type;
+            LoadAsset(path,type,callBack);
         }
 
-        public void LoadAsset(string path, Action<AssetBundle> callBack = null)
+
+
+        public void LoadAsset(string path,EResType type, Action<int> callBack = null)
         {
             BundleInfo bInfo = null;
             if (hashTable.TryGetValue(path, out bInfo))
             {
                 bInfo.referencedCount++;
                 if (bInfo.isDone)
-                    callBack(bInfo.bundle);
+                    callBack(0);
             }
             else
             {
-                bInfo = new BundleInfo(path);
+                bInfo = new BundleInfo(path, type);
                 if (callBack != null)
                     bInfo.callbacks.Add(callBack);
 
@@ -99,16 +136,42 @@ namespace MyFramework
                 {
                     bInfo.bundle = bundle;
                     bInfo.isDone = true;
+                    CacheAssetBundle(path, bInfo.bundle, bInfo.type);
+
 
                     for (int i = 0; i < bInfo.callbacks.Count; i++)
                     {
-                        bInfo.callbacks[i](request.assetBundle);
+                        bInfo.callbacks[i](GetCacheAllNum());
                     }
 
                     bInfo.callbacks.Clear();
+
                 }
             }
             yield return 0;
+        }
+
+        public void CacheAssetBundle(string path,AssetBundle bundle, EResType type)
+        {
+            switch (type)
+            {
+                case EResType.Atlas:
+                    if (!cacheAtlasBundle.ContainsKey(path))
+                    {
+                        cacheAtlasBundle.Add(path, bundle);
+                    }
+                    else
+                        Console.WriteLine("Atlas存在重复AssetBundle:" + path);
+                    break;
+                case EResType.UIPrefab:
+                    if (!cacheUIPrefabBundle.ContainsKey(path))
+                    {
+                        cacheUIPrefabBundle.Add(path, bundle);
+                    }
+                    else
+                        Console.WriteLine("Prefab存在重复AssetBundle:" + path);
+                    break;
+            }
         }
 
         /// <summary>
@@ -128,9 +191,9 @@ namespace MyFramework
             else
             {
                 bundle = LoadBundle(path);
-                BundleInfo bInfo = new BundleInfo(path,bundle);
-                bInfo.isDone = true;
-                hashTable.Add(path, bInfo);
+                //BundleInfo bInfo = new BundleInfo(path,bundle);
+                //bInfo.isDone = true;
+                //hashTable.Add(path, bInfo);
             }
 
             GameObject prefab = Util.LoadAsset(bundle, Util.TrimPath(path));
@@ -142,6 +205,82 @@ namespace MyFramework
             GameObject prefab = Getprefab(path);
             GameObject go = Instantiate(prefab) as GameObject;
             return go;
+        }
+
+        public void AdvanceLoadAssetBundleByType(EResType type)
+        {
+            switch (type)
+            {
+                case EResType.Atlas:
+                    LoadAtlasAssetByBunlde();
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// 提前加载atlas目录内容
+        /// </summary>
+        public void LoadAtlasAssetByBunlde()
+        {
+            foreach (var cacheUIPrefab in cacheUIPrefabBundle)
+            {
+                StartCoroutine(AsynLoadAtlasAssetBundle(cacheUIPrefab.Value, cacheUIPrefab.Key));
+            }
+        }
+        
+        IEnumerator AsynLoadAtlasAssetBundle(AssetBundle bundle,string name)
+        {
+            AssetBundleRequest request = bundle.LoadAssetAsync(name);
+            yield return request;
+            if (request.isDone)
+            {
+                UGUIAtlas atlas = request.asset as UGUIAtlas;
+
+                foreach (var sprite in atlas.CachedSprites)
+                {
+                    if (cacheAllSprite.ContainsKey(sprite.name))
+                    {
+                        SDDebug.LogErrorFormat("存在相同的图片：{0},所在图集{1}", sprite.name, atlas.name);
+                    }
+                    else
+                        cacheAllSprite.Add(sprite.name, sprite);
+                }
+            }
+            yield return 0;
+        }
+
+        public Sprite GetSpriteByName(string name)
+        {
+            Sprite sprite = null;
+            if (!cacheAllSprite.TryGetValue(name, out sprite))
+            {
+                SDDebug.LogFormat("未找到该图片。请检查");
+            }
+            return sprite;
+        }
+
+        public GameObject LoadUIPrefabAssetByPath(string path,bool isAsyn = false)
+        {
+            AssetBundle bundle = null;
+            if (!cacheUIPrefabBundle.TryGetValue(path, out bundle))
+            {
+                SDDebug.LogFormat("未找到该prefab。请检查");
+            }
+
+            GameObject prefab = null;
+
+            if (isAsyn)
+            {
+                AssetBundleRequest request = bundle.LoadAssetAsync(path);
+                if (request.isDone)
+                {
+                    prefab = request.asset as GameObject;
+                }
+            }
+            else
+                prefab = bundle.LoadAsset(name, typeof(GameObject)) as GameObject;
+
+            return prefab;
         }
 
         /// <summary>
@@ -157,6 +296,7 @@ namespace MyFramework
             return null;
         }
 
+        
         /// <summary>
         /// 卸载Bundle
         /// </summary>

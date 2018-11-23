@@ -40,4 +40,16 @@ public class FilePathTools
         return realfilePath.Substring(length - 6, realfilePath.Length - length + 6);
     }
 
+    public static string GetStreamAssetPathByFilePath(string dataPath)
+    {
+        if (string.IsNullOrEmpty(dataPath))
+        {
+            return "";
+        }
+        dataPath = dataPath.Substring(dataPath.IndexOf('/') + 1);
+        return dataPath.Substring(0,dataPath.IndexOf('.'));
+    }
+
+
+
 }

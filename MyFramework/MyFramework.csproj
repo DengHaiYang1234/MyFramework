@@ -87,6 +87,7 @@
   <ItemGroup>
     <Compile Include="Assets\Builder.cs" />
     <Compile Include="Assets\Scripts\Base\AppFacade.cs" />
+    <Compile Include="Assets\Scripts\Base\ArrayBufferStruct.cs" />
     <Compile Include="Assets\Scripts\Base\BaseClass.cs" />
     <Compile Include="Assets\Scripts\Base\ClassicalSingleton.cs" />
     <Compile Include="Assets\Scripts\Base\Facade.cs" />
@@ -95,6 +96,9 @@
     <Compile Include="Assets\Scripts\ConstDefine\AppConst.cs" />
     <Compile Include="Assets\Scripts\ConstDefine\ManagersName.cs" />
     <Compile Include="Assets\Scripts\ConstDefine\NotiConst.cs" />
+    <Compile Include="Assets\Scripts\Events\EventDispatchCenter.cs" />
+    <Compile Include="Assets\Scripts\Events\LTEventCenter.cs" />
+    <Compile Include="Assets\Scripts\Events\Loom.cs" />
     <Compile Include="Assets\Scripts\FSMState\BaseStage.cs" />
     <Compile Include="Assets\Scripts\FSMState\StateBase.cs" />
     <Compile Include="Assets\Scripts\FSMState\StateMachine.cs" />
@@ -102,6 +106,7 @@
     <Compile Include="Assets\Scripts\FSMTest\State_Dead.cs" />
     <Compile Include="Assets\Scripts\FSMTest\State_Walk.cs" />
     <Compile Include="Assets\Scripts\FrameworkMain.cs" />
+    <Compile Include="Assets\Scripts\Interface\IUpdate.cs" />
     <Compile Include="Assets\Scripts\LogDebug\LTDebugOutput.cs" />
     <Compile Include="Assets\Scripts\LogDebug\LTDebugText.cs" />
     <Compile Include="Assets\Scripts\LogDebug\SDDebug.cs" />

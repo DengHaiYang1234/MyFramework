@@ -8,6 +8,9 @@ namespace Res
     {
         Atlas = 0,
         UIPrefab,
+
+
+        isNull = 100,
     }
 }
 

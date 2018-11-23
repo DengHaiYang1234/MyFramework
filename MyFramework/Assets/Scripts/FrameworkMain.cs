@@ -51,6 +51,7 @@ namespace MyFramework
             Init();
             InitGlobalManager();
             InitFsm();
+            Loom.Initialize();
         }
 
         void Start()

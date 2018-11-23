@@ -171,7 +171,15 @@ namespace MyFramework
                     return AppConst.StandaloneWindows;
             }
         }
-#endregion
+
+        public static string GetBundleFileName(string dataPath)
+        {
+            return dataPath.Substring(dataPath.LastIndexOf('/'));
+        }
+
+
+
+        #endregion
     }
 }
 

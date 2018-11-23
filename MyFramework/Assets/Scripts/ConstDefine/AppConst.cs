@@ -14,7 +14,7 @@ namespace MyFramework
         public const string LuaTempDir = "LuaTempDir/";
         
         //!调试模式-用于内部测试
-        public static bool DebugMode = false;
+        public static bool DebugMode = true;
 
         //lua代码Assetbundle模式
         public static bool LuaBunldeMode = false;
@@ -23,7 +23,10 @@ namespace MyFramework
         public static bool LuaByteMode = false;
 
         //更新模式(开启热更必须关闭 DebugMode)
-        public static bool UpdateMode = true;
+        public static bool UpdateMode = false;
+
+        //是否直接使用prefab
+        public static bool UseEditorPrefab = false;
         
         //下载地址
         public static string WebUrl = "http://192.168.93.192:8081/StreamingAssets/";

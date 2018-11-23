@@ -29,4 +29,10 @@ public static class BuildToolsConstDefine
         return string.Format("{0}{1}", BuildDataFolder, path);
     }
 
+
+    public static string GetBuildingAssetPath(EResType type)
+    {
+        string resPath = GetBuildingFolderByResType(type);
+        return string.Format("{0}/{1}", AssetRootFolder, resPath);
+    }
 }

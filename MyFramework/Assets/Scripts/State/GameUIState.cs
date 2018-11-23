@@ -22,7 +22,9 @@ namespace MyFramework
         public override void OnEnter(StateBase<FrameworkMain> exitState, object param)
         {
             base.OnEnter(exitState, param);
-            ShowGameTestUI();
+            //FrameworkMain.Instance.Run = true;
+            ResMain.Instance.InitCacheAtlas();
+            ResMain.Instance.InitCacheUIPrefab();
         }
 
 

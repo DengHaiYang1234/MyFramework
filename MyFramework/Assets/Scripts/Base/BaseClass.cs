@@ -11,9 +11,6 @@ namespace MyFramework
     /// </summary>
     public class BaseClass : MonoBehaviour
     {
-        
-
-
         private ThreadManager m_ThreadMgr;
         private LuaManager m_LuaMgr;
         private HotManager m_hotFixMgr;
