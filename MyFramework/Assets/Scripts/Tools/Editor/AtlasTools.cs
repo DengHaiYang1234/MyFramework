@@ -146,9 +146,7 @@ namespace Res
                 string path = fileInfo[i];
                 ReImporterTexture(path, att.AtlasName, att.Quality, att.Pivot);
             }
-
         }
-
         /// <summary>
         /// 获取不同格式文件路径
         /// </summary>
@@ -190,7 +188,6 @@ namespace Res
                 path = path.Replace('\\', '/');
                 filePath.Add(path);
             }
-
             return filePath;
         }
 
@@ -319,10 +316,7 @@ namespace Res
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
         }
-
-
-
-
+        
         /// <summary>
         /// 生成可视化  ScriptableObject
         /// </summary>
@@ -355,6 +349,9 @@ namespace Res
                         string textureAssetPath = AssetDatabase.GUIDToAssetPath(findResult[j]);
                         if (hasSearchedTexturePath.Contains(textureAssetPath))
                             continue;
+
+                        //设置每张图片资源打包
+                        //SetAssetImporter( string.Format("{0}Atlas", GetAtlasAssetName(list[i])) , textureAssetPath);
 
                         List<Sprite> tmpList = GetSpriteAssetByPath(textureAssetPath);
                         hasSearchedTexturePath.Add(textureAssetPath);
@@ -398,6 +395,18 @@ namespace Res
             }
         }
 
+        private static void SetAssetImporter(string dir, string path)
+        {
+            dir = "atlas/" + dir;
+            AssetImporter assetImporter = AssetImporter.GetAtPath(path);
+            assetImporter.assetBundleName = string.Empty;
+            string assetName = path.Substring(path.LastIndexOf('/') + 1);
+            assetName = assetName.Substring(0, (assetName.IndexOf('.')));
+
+            string assetBundleName = string.Format("{0}/{1}", dir, assetName);
+            assetImporter.SetAssetBundleNameAndVariant(assetBundleName, BuildToolsConstDefine.BundleName);
+            assetImporter.SaveAndReimport();
+        }
         /// <summary>
         /// 获取Atlas根目录
         /// </summary>

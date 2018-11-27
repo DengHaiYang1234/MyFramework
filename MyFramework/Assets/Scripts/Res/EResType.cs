@@ -8,7 +8,7 @@ namespace Res
     {
         Atlas = 0,
         UIPrefab,
-
+        Mainfest,
 
         isNull = 100,
     }

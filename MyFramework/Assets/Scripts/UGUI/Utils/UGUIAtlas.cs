@@ -10,7 +10,10 @@ namespace Res
     {
         [SerializeField] public List<Sprite> CachedSprites;
         [NonSerialized] private bool _hasInited = false;
-        [NonSerialized] private Dictionary<string, Sprite> _cachedSpritesDic;
+        [NonSerialized] public Dictionary<string, Sprite> _cachedSpritesDic;
+        [NonSerialized]
+        private Dictionary<string, Sprite> _cachedSpriteByName;
+
 
         private Dictionary<string, Sprite> CachedSpritesDic
         {

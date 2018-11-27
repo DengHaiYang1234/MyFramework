@@ -9,6 +9,7 @@ using System.Diagnostics;
 using System.Text;
 
 
+
 namespace Res
 {
     public class PackageBuild : MonoBehaviour
@@ -335,7 +336,6 @@ namespace Res
         #endregion
         #endregion
 
-
         #region ---------------------资源打包---------------------
         #region 打包其他项目资源（如场景，模型，特效等等）
         public static void BuildAssetsResource(BuildTarget target)
@@ -477,6 +477,7 @@ namespace Res
             _cachedResAssetPathDic = new Dictionary<EResType, AssetPathContainer>();
             _cachedResAssetPathDic.Add(EResType.Atlas, new AssetPathContainer(ResPathDef.ResUGUIAtlasPackTag));
             _cachedResAssetPathDic.Add(EResType.UIPrefab, new AssetPathContainer(ResPathDef.ResUGUIPrefabsPackTag));
+            _cachedResAssetPathDic.Add(EResType.Mainfest, new AssetPathContainer(ResPathDef.ResMainfestPackTag));
 
             string rootPath = ResPathDef.GetRootResAssetPath();
             if (!Directory.Exists(rootPath))
@@ -499,9 +500,12 @@ namespace Res
             try
             {
                 ClearAssetBunldeNames();
-
                 BuildBaseAsset<UGUIAtlas>(EResType.Atlas, "UGUIAtlas");
                 BuildBaseAsset<GameObject>(EResType.UIPrefab, "GameObject");
+                WriteMainfestData();
+                BuildBaseAsset<ResourceManifest>(EResType.Mainfest, "ResourceManifest");
+
+                PackageBuild.BuildAssetsResource(_buildTarget);
             }
             catch (Exception e)
             {
@@ -530,19 +534,25 @@ namespace Res
                     if (asset == null)
                         continue;
 
+                    //string dataPath = BuildToolsConstDefine.GetBuildAssetDirPath(type, assetdataPath);
 
                     BuildingAssetHolder.Instance.AddAssetPath(type, FilePathTools.GetStreamAssetPathByFilePath(assetdataPath));
 
                     AssetImporter assetImporter = AssetImporter.GetAtPath(assetdataPath);
                     SetAssetImport(dataPath, assetdataPath, assetImporter);
+
+                    switch (type)
+                    {
+                        case EResType.Atlas:
+                            BuildingAssetHolder.Instance.AddAtlas(asset as UGUIAtlas);
+                            break;
+                    }
+
                     AssetDatabase.Refresh();
                 }
 
-
-                PackageBuild.BuildAssetsResource(_buildTarget);
             }
         }
-
 
         public static void SetAssetImport(string dataPath, string assetdataPath, AssetImporter assetImporter)
         {
@@ -561,8 +571,43 @@ namespace Res
 
             AssetDatabase.Refresh();
         }
-        
 
+        /// <summary>
+        /// 可拓展数据
+        /// </summary>
+        /// <returns></returns>
+        private ResourceManifest CreatMainfest()
+        {
+            var data = ScriptableObject.CreateInstance<ResourceManifest>();
+            data.SpriteAtlasRelation = BuildingAssetHolder.Instance.SpriteRelation;
+            return data;
+        }
+
+        private void WriteMainfestData()
+        {
+            string path = ResPathDef.GetMainfestAssetPath();
+            ResourceManifest asset = AssetDatabase.LoadAssetAtPath<ResourceManifest>(path);
+            if (asset != null) AssetDatabase.DeleteAsset(path);
+            asset = null;
+
+            var mainfestData = CreatMainfest();
+            AssetDatabase.CreateAsset(mainfestData, path);
+            SaveAssets();
+        }
+
+        /// <summary>
+        /// 可打包相关辅助依赖信息
+        /// </summary>
+        private void BuildMainfest()
+        {
+            WriteMainfestData();
+        }
+
+        private static void SaveAssets()
+        {
+            AssetDatabase.SaveAssets();
+            AssetDatabase.Refresh();
+        }
     }
 }
 

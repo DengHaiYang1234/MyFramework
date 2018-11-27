@@ -132,6 +132,7 @@
   <ItemGroup>
     <Compile Include="Assets\Editor\Custom\CustomSettings.cs" />
     <Compile Include="Assets\Editor\Package\PackageBuild.cs" />
+    <Compile Include="Assets\Editor\Package\Test.cs" />
     <Compile Include="Assets\Scripts\Tools\Editor\AtlasTools.cs" />
     <Compile Include="Assets\Scripts\UGUI\Editor\DecoratorEditor.cs" />
     <Compile Include="Assets\Scripts\UGUI\Editor\UIRectTransformEditor.cs" />

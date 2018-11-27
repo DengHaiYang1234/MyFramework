@@ -54,8 +54,13 @@ namespace Res
         //缓存所有UIPrefabs
         private Dictionary<string, GameObject> _cachedAllUIPrefabs;
 
-
         private Dictionary<EResType, List<string>> _cacheAllAssetPath;
+
+
+        public Dictionary<string, string> AllSpriteAtlasReleation
+        {
+            get { return _cachedAllSpriteAtlasReleation; }
+        }
 
         public BuildingAssetHolder()
         {
@@ -64,7 +69,7 @@ namespace Res
             _cacheAssetStreamPath = new Dictionary<EResType, string>();
             _cacheAllAssetPath = new Dictionary<EResType, List<string>>();
         }
-
+        
         public void AddAssetPath(EResType type,string assetPath)
         {
             List<string> _lsit = null;
@@ -98,6 +103,24 @@ namespace Res
             return _cacheAllAssetPath[EResType.UIPrefab];
         }
 
+        public List<SpriteAtlasRelation> SpriteRelation
+        {
+            get { List<SpriteAtlasRelation> res = new List<SpriteAtlasRelation>();
+                if (_cachedAllSpriteAtlasReleation == null)
+                    return res;
+                var e = _cachedAllSpriteAtlasReleation.GetEnumerator();
+                while (e.MoveNext())
+                {
+                    res.Add(new SpriteAtlasRelation()
+                    {
+                        AtlasName = e.Current.Value,
+                        SpriteName = e.Current.Key
+
+                    });
+                }
+                return res;
+            }
+        }
 
         public List<string> GetStreamAssetFilePath(string directoryName,EResType type)
         {
@@ -123,82 +146,36 @@ namespace Res
         }
 
 
-        //public void AddAtlas(UGUIAtlas atlas)
-        //{
-        //    if (atlas == null || atlas.CachedSprites == null)
-        //    {
-        //        Debug.LogError("AddAtlas called but atlas == null || atlas.CachedSprites == null");
-        //        return;
-        //    }
+        public void AddAtlas(UGUIAtlas atlas)
+        {
+            if (atlas == null || atlas.CachedSprites == null)
+            {
+                Debug.LogError("AddAtlas called but atlas == null || atlas.CachedSprites == null");
+                return;
+            }
 
-        //    for (int i = 0; i < atlas.CachedSprites.Count; i++)
-        //    {
-        //        var sprite = atlas.CachedSprites[i];
-        //        if (sprite == null)
-        //        {
-        //            Debug.LogError("atlas.CachedSprites[i] is null index is " + i);
-        //            continue;
-        //        }
+            for (int i = 0; i < atlas.CachedSprites.Count; i++)
+            {
+                var sprite = atlas.CachedSprites[i];
+                if (sprite == null)
+                {
+                    Debug.LogError("atlas.CachedSprites[i] is null index is " + i);
+                    continue;
+                }
 
-        //        string sName = sprite.name;
-        //        if (_cachedAllSprite.ContainsKey(sprite.name))
-        //        {
-        //            Debug.LogErrorFormat("Sprite name {0} duplicated !! in atlas {1}", sprite.name, atlas.name);
-        //            continue;
-        //        }
+                string sName = sprite.name;
+                if (_cachedAllSprite.ContainsKey(sprite.name))
+                {
+                    Debug.LogErrorFormat("Sprite name {0} duplicated !! in atlas {1}", sprite.name, atlas.name);
+                    continue;
+                }
 
-        //        _cachedAllSprite.Add(sprite.name,sprite);
-        //        _cachedAllSpriteAtlasReleation.Add(sName, atlas.name);
-        //    }
-        //}
+                _cachedAllSprite.Add(sprite.name, sprite);
+                _cachedAllSpriteAtlasReleation.Add(sName, atlas.name);
+            }
 
-        //public void AddAssetStreamPath(EResType type,string path)
-        //{
-        //    string sPath = null;
-        //    if (_cacheAssetStreamPath.TryGetValue(type, out sPath))
-        //    {
-        //        if (sPath == path) return;
-        //        else
-        //            _cacheAssetStreamPath[type] = path;
-        //    }
-        //    else
-        //        _cacheAssetStreamPath.Add(type, path);
-        //}
-
-        //public void AddUIPrefab(GameObject prefab)
-        //{
-        //    if (prefab == null)
-        //    {
-        //        Debug.LogError("AddUIPrefab called but prefab == null");
-        //        return;
-        //    }
-
-        //    if (_cachedAllUIPrefabs.ContainsKey(prefab.name))
-        //    {
-        //        Debug.LogErrorFormat("prefab name {0} duplicated !!", prefab.name);
-        //        return;
-        //    }
-
-        //    _cachedAllUIPrefabs.Add(prefab.name, prefab);
-        //}
-
-        //public Sprite GetSpriteByName(string name)
-        //{
-        //    Sprite sp = null;
-        //    if (!_cachedAllSprite.TryGetValue(name,out sp))
-        //    {
-        //        if (AppConst.UseEditorPrefab)
-        //            sp = DirectLoadAseetByName<Sprite>(name, EResType.Atlas);
-        //        else
-        //        {
-        //            SDDebug.LogErrorFormat("请开启UseEditorPrefab或打包资源");
-        //            return null;
-        //        }
-        //    }
-        //    return sp;
-        //}
-
-
+            SDDebug.LogErrorFormat("打包完成后的_cachedAllSpriteAtlasReleation:{0}", _cachedAllSpriteAtlasReleation.Count);
+        }
 
 #if UNITY_EDITOR
         public T DirectLoadAseetByName<T>(string name,EResType type) where T : Object

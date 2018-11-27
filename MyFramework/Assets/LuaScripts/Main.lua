@@ -18,6 +18,7 @@ function Main.SetValue()
     DownPanel = MyFramework.DownPanel
     DownPanel.SetProgressValue("MyFramework")
     DownPanel.SetFileValue("MyFramework")
+    DownPanel.SetSprite("bg_left")
     --DownPanel.GetTitle()
 end
  

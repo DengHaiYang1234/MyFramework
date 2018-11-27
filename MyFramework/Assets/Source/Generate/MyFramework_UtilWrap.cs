@@ -16,6 +16,7 @@ public class MyFramework_UtilWrap
 		L.RegFunction("TrimPath", TrimPath);
 		L.RegFunction("LoadAsset", LoadAsset);
 		L.RegFunction("GetPlatfromFoldername", GetPlatfromFoldername);
+		L.RegFunction("GetBundleFileName", GetBundleFileName);
 		L.RegFunction("New", _CreateMyFramework_Util);
 		L.RegFunction("__tostring", ToLua.op_ToString);
 		L.RegVar("DataPath", get_DataPath, null);
@@ -188,6 +189,23 @@ public class MyFramework_UtilWrap
 		{
 			ToLua.CheckArgsCount(L, 0);
 			string o = MyFramework.Util.GetPlatfromFoldername();
+			LuaDLL.lua_pushstring(L, o);
+			return 1;
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int GetBundleFileName(IntPtr L)
+	{
+		try
+		{
+			ToLua.CheckArgsCount(L, 1);
+			string arg0 = ToLua.CheckString(L, 1);
+			string o = MyFramework.Util.GetBundleFileName(arg0);
 			LuaDLL.lua_pushstring(L, o);
 			return 1;
 		}

@@ -48,6 +48,9 @@
 //        }
 //        length = AssetDatabase.GetAllAssetBundleNames().Length;
 //    }
+
+
+
 //    static void Pack(string source)
 //    {
 //        DirectoryInfo folder = new DirectoryInfo(source); //拿到文件夹目录

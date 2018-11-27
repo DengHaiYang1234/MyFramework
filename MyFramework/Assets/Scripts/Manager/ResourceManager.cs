@@ -33,22 +33,26 @@ namespace MyFramework
 
         //资源AssetBundle缓存列表
         private Dictionary<string, BundleInfo> hashTable = null;
-
+        //缓存图集资源
         private Dictionary<string, AssetBundle> cacheAtlasBundle = null;
-
+        //缓存prefab资源
         private Dictionary<string, AssetBundle> cacheUIPrefabBundle = null;
-
+        //缓存图片资源
         private Dictionary<string, Sprite> cacheAllSprite = null;
-
+        //通过名称检索资源对应路径
+        private Dictionary<string, string> cacheAllBundleMap = null;
 
         private EResType currentType;
         
+
+
         public void Initialize(Action func = null)
         {
             hashTable = new Dictionary<string, BundleInfo>();
             cacheAtlasBundle = new Dictionary<string, AssetBundle>();
             cacheUIPrefabBundle = new Dictionary<string, AssetBundle>();
             cacheAllSprite = new Dictionary<string, Sprite>();
+            cacheAllBundleMap = new Dictionary<string, string>();
             currentType = EResType.isNull;
             if (func != null)
                 func();
@@ -56,21 +60,9 @@ namespace MyFramework
 
         int GetCacheAllNum()
         {
-            SDDebug.LogError("GetCacheAllNum:" + (cacheAtlasBundle.Count + cacheUIPrefabBundle.Count));
             return cacheAtlasBundle.Count + cacheUIPrefabBundle.Count;
         }
-
-        ///// <summary>
-        ///// 缓存assetBundle
-        ///// </summary>
-        ///// <param name="path"> assetPath </param>
-        ///// <param name="callBack"> 回调 </param>
-        //public void CacheBundle(string path, Action<AssetBundle> callBack = null)
-        //{
-        //    LoadAsset(path, callBack);
-        //}
-
-
+        
         /// <summary>
         /// 缓存assetBundle
         /// </summary>
@@ -81,8 +73,6 @@ namespace MyFramework
             currentType = type;
             LoadAsset(path,type,callBack);
         }
-
-
 
         public void LoadAsset(string path,EResType type, Action<int> callBack = null)
         {
@@ -122,7 +112,7 @@ namespace MyFramework
 
             return bundle;
         }
-
+        
         IEnumerator IAsynLoadBundle(string path,byte[] stream)
         {
             AssetBundleCreateRequest request = AssetBundle.LoadFromMemoryAsync(stream);
@@ -137,18 +127,26 @@ namespace MyFramework
                     bInfo.bundle = bundle;
                     bInfo.isDone = true;
                     CacheAssetBundle(path, bInfo.bundle, bInfo.type);
-
-
+                    AddBundleMap(path);
                     for (int i = 0; i < bInfo.callbacks.Count; i++)
                     {
                         bInfo.callbacks[i](GetCacheAllNum());
                     }
 
                     bInfo.callbacks.Clear();
-
                 }
             }
             yield return 0;
+        }
+
+
+
+        public void AddBundleMap(string path)
+        {
+            string name = path.Substring(path.LastIndexOf('/') + 1);
+            if(!cacheAllBundleMap.ContainsKey(name))
+                cacheAllBundleMap.Add(name, path);
+
         }
 
         public void CacheAssetBundle(string path,AssetBundle bundle, EResType type)
@@ -161,7 +159,7 @@ namespace MyFramework
                         cacheAtlasBundle.Add(path, bundle);
                     }
                     else
-                        Console.WriteLine("Atlas存在重复AssetBundle:" + path);
+                        Console.WriteLine("Atlas  Sprite存在重复AssetBundle:" + path);
                     break;
                 case EResType.UIPrefab:
                     if (!cacheUIPrefabBundle.ContainsKey(path))
@@ -173,46 +171,18 @@ namespace MyFramework
                     break;
             }
         }
-
+        
         /// <summary>
-        /// 获取prefabs
+        /// 缓存图片资源
         /// </summary>
-        /// <param name="path"></param>
-        /// <returns></returns>
-        public GameObject Getprefab(string path)
-        {
-            AssetBundle bundle = null;
-            if (hashTable.ContainsKey(path))
-            {
-                BundleInfo bInfo = hashTable[path];
-                bInfo.referencedCount++;
-                bundle = bInfo.bundle;
-            }
-            else
-            {
-                bundle = LoadBundle(path);
-                //BundleInfo bInfo = new BundleInfo(path,bundle);
-                //bInfo.isDone = true;
-                //hashTable.Add(path, bInfo);
-            }
-
-            GameObject prefab = Util.LoadAsset(bundle, Util.TrimPath(path));
-            return prefab;
-        }
-
-        public GameObject CreatGamePrefab(string path)
-        {
-            GameObject prefab = Getprefab(path);
-            GameObject go = Instantiate(prefab) as GameObject;
-            return go;
-        }
-
-        public void AdvanceLoadAssetBundleByType(EResType type)
+        /// <param name="type"></param>
+        /// <param name="callback"></param>
+        public void AdvanceLoadAssetBundleByType(EResType type,Action<int> callback = null)
         {
             switch (type)
             {
                 case EResType.Atlas:
-                    LoadAtlasAssetByBunlde();
+                    LoadAtlasAssetByBunlde(callback);
                     break;
             }
         }
@@ -220,16 +190,24 @@ namespace MyFramework
         /// <summary>
         /// 提前加载atlas目录内容
         /// </summary>
-        public void LoadAtlasAssetByBunlde()
+        public void LoadAtlasAssetByBunlde(Action<int> callback = null)
         {
-            foreach (var cacheUIPrefab in cacheUIPrefabBundle)
+            foreach (var cacheSprite in cacheAtlasBundle)
             {
-                StartCoroutine(AsynLoadAtlasAssetBundle(cacheUIPrefab.Value, cacheUIPrefab.Key));
+                StartCoroutine(AsynLoadAtlasAssetBundle(cacheSprite.Value, cacheSprite.Key, callback));
             }
         }
-        
-        IEnumerator AsynLoadAtlasAssetBundle(AssetBundle bundle,string name)
+
+        /// <summary>
+        /// 异步加载图片资源
+        /// </summary>
+        /// <param name="bundle"></param>
+        /// <param name="name"></param>
+        /// <param name="callback"></param>
+        /// <returns></returns>
+        IEnumerator AsynLoadAtlasAssetBundle(AssetBundle bundle,string name, Action<int> callback = null)
         {
+            name = name.Substring(name.LastIndexOf('/') + 1) + BuildToolsConstDefine.AssetSuffix;
             AssetBundleRequest request = bundle.LoadAssetAsync(name);
             yield return request;
             if (request.isDone)
@@ -243,44 +221,109 @@ namespace MyFramework
                         SDDebug.LogErrorFormat("存在相同的图片：{0},所在图集{1}", sprite.name, atlas.name);
                     }
                     else
+                    {
                         cacheAllSprite.Add(sprite.name, sprite);
+                        SDDebug.LogErrorFormat("sprite.name{0}:",sprite.name);
+                        EventDispatchCenter.Instance.Dispatch("C2C_ASYN_LOAD_ATLAL_SPRITE", sprite.name);
+                    }
                 }
             }
             yield return 0;
         }
 
+
         public Sprite GetSpriteByName(string name)
         {
+            var atlasName = BuildingAssetHolder.Instance.AllSpriteAtlasReleation[name];
+
+            UGUIAtlas atlas = LoadABAssetByPath<UGUIAtlas>(atlasName, EResType.Atlas);
+
+            
+
             Sprite sprite = null;
-            if (!cacheAllSprite.TryGetValue(name, out sprite))
+            if (!atlas._cachedSpritesDic.TryGetValue(name, out sprite))
             {
                 SDDebug.LogFormat("未找到该图片。请检查");
             }
             return sprite;
         }
 
-        public GameObject LoadUIPrefabAssetByPath(string path,bool isAsyn = false)
+        public Dictionary<string, AssetBundle> GetCacheAssetBundle(EResType type)
         {
-            AssetBundle bundle = null;
-            if (!cacheUIPrefabBundle.TryGetValue(path, out bundle))
+            switch (type)
             {
-                SDDebug.LogFormat("未找到该prefab。请检查");
+                case EResType.Atlas:
+                    return cacheAtlasBundle;
+                case EResType.UIPrefab:
+                    return cacheUIPrefabBundle;
             }
 
-            GameObject prefab = null;
+            return null;
+        }
+
+
+
+        public T LoadABAssetByPath<T>(string name,EResType type,bool isAsyn = false) where T : UnityEngine.Object
+        {
+            var cacheBundle = GetCacheAssetBundle(type);
+            if (cacheBundle == null)
+            {
+                SDDebug.LogErrorFormat("LoadABAssetByPath Is Called. But GetCacheAssetBundle(type) is Null.Type:{0}",type);
+                return default(T);
+            }
+
+            string path = "";
+
+            if (cacheAllBundleMap.ContainsKey(name))
+            {
+                path = cacheAllBundleMap[name];
+            }
+
+            AssetBundle bundle = null;
+            if (!cacheBundle.TryGetValue(path, out bundle))
+            {
+                SDDebug.LogFormat("未找到该Asset。请检查");
+                return null;
+            }
+
+            T prefab = null;
+
+            name = name + BuildToolsConstDefine.PrefabSuffix;
 
             if (isAsyn)
             {
-                AssetBundleRequest request = bundle.LoadAssetAsync(path);
+                AssetBundleRequest request = bundle.LoadAssetAsync(name);
                 if (request.isDone)
                 {
-                    prefab = request.asset as GameObject;
+                    prefab = request.asset as T;
                 }
             }
             else
-                prefab = bundle.LoadAsset(name, typeof(GameObject)) as GameObject;
+                prefab = bundle.LoadAsset<T>(name);
 
             return prefab;
+        }
+
+
+
+        public T LoadABAssetByPath<T>(string path) where T : UnityEngine.Object
+        {
+            byte[] stream = File.ReadAllBytes(path);
+            AssetBundle ab = AssetBundle.LoadFromMemory(stream);
+            if (ab == null)
+            {
+                Debug.LogErrorFormat("LoadABAssetByPath is called . But AssetBundle.LoadFromFile(path) is null. Path:{0}",path);
+                return null;
+            }
+
+            T res = ab.mainAsset as T;
+
+            return res;
+        }
+
+        public GameObject InstantiateObj(GameObject obj)
+        {
+            return Instantiate(obj);
         }
 
         /// <summary>

@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 3140997394
+CRC: 2460995243
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -10,4 +10,13 @@ AssetBundleManifest:
       Dependencies: {}
     Info_2:
       Name: data/uiprefab/downloadpanel.assetbundle
+      Dependencies: {}
+    Info_3:
+      Name: data/uiprefab/image.assetbundle
+      Dependencies: {}
+    Info_4:
+      Name: data/uiprefab/test.assetbundle
+      Dependencies: {}
+    Info_5:
+      Name: data/mainfest/resmainfest.assetbundle
       Dependencies: {}

@@ -426,15 +426,15 @@ namespace MyFramework
             //Util.CallMethod("Main", "SetValue");
         }
 
-        void LoadInitPrefab(string path)
-        {
-            GameObject obj =  ResourceManager_.CreatGamePrefab(path);
-            var parent =  GameObject.Find("UI_Canvas").gameObject;
-            obj.transform.parent = parent.transform;
-            obj.AddComponent<DownPanel>();
-            obj.transform.localPosition = Vector3.zero;
-            //RectTransform
-        }
+        //void LoadInitPrefab(string path)
+        //{
+        //    GameObject obj =  ResourceManager_.CreatGamePrefab(path);
+        //    var parent =  GameObject.Find("UI_Canvas").gameObject;
+        //    obj.transform.parent = parent.transform;
+        //    obj.AddComponent<DownPanel>();
+        //    obj.transform.localPosition = Vector3.zero;
+        //    //RectTransform
+        //}
         #endregion
     }
 }

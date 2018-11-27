@@ -1,0 +1,7 @@
+﻿SDDebug##Error:11/26/2018 2:57:57 PM::CheckStage  OnEnter!
+SDDebug##Error:11/26/2018 3:00:04 PM::GetCacheAllNum:1
+SDDebug##Error:11/26/2018 3:00:04 PM::IsCacheAssetIsComplete:1
+SDDebug##Error:11/26/2018 3:00:11 PM::GetCacheAllNum:2
+SDDebug##Error:11/26/2018 3:00:11 PM::IsCacheAssetIsComplete:2
+SDDebug##Error:11/26/2018 3:00:13 PM::GetCacheAllNum:3
+SDDebug##Error:11/26/2018 3:00:13 PM::IsCacheAssetIsComplete:3

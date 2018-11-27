@@ -125,6 +125,7 @@
     <Compile Include="Assets\Scripts\Res\ResMain.cs" />
     <Compile Include="Assets\Scripts\Res\ResPathDef.cs" />
     <Compile Include="Assets\Scripts\Res\ResourceManifest.cs" />
+    <Compile Include="Assets\Scripts\Res\RuntimePath.cs" />
     <Compile Include="Assets\Scripts\State\CheckStage.cs" />
     <Compile Include="Assets\Scripts\State\GameUIState.cs" />
     <Compile Include="Assets\Scripts\Tools\BuildToolsConstDefine.cs" />

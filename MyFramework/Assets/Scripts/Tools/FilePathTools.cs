@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using MyFramework;
 using UnityEngine;
 
 public class FilePathTools 
@@ -49,7 +50,4 @@ public class FilePathTools
         dataPath = dataPath.Substring(dataPath.IndexOf('/') + 1);
         return dataPath.Substring(0,dataPath.IndexOf('.'));
     }
-
-
-
 }

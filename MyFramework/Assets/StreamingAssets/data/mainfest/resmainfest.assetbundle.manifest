@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 943307887
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 8220fe0fb93b735a73b6416559146153
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b3dacef42bc46fe63584e17d58fbc059
+HashAppended: 0
+ClassTypes:
+- Class: 114
+  Script: {fileID: 11500000, guid: 1b6ec50dec8a4b541b84cb6e77fd911a, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/data/[Mainfest]/ResMainfest.asset
+Dependencies: []

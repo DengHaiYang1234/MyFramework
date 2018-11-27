@@ -10,14 +10,16 @@ namespace MyFramework
         static Text text_1;
         static Text text_2;
         static Text text_Title;
+        private static Image sprite;
 
         private void Awake()
         {
             text_1 = transform.Find("Test1").gameObject.GetComponent<Text>();
             text_2 = transform.Find("Test2").gameObject.GetComponent<Text>();
             text_Title = transform.Find("Title").gameObject.GetComponent<Text>();
+            sprite = transform.Find("sprite").gameObject.GetComponent<Image>();
         }
-
+        
         public static void SetProgressValue(string str)
         {
             text_1.text = str;
@@ -38,6 +40,11 @@ namespace MyFramework
         public static void GetTitle()
         {
             Util.Log("=======  =======  =======  =======text_Title:" + text_Title.text);
+        }
+
+        public static void SetSprite(string name)
+        {
+            sprite.sprite = ResMain.Instance.GetSpriteByName(name);
         }
 
     }
