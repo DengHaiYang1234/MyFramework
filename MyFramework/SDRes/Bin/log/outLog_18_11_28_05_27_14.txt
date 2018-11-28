@@ -1,0 +1,7 @@
+﻿SDDebug##Error:11/28/2018 5:27:16 PM::CheckStage  OnEnter!
+SDDebug##Error:11/28/2018 5:27:16 PM::IsCacheAssetIsComplete:1
+SDDebug##Error:11/28/2018 5:27:17 PM::IsCacheAssetIsComplete:2
+SDDebug##Error:11/28/2018 5:27:17 PM::IsCacheAssetIsComplete:3
+SDDebug##Error:11/28/2018 5:27:17 PM::IsCacheAssetIsComplete:4
+SDDebug##Error:11/28/2018 5:27:17 PM::IsCacheAssetIsComplete:5
+SDDebug##Error:11/28/2018 5:27:17 PM::普通测试--------这是用来测试CustomSettings

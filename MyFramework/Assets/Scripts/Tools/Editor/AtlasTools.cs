@@ -318,7 +318,7 @@ namespace Res
         }
         
         /// <summary>
-        /// 生成可视化  ScriptableObject
+        /// 批量生产配置文件
         /// </summary>
         public static void MakeSoyAtlas()
         {
@@ -375,6 +375,7 @@ namespace Res
                         }
 
                         resDic.Add(totalSprite[z].name,totalSprite[z]);
+
                         mainfestContent.Add(new SpriteAtlasRelation
                         {
                             AtlasName = atlasMainName,
@@ -389,10 +390,12 @@ namespace Res
                         BuildToolsConstDefine.AssetSuffix);
 
                     AssetDatabase.CreateAsset(asset, atlasAssetPath);
+                    BuildingAssetHolder.Instance.AddAtlas(asset);
                     SaveAssets();
                     totalSprite = new List<Sprite>();
                 }
             }
+            WriteMainfestData();
         }
 
         private static void SetAssetImporter(string dir, string path)
@@ -522,6 +525,32 @@ namespace Res
                 Debug.LogError("有问题,检查上面错误日志");
         }
 
+
+        private static ResourceManifest CreatMainfest()
+        {
+            var data = ScriptableObject.CreateInstance<ResourceManifest>();
+            data.SpriteAtlasRelationData = BuildingAssetHolder.Instance.SpriteRelation;
+            return data;
+        }
+
+
+        private static void WriteMainfestData()
+        {
+            string path = ResPathDef.GetMainfestAssetPath();
+            ResourceManifest asset = AssetDatabase.LoadAssetAtPath<ResourceManifest>(path);
+            if (asset != null) AssetDatabase.DeleteAsset(path);
+            asset = null;
+
+            var mainfestData = CreatMainfest();
+            AssetDatabase.CreateAsset(mainfestData, path);
+            SaveAssets();
+        }
+
+        private static ResourceManifest LoadManifest()
+        {
+            string path = ResPathDef.GetMainfestAssetPath();
+            return AssetDatabase.LoadAssetAtPath<ResourceManifest>(path);
+        }
     }
 
 

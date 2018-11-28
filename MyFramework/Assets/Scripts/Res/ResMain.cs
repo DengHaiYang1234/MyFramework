@@ -42,14 +42,16 @@ namespace MyFramework
         
         public ResMain()
         {
-            RuntimePath rt = new RuntimePath();
             EventDispatchCenter.Instance.Registry("C2C_ASYN_LOAD_ATLAL_SPRITE",OnAsynLoadSprite);
             res = AppFacade.Instance.GetManager<ResourceManager>(ManagersName.resource);
-            mainfest = res.LoadABAssetByPath<ResourceManifest>(rt.MainfestPath);
-            mainfest.MappingAllData();
+            mainfest = res.LoadABAssetByPath<ResourceManifest>(RuntimePath.Instance.MainfestPath,EResType.Mainfest);
+            mainfest.MappingAllAndClearRedundancy();
             resLoadNum = new Dictionary<EResType, int>();
             InitCacheResInfos();
+
+            SDDebug.LogError("ResMain  初始化完成!!!!");
         }
+
 
 
         private void OnAsynLoadSprite(object o)
@@ -94,6 +96,7 @@ namespace MyFramework
         
         public void CacheAtlas()
         {
+            SDDebug.LogError("CacheAtlas  开始!!!!");
             List<string> atlasPath = null;
             if (_cachedResAssetPathDic.TryGetValue(EResType.Atlas, out atlasPath))
             {
@@ -148,18 +151,18 @@ namespace MyFramework
 
         public Sprite GetSpriteByName(string name)
         {
-             return res.GetSpriteByName(name);
+            string atlasName =  (mainfest.GetAtlasNameBySpriteName(name)).ToLower();
+
+            UGUIAtlas atlas = res.LoadABAssetByName<UGUIAtlas>(atlasName, EResType.Atlas);
+
+            return atlas.GetSpriteByName(name);
         }
-
-
 
         public GameObject GetUIPrefab(string name)
         {
-            //string dataPath = BuildToolsConstDefine.GetBuildingFolderByResType(EResType.UIPrefab);
-            //string assetpath = string.Format("{0}/{1}",dataPath,name);
             name = name.ToLower();
 
-            GameObject obj = res.LoadABAssetByPath<GameObject>(name,EResType.UIPrefab);
+            GameObject obj = res.LoadABAssetByName<GameObject>(name,EResType.UIPrefab);
 
             return res.InstantiateObj(obj);
         }

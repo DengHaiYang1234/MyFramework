@@ -48,6 +48,8 @@ namespace MyFramework
 
         public void Initialize(Action func = null)
         {
+
+            SDDebug.LogError("ResourceManager  Initialize !!!ResourceManager  Initialize !!! ");
             hashTable = new Dictionary<string, BundleInfo>();
             cacheAtlasBundle = new Dictionary<string, AssetBundle>();
             cacheUIPrefabBundle = new Dictionary<string, AssetBundle>();
@@ -70,6 +72,7 @@ namespace MyFramework
         /// <param name="callBack"> 回调 </param>
         public void CacheBundle(string path,EResType type,Action<int> callBack = null)
         {
+            SDDebug.LogError("缓存assetBundle");
             currentType = type;
             LoadAsset(path,type,callBack);
         }
@@ -231,23 +234,6 @@ namespace MyFramework
             yield return 0;
         }
 
-
-        public Sprite GetSpriteByName(string name)
-        {
-            var atlasName = BuildingAssetHolder.Instance.AllSpriteAtlasReleation[name];
-
-            UGUIAtlas atlas = LoadABAssetByPath<UGUIAtlas>(atlasName, EResType.Atlas);
-
-            
-
-            Sprite sprite = null;
-            if (!atlas._cachedSpritesDic.TryGetValue(name, out sprite))
-            {
-                SDDebug.LogFormat("未找到该图片。请检查");
-            }
-            return sprite;
-        }
-
         public Dictionary<string, AssetBundle> GetCacheAssetBundle(EResType type)
         {
             switch (type)
@@ -263,12 +249,12 @@ namespace MyFramework
 
 
 
-        public T LoadABAssetByPath<T>(string name,EResType type,bool isAsyn = false) where T : UnityEngine.Object
+        public T LoadABAssetByName<T>(string name,EResType type,bool isAsyn = false) where T : UnityEngine.Object
         {
             var cacheBundle = GetCacheAssetBundle(type);
             if (cacheBundle == null)
             {
-                SDDebug.LogErrorFormat("LoadABAssetByPath Is Called. But GetCacheAssetBundle(type) is Null.Type:{0}",type);
+                SDDebug.LogErrorFormat("LoadABAssetByName Is Called. But GetCacheAssetBundle(type) is Null.Type:{0}", type);
                 return default(T);
             }
 
@@ -288,7 +274,7 @@ namespace MyFramework
 
             T prefab = null;
 
-            name = name + BuildToolsConstDefine.PrefabSuffix;
+            name = name + ResPathDef.GetAssetBunldeSuffix(type);
 
             if (isAsyn)
             {
@@ -306,8 +292,9 @@ namespace MyFramework
 
 
 
-        public T LoadABAssetByPath<T>(string path) where T : UnityEngine.Object
+        public T LoadABAssetByPath<T>(string path, EResType type) where T : UnityEngine.Object
         {
+            path = path.ToLower();
             byte[] stream = File.ReadAllBytes(path);
             AssetBundle ab = AssetBundle.LoadFromMemory(stream);
             if (ab == null)
@@ -316,8 +303,7 @@ namespace MyFramework
                 return null;
             }
 
-            T res = ab.mainAsset as T;
-
+            T res = ab.LoadAsset<T>(ResPathDef.GetLoadAssetBundleName(path,type));
             return res;
         }
 

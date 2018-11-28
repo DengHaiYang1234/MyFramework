@@ -105,9 +105,12 @@ namespace Res
 
         public List<SpriteAtlasRelation> SpriteRelation
         {
-            get { List<SpriteAtlasRelation> res = new List<SpriteAtlasRelation>();
+            get {
+                List<SpriteAtlasRelation> res = new List<SpriteAtlasRelation>();
                 if (_cachedAllSpriteAtlasReleation == null)
+                {
                     return res;
+                }
                 var e = _cachedAllSpriteAtlasReleation.GetEnumerator();
                 while (e.MoveNext())
                 {
@@ -115,7 +118,6 @@ namespace Res
                     {
                         AtlasName = e.Current.Value,
                         SpriteName = e.Current.Key
-
                     });
                 }
                 return res;

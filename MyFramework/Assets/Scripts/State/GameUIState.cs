@@ -62,11 +62,11 @@ namespace MyFramework
             GameObject obj = ResMain.Instance.GetUIPrefab(name);
             //GameObject obj = res.CreatGamePrefab(path);
             obj.AddComponent<DownPanel>();
-            var parent = GameObject.Find("UI_Canvas").gameObject;
+            var parent = GameObject.Find("SceneUI/layer1").gameObject;
             obj.transform.parent = parent.transform;
             obj.transform.localPosition = Vector3.zero;
-            //obj.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
-            //obj.transform.localScale = Vector2.one;
+            obj.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            obj.transform.localScale = Vector3.one;
         }
     }
 }

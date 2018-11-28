@@ -1,0 +1,11 @@
+﻿SDDebug##Error:11/28/2018 5:20:07 PM::CheckStage  OnEnter!
+SDDebug##Error:11/28/2018 5:20:07 PM::IsCacheAssetIsComplete:1
+SDDebug##Error:11/28/2018 5:20:08 PM::IsCacheAssetIsComplete:2
+SDDebug##Error:11/28/2018 5:20:08 PM::IsCacheAssetIsComplete:3
+SDDebug##Error:11/28/2018 5:20:08 PM::IsCacheAssetIsComplete:4
+SDDebug##Error:11/28/2018 5:20:08 PM::IsCacheAssetIsComplete:5
+SDDebug##Error:11/28/2018 5:20:08 PM::普通测试--------这是用来测试CustomSettings
+SDDebug##Error:11/28/2018 5:20:12 PM::GetLoadAssetBundleName is called . but path: is null!
+SDDebug##Error:11/28/2018 5:20:14 PM::GetLoadAssetBundleName is called . but path: is null!
+SDDebug##Error:11/28/2018 5:20:16 PM::GetLoadAssetBundleName is called . but path: is null!
+SDDebug##Error:11/28/2018 5:20:42 PM::GetLoadAssetBundleName is called . but path: is null!

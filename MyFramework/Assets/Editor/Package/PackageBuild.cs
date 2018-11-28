@@ -32,11 +32,11 @@ namespace Res
         }
 
         #region windows资源打包入口
-        [MenuItem("AssetsBundle/Build Windows Resource", false, 100)]
-        public static void BuildWindowsResource()
-        {
-            BuildAssetResource(BuildTarget.StandaloneWindows, false);
-        }
+        //[MenuItem("AssetsBundle/Build Windows Resource", false, 100)]
+        //public static void BuildWindowsResource()
+        //{
+        //    BuildAssetResource(BuildTarget.StandaloneWindows, false);
+        //}
         #endregion
 
         [MenuItem("AssetsBundle/Build Android Resource", false, 102)]
@@ -340,14 +340,18 @@ namespace Res
         #region 打包其他项目资源（如场景，模型，特效等等）
         public static void BuildAssetsResource(BuildTarget target)
         {
-            string assetFolder = AppStreamPath;
+            string assetFolder = Application.streamingAssetsPath + "/";
+            SDDebug.LogError("assetFolder:" + assetFolder);
             if (!Directory.Exists(assetFolder))
                 Directory.CreateDirectory(assetFolder);
 
             BuildAssetBundleOptions options = BuildAssetBundleOptions.CompleteAssets |
                                               BuildAssetBundleOptions.CollectDependencies |
                                               BuildAssetBundleOptions.DeterministicAssetBundle;
-            BuildPipeline.BuildAssetBundles(assetFolder, options, target);
+
+            SDDebug.LogError("EditorUserBuildSettings.activeBuildTarget:" + EditorUserBuildSettings.activeBuildTarget);
+
+            BuildPipeline.BuildAssetBundles(assetFolder, BuildAssetBundleOptions.None, EditorUserBuildSettings.activeBuildTarget);
             AssetDatabase.Refresh();
         }
 
@@ -501,10 +505,10 @@ namespace Res
             {
                 ClearAssetBunldeNames();
                 BuildBaseAsset<UGUIAtlas>(EResType.Atlas, "UGUIAtlas");
-                BuildBaseAsset<GameObject>(EResType.UIPrefab, "GameObject");
                 WriteMainfestData();
+                
+                BuildBaseAsset<GameObject>(EResType.UIPrefab, "GameObject");
                 BuildBaseAsset<ResourceManifest>(EResType.Mainfest, "ResourceManifest");
-
                 PackageBuild.BuildAssetsResource(_buildTarget);
             }
             catch (Exception e)
@@ -550,9 +554,10 @@ namespace Res
 
                     AssetDatabase.Refresh();
                 }
-
             }
         }
+
+
 
         public static void SetAssetImport(string dataPath, string assetdataPath, AssetImporter assetImporter)
         {
@@ -579,9 +584,10 @@ namespace Res
         private ResourceManifest CreatMainfest()
         {
             var data = ScriptableObject.CreateInstance<ResourceManifest>();
-            data.SpriteAtlasRelation = BuildingAssetHolder.Instance.SpriteRelation;
+            data.SpriteAtlasRelationData = BuildingAssetHolder.Instance.SpriteRelation;
             return data;
         }
+
 
         private void WriteMainfestData()
         {
@@ -595,6 +601,11 @@ namespace Res
             SaveAssets();
         }
 
+        private ResourceManifest LoadManifest()
+        {
+            string path = ResPathDef.GetMainfestAssetPath();
+            return AssetDatabase.LoadAssetAtPath<ResourceManifest>(path);
+        }
         /// <summary>
         /// 可打包相关辅助依赖信息
         /// </summary>
@@ -605,8 +616,8 @@ namespace Res
 
         private static void SaveAssets()
         {
-            AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
+            AssetDatabase.SaveAssets();
         }
     }
 }

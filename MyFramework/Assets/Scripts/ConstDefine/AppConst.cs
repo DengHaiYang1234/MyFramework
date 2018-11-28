@@ -14,16 +14,16 @@ namespace MyFramework
         public const string LuaTempDir = "LuaTempDir/";
         
         //!调试模式-用于内部测试
-        public static bool DebugMode = true;
+        public static bool DebugMode = false;
 
         //lua代码Assetbundle模式
-        public static bool LuaBunldeMode = false;
+        public static bool LuaBunldeMode = true;
 
         //Lua字节码模式
         public static bool LuaByteMode = false;
 
         //更新模式(开启热更必须关闭 DebugMode)
-        public static bool UpdateMode = false;
+        public static bool UpdateMode = true;
 
         //是否直接使用prefab
         public static bool UseEditorPrefab = false;
