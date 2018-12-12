@@ -119,6 +119,8 @@
     <Compile Include="Assets\Scripts\Manager\ResourceManager.cs" />
     <Compile Include="Assets\Scripts\Manager\ThreadInfos\ThreadEvent.cs" />
     <Compile Include="Assets\Scripts\Manager\ThreadInfos\ThreadManager.cs" />
+    <Compile Include="Assets\Scripts\MyAssetBundle\BuildAsset\BuildDefaultPath.cs" />
+    <Compile Include="Assets\Scripts\MyAssetBundle\BuildAsset\PackageMethod.cs" />
     <Compile Include="Assets\Scripts\Res\AssetPathContainer.cs" />
     <Compile Include="Assets\Scripts\Res\BuildingAssetHolder.cs" />
     <Compile Include="Assets\Scripts\Res\EResType.cs" />

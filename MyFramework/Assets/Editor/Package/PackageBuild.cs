@@ -8,8 +8,6 @@ using MyFramework;
 using System.Diagnostics;
 using System.Text;
 
-
-
 namespace Res
 {
     public class PackageBuild : MonoBehaviour
@@ -64,7 +62,7 @@ namespace Res
             GenerateVersion();
             BuildFileMD5();
 
-            BuildAllAssetExceptLua(target);
+            //BuildAllAssetExceptLua(target);
             Util.LogErr("若需拷贝资源至服务器。请稍等刷新一会在拷贝！！！！！！");
             AssetDatabase.Refresh();
         }

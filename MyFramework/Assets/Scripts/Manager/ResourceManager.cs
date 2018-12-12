@@ -290,16 +290,20 @@ namespace MyFramework
             return prefab;
         }
 
-
-
         public T LoadABAssetByPath<T>(string path, EResType type) where T : UnityEngine.Object
         {
             path = path.ToLower();
             byte[] stream = File.ReadAllBytes(path);
+
+            if (stream.Length == 0)
+            {
+                Debug.LogErrorFormat("LoadABAssetByPath is called.But stream.Length == 0 AssetBundle.LoadFromFile(path) is null. Path:{0}", path);
+            }
+
             AssetBundle ab = AssetBundle.LoadFromMemory(stream);
             if (ab == null)
             {
-                Debug.LogErrorFormat("LoadABAssetByPath is called . But AssetBundle.LoadFromFile(path) is null. Path:{0}",path);
+                Debug.LogErrorFormat("LoadABAssetByPath is called.But ab == null AssetBundle.LoadFromFile(path) is null. Path:{0}", path);
                 return null;
             }
 
