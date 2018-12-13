@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace MyAssetBundleEditor
 {
-    public class PackageMethod : ScriptableObject
+    public class PackagePattern : ScriptableObject
     {
         [SerializeField]
         public List<BuildPackageInfo> packagInfos = new List<BuildPackageInfo>();
@@ -36,6 +36,11 @@ namespace MyAssetBundleEditor
                 packagInfos.Remove(GetPackagInfoByAssetName(assetName));
                 _cachedPackagInfos.Remove(assetName);
             }
+        }
+
+        public Dictionary<string, BuildPackageInfo> GetCacheAssetDataInfos()
+        {
+            return _cachedPackagInfos;
         }
 
         public void Clear()

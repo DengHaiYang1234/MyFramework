@@ -17,28 +17,56 @@ namespace MyAssetBundleEditor
             List<AssetBundleBuild> bundles;
         }
 
-        [MenuItem("Assets/CheckPackagingMethod/BuildAssetsWithFilename")]
+        [MenuItem("Assets/CheckPackagingMethod/BuildAssetsWithFilename",false,4)]
         public static void SetManifestWithBuildAssetsWithFilename()
         {
-            BuildPackMethod method = new BuildPackMethod(Selection.activeObject,BuildDefaultPath.BuildAssetsWithFilename);
+            if (EditorApplication.isCompiling)
+            {
+                return;
+            }
+            BuildPackPattern method = new BuildPackPattern(Selection.activeObject,BuildDefaultPath.BuildAssetsWithFilename);
         }
 
-        [MenuItem("Assets/CheckPackagingMethod/BuildAssetsWithDirectroyName")]
+        [MenuItem("Assets/CheckPackagingMethod/BuildAssetsWithDirectroyName",false,5)]
         public static void SetManifestWithBuildAssetsWithDirectroyName()
         {
-            BuildPackMethod method = new BuildPackMethod(Selection.activeObject, BuildDefaultPath.BuildAssetsWithDirectroyName);
+            if (EditorApplication.isCompiling)
+            {
+                return;
+            }
+            BuildPackPattern method = new BuildPackPattern(Selection.activeObject, BuildDefaultPath.BuildAssetsWithDirectroyName);
         }
 
-        [MenuItem("Assets/CheckPackagingMethod/BuildAssetsWithAssetBundleName")]
+        [MenuItem("Assets/CheckPackagingMethod/BuildAssetsWithAssetBundleName",false,6)]
         public static void SetManifestWithBuildAssetsWithAssetBundleName()
         {
-            BuildPackMethod method = new BuildPackMethod(Selection.activeObject, BuildDefaultPath.BuildAssetsWithAssetBundleName);
+            if (EditorApplication.isCompiling)
+            {
+                return;
+            }
+            BuildPackPattern method = new BuildPackPattern(Selection.activeObject, BuildDefaultPath.BuildAssetsWithAssetBundleName);
         }
 
-        [MenuItem("Assets/CheckPackagingMethod/ClearPackageMethod")]
+        [MenuItem("Assets/CheckPackagingMethod/ClearPackageMethod",false,7)]
         public static void ClearPackageMethod()
         {
-            BuildPackMethod method = new BuildPackMethod(true);
+            if (EditorApplication.isCompiling)
+            {
+                return;
+            }
+            BuildPackPattern method = new BuildPackPattern(true);
+        }
+
+        [MenuItem("Assets/BuildManifest", false, 10)]
+        public static void BuildManifest()
+        {
+            if (EditorApplication.isCompiling)
+            {
+                return;
+            }
+
+            List<AssetBundleBuild> builds = BaseBuild.GetBuilds();
+            BuildMainfest manifest = new BuildMainfest(builds);
         }
     }
 }

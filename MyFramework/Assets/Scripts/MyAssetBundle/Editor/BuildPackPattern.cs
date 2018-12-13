@@ -6,24 +6,33 @@ using System.IO;
 
 namespace MyAssetBundleEditor
 {
-    public class BuildPackMethod
+    public class BuildPackPattern
     {
-        private static PackageMethod pkgMethod;
+        private static PackagePattern pkgMethod;
 
-        public BuildPackMethod(bool isClear)
+        /// <summary>
+        /// 清空
+        /// </summary>
+        /// <param name="isClear"></param>
+        public BuildPackPattern(bool isClear)
         {
-            pkgMethod = AssetDatabase.LoadAssetAtPath<PackageMethod>(BuildDefaultPath.GetBuildMethodFloderPath());
+            pkgMethod = AssetDatabase.LoadAssetAtPath<PackagePattern>(BuildDefaultPath.GetBuildPattrenAssetPath());
             if (pkgMethod != null)
             {
                 pkgMethod.Clear();
-                AssetDatabase.DeleteAsset(BuildDefaultPath.GetBuildMethodFloderPath());
+                AssetDatabase.DeleteAsset(BuildDefaultPath.GetBuildPattrenAssetPath());
             }
             SaveAndRefresh();
         }
-
-        public BuildPackMethod(Object SelectionObj,string buildMethod,bool isClear = false)
+        /// <summary>
+        /// 打包指定路径
+        /// </summary>
+        /// <param name="SelectionObj"></param>
+        /// <param name="buildMethod"></param>
+        /// <param name="isClear"></param>
+        public BuildPackPattern(Object SelectionObj,string buildMethod)
         {
-            pkgMethod = AssetDatabase.LoadAssetAtPath<PackageMethod>(BuildDefaultPath.GetBuildMethodFloderPath());
+            pkgMethod = AssetDatabase.LoadAssetAtPath<PackagePattern>(BuildDefaultPath.GetBuildPattrenAssetPath());
             if (pkgMethod != null)
             {
                 pkgMethod.MappingPackageData();
@@ -56,6 +65,15 @@ namespace MyAssetBundleEditor
             }
             SaveAndRefresh();
         }
+        /// <summary>
+        /// 根据路径打包所有
+        /// </summary>
+        /// <param name="assetDataPath"></param>
+        public BuildPackPattern()
+        {
+            CreatScriptableObject();
+            SaveAndRefresh();
+        }
 
         private static bool CheckIsVaildFolder(string path)
         {
@@ -72,11 +90,30 @@ namespace MyAssetBundleEditor
 
             return true;
         }
+
+        /// <summary>
+        /// 所有资源采用默认方法打包
+        /// </summary>
+        private static void CreatScriptableObject()
+        {
+            var asset = ScriptableObject.CreateInstance<PackagePattern>();
+            string[] dirs = Directory.GetDirectories(BuildDefaultPath.GetAssetDataPath());
+            foreach (var dir in dirs)
+            {
+                if (CheckIsVaildFolder(dir))
+                {
+                    string name = dir.Substring(dir.LastIndexOf('/') + 1);
+                    asset.packagInfos.Add(SetData(name, BuildDefaultPath.BuildAssetsWithDirectroyName, dir,
+                        GetSerchPattern(name), SearchOption.AllDirectories));
+                }
+            }
+            AssetDatabase.CreateAsset(asset, BuildDefaultPath.GetBuildPattrenAssetPath());
+        }
         
         private static void CreatScriptableObject(string name,string buildMethod,string searchPath,string searchPattern, SearchOption option)
         {
-            string path = BuildDefaultPath.GetBuildMethodFloderPath();
-            var asset = ScriptableObject.CreateInstance<PackageMethod>();
+            string path = BuildDefaultPath.GetBuildPattrenAssetPath();
+            var asset = ScriptableObject.CreateInstance<PackagePattern>();
             asset.packagInfos.Add(SetData(name,buildMethod,searchPath,searchPattern,option));
             AssetDatabase.CreateAsset(asset, path);
         }
