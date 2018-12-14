@@ -1,0 +1,14 @@
+ManifestFileVersion: 0
+CRC: 1398784414
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: manifest
+      Dependencies: {}
+    Info_1:
+      Name: uiprefab
+      Dependencies:
+        Dependency_0: uiatlas
+    Info_2:
+      Name: uiatlas
+      Dependencies: {}

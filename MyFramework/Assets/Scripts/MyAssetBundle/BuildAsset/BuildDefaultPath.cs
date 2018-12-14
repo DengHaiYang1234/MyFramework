@@ -10,6 +10,7 @@ namespace MyAssetBundleEditor
     {
         public const string assetPath = "Assets";
         public const string dataPath = "data";
+        public const string AssetBundleOutputPath = "AssetBundles";
 
         public const string assetsManifestFloder = "Manifest";
         public const string assetsBuildMethodFloder = "BuildPattern";
@@ -47,6 +48,16 @@ namespace MyAssetBundleEditor
                 Path.Combine(Path.GetDirectoryName(assetPath), Path.GetFileNameWithoutExtension(assetPath))
                     .Replace('\\', '/')
                     .ToLower();
+        }
+
+        public static string CreateAssetBundleDirectory()
+        {
+            string outputPath = Path.Combine(AssetBundleOutputPath, ResUtility.GetPlatformName());
+
+            if (Directory.Exists(outputPath))
+                Directory.Delete(outputPath, true);
+
+            return outputPath;
         }
     }
 }

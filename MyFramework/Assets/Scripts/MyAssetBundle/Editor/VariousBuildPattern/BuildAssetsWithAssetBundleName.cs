@@ -20,7 +20,7 @@ namespace MyAssetBundleEditor
         }
 
         /// <summary>
-        /// 将searchPath下的所有文件连同其各自对应的Dependencies都打包在一起
+        /// 将搜索到的所有资源按指定的 AssetBundleName 进行打包。
         /// </summary>
         public override void Build()
         {

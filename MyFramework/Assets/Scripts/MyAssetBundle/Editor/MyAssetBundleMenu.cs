@@ -68,6 +68,20 @@ namespace MyAssetBundleEditor
             List<AssetBundleBuild> builds = BaseBuild.GetBuilds();
             BuildMainfest manifest = new BuildMainfest(builds);
         }
+
+
+        [MenuItem("AssetsBundle/StartBuildAssetBundles", false, 105)]
+        public static void BuildAssetBundles()
+        {
+            if (EditorApplication.isCompiling)
+            {
+                return;
+            }
+            List<AssetBundleBuild> builds = BaseBuild.GetBuilds();
+            BuildMainfest manifest = new BuildMainfest(builds);
+            BuildingAssetBundles.BuildAssetBundles(builds);
+
+        }
     }
 }
 

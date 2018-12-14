@@ -20,7 +20,7 @@ namespace MyAssetBundleEditor
         }
 
         /// <summary>
-        /// 细化打包  一个file只打其自身加依赖文件
+        /// 将搜索到的所有资源按每个资源的文件名进行打包，每个文件一个包。
         /// </summary>
         public override void Build()
         {
