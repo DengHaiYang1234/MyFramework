@@ -21,6 +21,10 @@ namespace Res
             get { return true; }
         }
 
+        public int references { get; private set; }
+
+        public readonly List<MyBundle> dependencies = new List<MyBundle>();
+
         protected Hash128 version;
 
         private AssetBundle _assetBundle;
@@ -57,6 +61,19 @@ namespace Res
                 _assetBundle.Unload(false);
                 _assetBundle = null;
             }
+        }
+
+        public void Retain()
+        {
+            references++;
+        }
+
+        public T LoadAsset<T>(string assetName) where T : Object
+        {
+            if (error != null)
+                return null;
+
+            return assetBundle.LoadAsset(assetName, typeof(T)) as T;
         }
 
     }

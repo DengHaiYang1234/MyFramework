@@ -110,7 +110,6 @@
     <Compile Include="Assets\Scripts\LogDebug\LTDebugOutput.cs" />
     <Compile Include="Assets\Scripts\LogDebug\LTDebugText.cs" />
     <Compile Include="Assets\Scripts\LogDebug\MyDebug.cs" />
-    <Compile Include="Assets\Scripts\LogDebug\SDDebug.cs" />
     <Compile Include="Assets\Scripts\LogDebug\SDRootPath.cs" />
     <Compile Include="Assets\Scripts\Manager\GamerManager.cs" />
     <Compile Include="Assets\Scripts\Manager\HotManager.cs" />
@@ -125,6 +124,7 @@
     <Compile Include="Assets\Scripts\MyAssetBundle\Util\ResFileInfo.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundle\Util\ResUtility.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundleRes\BundleDownloadMode\MyBundleAsync.cs" />
+    <Compile Include="Assets\Scripts\MyAssetBundleRes\BundleDownloadMode\MyBundleWWW.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundleRes\MyAssets.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundleRes\MyBundle.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundleRes\MyBundles.cs" />

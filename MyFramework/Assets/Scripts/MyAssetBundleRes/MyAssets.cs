@@ -43,6 +43,14 @@ namespace Res
 #else
                 Path.Combine(Application.streamingAssetsPath, relativePath) + "/";
 #endif
+            if (MyBundles.Initialize(url))
+            {
+                var bundle = MyBundles.Load("manifest");
+                if (bundle != null)
+                {
+                    using()
+                }
+            }
         }
 
     }

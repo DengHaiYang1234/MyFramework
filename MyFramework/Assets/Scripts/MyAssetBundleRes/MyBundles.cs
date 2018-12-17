@@ -15,13 +15,20 @@ namespace Res
         public static AssetBundleManifest manifest { get; private set; }
 
         internal static readonly Dictionary<string, MyBundle> bundles = new Dictionary<string, MyBundle>();
-
+        
         public static bool Initialize(string path)
         {
             activeVariants = new string[0];
             dataPath = path;
 
-            var request = 
+            var request = LoadInternal(ResUtility.GetPlatformName(), true, false);
+            if (request == null || request.error != null)
+                return false;
+
+            manifest = request.LoadAsset<AssetBundleManifest>("AssetBundleManifest");
+            if (manifest == null)
+                return false;
+            return true;
         }
 
 
@@ -47,12 +54,27 @@ namespace Res
 
                 if (bundle == null)
                 {
-                    if (url.StartsWith("file://")
+                    if (url.StartsWith("file://"))
                     {
-                        
+                        bundle = new MyBundleWWW(url, hash);
                     }
+                    else
+                    {
+                        if (asyncRequest)
+                            bundle = new MyBundleAsync(url, hash);
+                        else
+                            bundle = new MyBundle(url, hash);
+                    }
+
+                    bundle.name = assetBundleName;
+                    bundles.Add(assetBundleName, bundle);
+                    bundle.Load();
+                    if (!isLoadingAssetBundleManifest)
+                        LoadDependencies(bundle, assetBundleName, asyncRequest);
                 }
             }
+            bundle.Retain();
+            return bundle;
         }
 
         static string RemapVariantName(string assetBundleName)
@@ -103,6 +125,21 @@ namespace Res
         public static string GetDataPath(string bundleName)
         {
             return dataPath;
+        }
+
+        static void LoadDependencies(MyBundle bundle,string assetBundleName,bool asyncRequest)
+        {
+            var dependencies = manifest.GetAllDependencies(assetBundleName);
+            if (dependencies.Length > 0)
+            {
+                foreach (var item in dependencies)
+                    bundle.dependencies.Add(LoadInternal(item, false, asyncRequest));
+            }
+        }
+
+        public static MyBundle Load(string assetBundleName)
+        {
+            return LoadInternal(assetBundleName, false, false);
         }
     }
 }

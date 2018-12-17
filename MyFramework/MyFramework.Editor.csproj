@@ -124,12 +124,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="MyFramework.csproj">
-      <Project>{923F6778-6A49-50C5-6274-7EC4B6EB5370}</Project>
-      <Name>MyFramework</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Assets\Editor\Custom\CustomSettings.cs" />
     <Compile Include="Assets\Editor\Package\Test.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundle\Editor\BaseBuild.cs" />
