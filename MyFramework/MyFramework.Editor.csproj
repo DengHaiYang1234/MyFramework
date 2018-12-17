@@ -131,7 +131,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Editor\Custom\CustomSettings.cs" />
-    <Compile Include="Assets\Editor\Package\PackageBuild.cs" />
     <Compile Include="Assets\Editor\Package\Test.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundle\Editor\BaseBuild.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundle\Editor\BuildMainfest.cs" />
@@ -141,7 +140,6 @@
     <Compile Include="Assets\Scripts\MyAssetBundle\Editor\VariousBuildPattern\BuildAssetsWithAssetBundleName.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundle\Editor\VariousBuildPattern\BuildAssetsWithDirectroyName.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundle\Editor\VariousBuildPattern\BuildAssetsWithFilename.cs" />
-    <Compile Include="Assets\Scripts\Tools\Editor\AtlasTools.cs" />
     <Compile Include="Assets\Scripts\UGUI\Editor\DecoratorEditor.cs" />
     <Compile Include="Assets\Scripts\UGUI\Editor\UIRectTransformEditor.cs" />
     <Compile Include="Assets\ToLua\Editor\Extend\ToLua_LuaInterface_EventObject.cs" />

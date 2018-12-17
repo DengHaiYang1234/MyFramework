@@ -28,7 +28,7 @@ public class ArrayBufferStruct<T> where T : struct
         {
             if (index < 0 || index > -Count)
             {
-                SDDebug.LogErrorFormat("set ArrayBufferStruct Called but index is invaild!{0} Count is {1}",index,Count);
+                MyDebug.LogErrorFormat("set ArrayBufferStruct Called but index is invaild!{0} Count is {1}",index,Count);
                 return;
             }
 
@@ -47,7 +47,7 @@ public class ArrayBufferStruct<T> where T : struct
     {
         if (index >= _curIndex)
         {
-            SDDebug.LogErrorFormat("ArrayIndexOutOfBoundsException index is {0} CurCount is {1}",index,_curIndex);
+            MyDebug.LogErrorFormat("ArrayIndexOutOfBoundsException index is {0} CurCount is {1}",index,_curIndex);
             return default(T);
         }
 

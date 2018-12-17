@@ -46,7 +46,6 @@ namespace MyAssetBundleEditor
         {
             packedAssets.Clear();
             builds.Clear();
-            allDependencies.Clear();
 
             builds.Add(BuildManifest());
 
@@ -81,7 +80,7 @@ namespace MyAssetBundleEditor
                 item.Build();
             }
 
-            //BuildAtlas();
+            BuildAtlas();
 
             UnityEditor.EditorUtility.ClearProgressBar();
 
@@ -149,13 +148,19 @@ namespace MyAssetBundleEditor
                     if (!allDependencies.ContainsKey(assetPath))
                         allDependencies[assetPath] = new List<string>();
 
-                    if (!allDependencies[assetPath].Contains(item))
+                    if (!allDependencies[assetPath].Contains(item))  //收集资源依赖情况
                         allDependencies[assetPath].Add(item);
                 }
-
             }
         }
 
+        /// <summary>
+        /// 获取packedAssets之外的资源
+        /// </summary>
+        /// <param name="searchPath"></param>
+        /// <param name="searchPattern"></param>
+        /// <param name="option"></param>
+        /// <returns></returns>
         protected static List<string> GetFilesWithoutPacked(string searchPath,string searchPattern,SearchOption option)
         {
             var files = ResFileInfo.GetFilesWithoutDirectores(searchPath, searchPattern, option);
@@ -171,19 +176,25 @@ namespace MyAssetBundleEditor
             return files;
         }
 
+        /// <summary>
+        /// 对应路径下的依赖文件
+        /// </summary>
+        /// <param name="pathName"></param>
+        /// <returns></returns>
         protected static List<string> GetDependencies(string pathName)
         {
             var assets = AssetDatabase.GetDependencies(pathName);
             List<string> assetNames = new List<string>();
             foreach (var assetPath in assets)
             {
+                //1.剔除prefab  2.去除自身  3.去除已打包资源  4.去除.cs文件
                 if (assetPath.Contains(".prefab") || assetPath.Equals(pathName) || packedAssets.Contains(assetPath) ||
                     assetPath.EndsWith(".cs", StringComparison.CurrentCulture))
                 {
                     continue;
                 }
 
-                if (allDependencies[assetPath].Count == 1)
+                if (allDependencies[assetPath].Count == 1) //排除多依赖文件
                     assetNames.Add(assetPath);
             }
 
@@ -197,9 +208,9 @@ namespace MyAssetBundleEditor
                 var assetsPath = item.assetNames;
                 foreach (var assetPath in assetsPath)
                 {
-                    var importer = AssetImporter.GetAtPath(assetPath);
-                    if (importer != null)
+                    if (assetPath.IndexOf(BuildDefaultPath.assetsAtlasFloder) != -1)
                     {
+                        var importer = AssetImporter.GetAtPath(assetPath);
                         var ti = importer as TextureImporter;
                         if (ti.textureType == TextureImporterType.Sprite)
                         {
@@ -227,9 +238,10 @@ namespace MyAssetBundleEditor
         
         private static AssetBundleBuild BuildManifest()
         {
+            string manifestAssetsName = BuildDefaultPath.GetManifestAssetPath();
             AssetBundleBuild build = new AssetBundleBuild();
-            build.assetBundleName = BuildDefaultPath.assetManifestName;
-            build.assetNames = new string[] { BuildDefaultPath .GetManifestAssetPath()};
+            build.assetBundleName = manifestAssetsName.Substring(0,manifestAssetsName.LastIndexOf('.')).ToLower();
+            build.assetNames = new string[] { manifestAssetsName };
             return build;
         }
     }

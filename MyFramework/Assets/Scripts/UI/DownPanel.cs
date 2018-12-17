@@ -44,7 +44,7 @@ namespace MyFramework
 
         public static void SetSprite(string name)
         {
-            sprite.sprite = ResMain.Instance.GetSpriteByName(name);
+            //sprite.sprite = ResMain.Instance.GetSpriteByName(name);
         }
 
     }

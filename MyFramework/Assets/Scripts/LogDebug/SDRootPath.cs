@@ -48,7 +48,7 @@ namespace MyFramework
             }
             else
             {
-                SDDebug.LogErrorFormat("_rootPath set error ! set to {0}!", Application.dataPath);
+                MyDebug.LogErrorFormat("_rootPath set error ! set to {0}!", Application.dataPath);
                 _rootPath = Application.dataPath;
             }
 

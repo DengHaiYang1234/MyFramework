@@ -8,14 +8,13 @@ namespace MyAssetBundleEditor
     public class PackageManifest : ScriptableObject
     {
         [SerializeField] public List<AssetManifestInfo> assetInfos = new List<AssetManifestInfo>();
-
     }
 
     [Serializable]
     public class AssetManifestInfo
     {
-        public string AssetName;
-        public List<string> Infos;
+        public string bundle;
+        public List<string> assets;
     }
 }
 

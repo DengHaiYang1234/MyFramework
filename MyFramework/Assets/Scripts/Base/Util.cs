@@ -38,17 +38,17 @@ namespace MyFramework
 
         public static void Log(object str)
         {
-            SDDebug.Log(str);
+            MyDebug.Log(str);
         }
 
         public static void LogErr(object str)
         {
-            SDDebug.LogError(str);
+            MyDebug.LogError(str);
         }
 
         public static void LogWarn(object str)
         {
-            SDDebug.LogWarning(str);
+            MyDebug.LogWarning(str);
         }
         /// <summary>
         /// 编写文件的MD5校验码

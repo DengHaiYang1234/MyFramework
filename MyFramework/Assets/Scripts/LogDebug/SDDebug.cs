@@ -6,7 +6,7 @@
 // 日志开关
 // DEBUG_LEVEL_NORMAL;DEBUG_LEVEL_WARNING;DEBUG_LEVEL_ERROR;DEBUG_LEVEL_EXCEPTION;DEBUG_LEVEL_ASSERT;
 /* 
- 注：SDDebug也可称为Debug管理.使用时，若不想在哪个平台看到打印日志，只需在PlayerSetting --> Ohter Settings -->scripting define symbols中不添加
+ 注：MyDebug也可称为Debug管理.使用时，若不想在哪个平台看到打印日志，只需在PlayerSetting --> Ohter Settings -->scripting define symbols中不添加
     （DEBUG_LEVEL_NORMAL;DEBUG_LEVEL_WARNING;DEBUG_LEVEL_ERROR;DEBUG_LEVEL_EXCEPTION;DEBUG_LEVEL_ASSERT;）即可。若想使用，则需添加.
  */
 
@@ -20,7 +20,7 @@ using UnityEngine;
 /// <summary>
 /// Debug输出类
 /// </summary>
-public static class SDDebug
+public static class MyDebug
 {
     private static List<string> _outPutLog = new List<string>();
     private static List<string> _outPutLogBuffer = new List<string>();
@@ -165,7 +165,7 @@ public static class SDDebug
 
     private static string FormatLog(string type, string content)
     {
-        return string.Format("SDDebug##{2}:{0}::{1}", DateTime.Now, content, type);
+        return string.Format("MyDebug##{2}:{0}::{1}", DateTime.Now, content, type);
     }
 
     private enum ELogType

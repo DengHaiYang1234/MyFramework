@@ -77,7 +77,7 @@ public class LTDebugOutput : MonoBehaviour
         }
 
         //保存Debug至文件
-        SDDebug.Init(_outPutPath);
+        MyDebug.Init(_outPutPath);
         #endregion
     }
 

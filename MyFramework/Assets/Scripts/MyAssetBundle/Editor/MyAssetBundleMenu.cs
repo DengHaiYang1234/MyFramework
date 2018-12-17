@@ -70,7 +70,7 @@ namespace MyAssetBundleEditor
         }
 
 
-        [MenuItem("AssetsBundle/StartBuildAssetBundles", false, 105)]
+        [MenuItem("MyAssetsBundle/BuildAssetBundles", false, 105)]
         public static void BuildAssetBundles()
         {
             if (EditorApplication.isCompiling)

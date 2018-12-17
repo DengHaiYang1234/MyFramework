@@ -47,7 +47,7 @@ namespace MyFramework
         {
             if (_states.ContainsKey(state.id))
             {
-                SDDebug.LogErrorFormat("alread contins state:" + state.id.ToString());
+                MyDebug.LogErrorFormat("alread contins state:" + state.id.ToString());
             }
             else
             {
@@ -67,7 +67,7 @@ namespace MyFramework
             if (_states.TryGetValue(id, out state))
                 _states.Remove(id);
             else
-                SDDebug.LogErrorFormat("not exist state:" + id.ToString());
+                MyDebug.LogErrorFormat("not exist state:" + id.ToString());
 
             return _states.Count;
         }
@@ -123,7 +123,7 @@ namespace MyFramework
                 }
                 return false;
             }
-            SDDebug.LogError("ChangeState  not exist state id:" + id.ToString());
+            MyDebug.LogError("ChangeState  not exist state id:" + id.ToString());
             return false;
         }
 

@@ -60,9 +60,9 @@ namespace MyFramework
     //        {
     //            if (FSM.currState != null)
     //            {
-    //                SDDebug.LogError("退出当前状态：" +  FSM.currState.id);
+    //                MyDebug.LogError("退出当前状态：" +  FSM.currState.id);
     //                FSM.ExitCurrState();
-    //                SDDebug.LogError("当前状态：" + FSM.currState);
+    //                MyDebug.LogError("当前状态：" + FSM.currState);
     //            }
     //        }
     //        else if (walk && dead)

@@ -32,8 +32,8 @@ namespace MyAssetBundleEditor
 
                 var manifest = new AssetManifestInfo()
                 {
-                    AssetName = name,
-                    Infos = infoList,
+                    bundle = build.assetBundleName,
+                    assets = infoList,
                 };
 
                 list.Add(manifest);

@@ -59,7 +59,7 @@ public class Loom : MonoBehaviour
         {
             if (Current._actions.Count >= Current._actions.MaxSize)  //该消息的绑定的回调数量大于总数量
             {
-                SDDebug.LogErrorFormat(
+                MyDebug.LogErrorFormat(
                     "QueueOnMainThread called but Current._actions.Count{0} >= Current._actions.MaxSize{1} !",
                     Current._actions.Count, Current._actions.MaxSize);
                 return;
@@ -92,7 +92,7 @@ public class Loom : MonoBehaviour
             }
             catch(Exception e)
             {
-                SDDebug.LogException(e);
+                MyDebug.LogException(e);
             }
         }
     }

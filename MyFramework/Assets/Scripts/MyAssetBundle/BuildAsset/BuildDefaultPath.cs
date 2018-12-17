@@ -12,7 +12,7 @@ namespace MyAssetBundleEditor
         public const string dataPath = "data";
         public const string AssetBundleOutputPath = "AssetBundles";
 
-        public const string assetsManifestFloder = "Manifest";
+        public const string assetsManifestFloder = "ManifestDir";
         public const string assetsBuildMethodFloder = "BuildPattern";
         public const string assetsAtlasFloder = "[UIAtlas]";
         public const string assetsPrefabFloder = "[UIPrefab]";
@@ -52,7 +52,7 @@ namespace MyAssetBundleEditor
 
         public static string CreateAssetBundleDirectory()
         {
-            string outputPath = Path.Combine(AssetBundleOutputPath, ResUtility.GetPlatformName());
+            string outputPath = Path.Combine(ResUtility.AssetBundlesOutputPath, ResUtility.GetPlatformName());
 
             if (Directory.Exists(outputPath))
                 Directory.Delete(outputPath, true);

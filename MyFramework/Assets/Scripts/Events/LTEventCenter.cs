@@ -39,7 +39,7 @@ namespace MyFramework
                 //已有相同的回调
                 if (findList.Contains(action))
                 {
-                    SDDebug.LogErrorFormat("{0}已存在同样时间注册{1}，本次注册取消", notifyID, action);
+                    MyDebug.LogErrorFormat("{0}已存在同样时间注册{1}，本次注册取消", notifyID, action);
                 }
                 else
                 {
@@ -92,7 +92,7 @@ namespace MyFramework
 
             if (!bCall)
             {
-                SDDebug.LogErrorFormat("Dispatch called SendNotify is successd! but not found this callBack");
+                MyDebug.LogErrorFormat("Dispatch called SendNotify is successd! but not found this callBack");
             }
         }
 
@@ -109,7 +109,7 @@ namespace MyFramework
             }
             catch(Exception e)
             {
-                SDDebug.LogException(e);
+                MyDebug.LogException(e);
             }
         }
 

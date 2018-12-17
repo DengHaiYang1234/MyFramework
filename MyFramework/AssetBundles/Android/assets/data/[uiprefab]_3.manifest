@@ -1,0 +1,39 @@
+ManifestFileVersion: 0
+CRC: 1238476394
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 12587c34215b35f247bf7266b8e95ddd
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 58a158943c69964ce8d5397a7a0dac56
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 114
+  Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+Assets:
+- Assets/data/[UIPrefab]/DownLoadPanel.prefab
+- Assets/data/[UIPrefab]/Test.prefab
+- Assets/data/[UIPrefab]/Image.prefab
+Dependencies:
+- D:/MyFramework/MyFramework/AssetBundles/Android/assets/data/[uiatlas]/test/_source_2

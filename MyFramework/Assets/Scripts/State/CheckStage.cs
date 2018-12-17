@@ -23,7 +23,7 @@ namespace MyFramework
         public override void OnEnter(StateBase<FrameworkMain> exitState, object param)
         {
             base.OnEnter(exitState, param);
-            SDDebug.LogError("CheckStage  OnEnter!  CheckStage  OnEnter!");
+            MyDebug.LogError("CheckStage  OnEnter!  CheckStage  OnEnter!");
             hotFix.Init();
             bool isExists = Directory.Exists(Util.DataPath) && Directory.Exists(Util.DataPath + "lua/") && File.Exists(Util.DataPath + "files.txt");
             if (isExists || AppConst.DebugMode)
@@ -56,7 +56,7 @@ namespace MyFramework
 
         public void OnCheckUpdateComplete()
         {
-            res.Initialize();
+            //res.Initialize();
 
             Owner.FSM.ChangeState((int) MyStage.gameUI);
         }

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 8c4d561bea3143f4ab62cbc3f0f5ff40
-timeCreated: 1544696262
+timeCreated: 1545048869
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName: {}
@@ -78,7 +78,7 @@ TextureImporter:
     serializedVersion: 2
     sprites: []
     outline: []
-  spritePackingTag: .assetbundle
+  spritePackingTag: assets_data_[uiatlas]_test__source_2
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -25,12 +25,12 @@ namespace MyFramework
     //        base.OnEnter(exitState, param);
     //        if (!_hasInit)
     //        {
-    //            SDDebug.LogError("角色死亡-进入");
+    //            MyDebug.LogError("角色死亡-进入");
     //            _hasInit = true;
     //        }
     //        else
     //        {
-    //            SDDebug.LogError("状态已开启:" + EStage_Test.Dead.ToString());
+    //            MyDebug.LogError("状态已开启:" + EStage_Test.Dead.ToString());
     //        }
     //    }
 
@@ -40,11 +40,11 @@ namespace MyFramework
     //        base.OnRunning(param);
     //        if (_hasInit)
     //        {
-    //            SDDebug.LogError("角色死亡-执行中");
+    //            MyDebug.LogError("角色死亡-执行中");
     //        }
     //        else
     //        {
-    //            SDDebug.LogError("状态未开启:" + EStage_Test.Dead.ToString());
+    //            MyDebug.LogError("状态未开启:" + EStage_Test.Dead.ToString());
     //        }
     //    }
 
@@ -53,12 +53,12 @@ namespace MyFramework
     //        base.OnExit(param);
     //        if (_hasInit)
     //        {
-    //            SDDebug.LogError("角色死亡-退出");
+    //            MyDebug.LogError("角色死亡-退出");
     //            _hasInit = false;
     //        }
     //        else
     //        {
-    //            SDDebug.LogError("状态未开启:" + EStage_Test.Dead.ToString());
+    //            MyDebug.LogError("状态未开启:" + EStage_Test.Dead.ToString());
     //        }
     //    }
     //}

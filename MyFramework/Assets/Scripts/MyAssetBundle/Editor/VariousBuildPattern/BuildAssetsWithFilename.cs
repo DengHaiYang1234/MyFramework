@@ -20,7 +20,8 @@ namespace MyAssetBundleEditor
         }
 
         /// <summary>
-        /// 将搜索到的所有资源按每个资源的文件名进行打包，每个文件一个包。
+        /// 将搜索到的所有资源按每个资源的文件名进行打包，每个文件一个包。(将searchPath路径下的。每一个文件进行依次打包)
+        /// 粒度最小
         /// </summary>
         public override void Build()
         {

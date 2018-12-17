@@ -21,7 +21,8 @@ namespace MyAssetBundleEditor
 
 
         /// <summary>
-        /// 将搜索到的所有资源按资源所在的路径进行打包，同一个路径下的所有资源会被打到一个包。
+        /// 将搜索到的所有资源按资源所在的路径进行打包，同一个路径下的所有资源会被打到一个包。(将searchPath路径下的按各自目录结构打成各自的包)
+        /// 粒度适中
         /// </summary>
         public override void Build()
         {
@@ -36,7 +37,7 @@ namespace MyAssetBundleEditor
                 }
 
                 var path = Path.GetDirectoryName(item);
-                if (!bundles.ContainsKey(path))
+                if (!bundles.ContainsKey(path))   //按目录添加
                 {
                     bundles[path] = new List<string>();
                 }

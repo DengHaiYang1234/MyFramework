@@ -12,8 +12,6 @@ namespace MyAssetBundleEditor
         {
             string output = BuildDefaultPath.CreateAssetBundleDirectory();
 
-
-       
             if (!Directory.Exists(output))
                 Directory.CreateDirectory(output);
 

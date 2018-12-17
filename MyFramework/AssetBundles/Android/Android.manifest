@@ -1,14 +1,17 @@
 ManifestFileVersion: 0
-CRC: 1398784414
+CRC: 3786050570
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
       Name: manifest
       Dependencies: {}
     Info_1:
-      Name: uiprefab
+      Name: assets/data/[uiprefab]_3
       Dependencies:
-        Dependency_0: uiatlas
+        Dependency_0: assets/data/[uiatlas]/test/_source_2
     Info_2:
-      Name: uiatlas
+      Name: assets/data/[uiatlas]/test/_source_2
+      Dependencies: {}
+    Info_3:
+      Name: assets/data/[uiatlas]/test1/_source_1
       Dependencies: {}

@@ -75,7 +75,7 @@ namespace MyFramework
         //初始状态机
         private void InitFsm()
         {
-            SDDebug.LogError("初始状态机  初始状态机  初始状态机");
+            MyDebug.LogError("初始状态机  初始状态机  初始状态机");
 
             _gameStateFsm.Add(new CheckStage(this));
             _gameStateFsm.Add(new GameUIState(this));

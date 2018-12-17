@@ -93,7 +93,7 @@ namespace MyFramework
             updateWord = "版本检测中：           " + (www.progress * 100).ToString() + "%";
             updatePercent = www.progress;
 
-            SDDebug.Log(updateWord);
+            MyDebug.Log(updateWord);
 
             yield return www;
 
@@ -174,7 +174,7 @@ namespace MyFramework
                         if(isCheckVer && !canUpdate)
                         {
                             updateWord = "更新检测完毕，进入游戏！";
-                            SDDebug.Log(updateWord);
+                            MyDebug.Log(updateWord);
                             updateWord = message;
                             updatePercent = 1;
                             //DownPanel.SetProgressAndFile(updatePercent, updateWord);
@@ -213,7 +213,7 @@ namespace MyFramework
                         updateWord = "开始下载资源  " + i.ToString() + "/" + files.Length.ToString() +
                                      "                                " + Math.Ceiling(updatePercent*100) + "%";
                         //DownPanel.SetProgressAndFile(updatePercent, updateWord);
-                        SDDebug.Log(updateWord);
+                        MyDebug.Log(updateWord);
                         yield return new WaitForEndOfFrame();
                     }
                 }
@@ -230,7 +230,7 @@ namespace MyFramework
             updatePercent = 100f;
             updateWord = "更新游戏完成         " + files.Length.ToString() + "/" + files.Length.ToString() +
                          "                                100%";
-            SDDebug.Log(updateWord);
+            MyDebug.Log(updateWord);
             //DownPanel.SetProgressAndFile(updatePercent, updateWord);
             yield return new WaitForEndOfFrame();
             //Util.LogErr("更新完成!!!!!");
@@ -255,14 +255,14 @@ namespace MyFramework
                 File.Delete(outfile);
 
             updateWord = "开始解压资源...";
-            SDDebug.Log(updateWord);
+            MyDebug.Log(updateWord);
             //Util.Log(message);
 
             if (Application.platform == RuntimePlatform.Android)
             {
                 WWW www = new WWW(infile);
                 updateWord = "版本检测中   " + (www.progress*100).ToString() + "%";
-                SDDebug.Log(updateWord);
+                MyDebug.Log(updateWord);
                 updatePercent = www.progress;
                 //DownPanel.SetProgressAndFile(updatePercent, updateWord);
                 yield return www;
@@ -291,7 +291,7 @@ namespace MyFramework
                 outfile = dataPath + fs[0];
 
                 updateWord = "正在解包文件:>" + fs[0];
-                SDDebug.Log(updateWord);
+                MyDebug.Log(updateWord);
                 //Util.Log(message);
 
                 string dir = Path.GetDirectoryName(outfile);
@@ -317,7 +317,7 @@ namespace MyFramework
 
                 updatePercent = (float) index/files.Length;
                 updateWord = "解压文件中          " + Math.Ceiling((updatePercent*100)) + "%";
-                SDDebug.Log(updateWord);
+                MyDebug.Log(updateWord);
                 //DownPanel.SetProgressAndFile(updatePercent, updateWord);
                 yield return new WaitForEndOfFrame();
             }
@@ -330,7 +330,7 @@ namespace MyFramework
         void OnUpdateFailed(string file)
         {
             updateWord = "更新失败：=======================<" + file + ">";
-            SDDebug.Log(updateWord);
+            MyDebug.Log(updateWord);
             //Debug.LogError(message);
             //Util.LogErr(message);
             return;
@@ -346,7 +346,7 @@ namespace MyFramework
         void OnUpdateMessageDownLoad(string file)
         {
             updateWord = "更新下载：=======================<" + file + ">";
-            SDDebug.Log(updateWord);
+            MyDebug.Log(updateWord);
             //Debug.LogError(message);
             //Util.LogErr(message);
             return;
@@ -354,7 +354,7 @@ namespace MyFramework
 
         public void ShowDownOrExtractLog(string log)
         {
-            SDDebug.Log(log);
+            MyDebug.Log(log);
         }
 
         /// <summary>
