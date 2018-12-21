@@ -46,7 +46,7 @@ namespace MyAssetBundleEditor
         {
             packedAssets.Clear();
             builds.Clear();
-
+            //allDependencies.Clear();
             builds.Add(BuildManifest());
 
             string packagePatternPath = BuildDefaultPath.GetBuildPattrenAssetPath();

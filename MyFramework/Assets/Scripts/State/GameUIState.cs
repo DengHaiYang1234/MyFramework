@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Res;
 
 
 namespace MyFramework
@@ -22,8 +23,15 @@ namespace MyFramework
         public override void OnEnter(StateBase<FrameworkMain> exitState, object param)
         {
             base.OnEnter(exitState, param);
+            if (!MyAssets.Initialize())
+            {
+                MyDebug.LogErrorFormat("MyAssets.Initialize failed!");
+            }
+
+            LoadInitPrefab();
             //ResMain.Instance.CacheAtlas();
             //ResMain.Instance.CacheUIPrefab();
+
             FrameworkMain.Instance.Run = true;
         }
         
@@ -47,26 +55,31 @@ namespace MyFramework
         private void ShowGameTestUI()
         {
             string path = "DownLoadPanel";
-            LoadInitPrefab(path);
+            //LoadInitPrefab(path);
             lua.InitStart();
             lua.DoFile("Main.lua"); //加载文件，编译文件，并且返回一个函数，不运行。 
 
             Util.CallMethod("Main", "start");
             Util.CallMethod("Main", "SetValue");
         }
-
-
-
-        void LoadInitPrefab(string name)
+        
+        void LoadInitPrefab()
         {
-            //GameObject obj = ResMain.Instance.GetUIPrefab(name);
-            ////GameObject obj = res.CreatGamePrefab(path);
-            //obj.AddComponent<DownPanel>();
-            //var parent = GameObject.Find("SceneUI/layer1").gameObject;
-            //obj.transform.parent = parent.transform;
-            //obj.transform.localPosition = Vector3.zero;
-            //obj.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
-            //obj.transform.localScale = Vector3.one;
+            var asset = MyAssets.Load<GameObject>("DownLoadPanel");
+            if (asset != null)
+            {
+                var prefab = asset.asset;
+                if (prefab != null)
+                {
+                    var go = GameObject.Instantiate(prefab) as GameObject;
+                    go.AddComponent<DownPanel>();
+                    var parent = GameObject.Find("SceneUI/layer1").gameObject;
+                    go.transform.parent = parent.transform;
+                    go.transform.localPosition = Vector3.zero;
+                    go.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+                    go.transform.localScale = Vector3.one;
+                }
+            }
         }
     }
 }

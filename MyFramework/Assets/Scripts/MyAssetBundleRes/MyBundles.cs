@@ -45,7 +45,7 @@ namespace Res
             }
 
             var url = GetDataPath(assetBundleName) + assetBundleName;
-            MyBundle bundle;
+            MyBundle bundle = null;
             if (!bundles.TryGetValue(assetBundleName, out bundle))
             {
                 var hash = isLoadingAssetBundleManifest
@@ -137,6 +137,11 @@ namespace Res
             }
         }
 
+        /// <summary>
+        /// 记载BUndle
+        /// </summary>
+        /// <param name="assetBundleName"> assetBundle名称(注意是包里的名称) </param>
+        /// <returns></returns>
         public static MyBundle Load(string assetBundleName)
         {
             return LoadInternal(assetBundleName, false, false);

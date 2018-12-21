@@ -125,6 +125,9 @@
     <Compile Include="Assets\Scripts\MyAssetBundle\Util\ResUtility.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundleRes\BundleDownloadMode\MyBundleAsync.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundleRes\BundleDownloadMode\MyBundleWWW.cs" />
+    <Compile Include="Assets\Scripts\MyAssetBundleRes\LoadAssetMode\LoadBundleAsset.cs" />
+    <Compile Include="Assets\Scripts\MyAssetBundleRes\Manifest.cs" />
+    <Compile Include="Assets\Scripts\MyAssetBundleRes\MyAsset.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundleRes\MyAssets.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundleRes\MyBundle.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundleRes\MyBundles.cs" />

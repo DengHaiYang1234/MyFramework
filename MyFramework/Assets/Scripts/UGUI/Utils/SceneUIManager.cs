@@ -22,9 +22,11 @@ namespace MyFramework
             LuaDataAgent.UILayers.Layer_4 = layer4;
             LuaDataAgent.UILayers.Layer_5 = layer5;
             LuaDataAgent.UILayers.Layer_Mask = mask;
-            Canvas can = this.gameObject.GetComponent<Canvas>();
-            can.worldCamera = FrameworkMain.Instance.UiCamera;
+            //Canvas can = this.gameObject.GetComponent<Canvas>();
+            //can.worldCamera = FrameworkMain.Instance.UiCamera;
         }
+
+        
 
         void ChgReferenceResolution()
         {

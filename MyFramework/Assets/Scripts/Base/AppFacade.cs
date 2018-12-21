@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using MyFramework;
 
-
 namespace MyFramework
 {
     /// <summary>

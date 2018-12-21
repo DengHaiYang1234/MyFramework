@@ -79,8 +79,25 @@ namespace MyAssetBundleEditor
             }
             List<AssetBundleBuild> builds = BaseBuild.GetBuilds();
             BuildMainfest manifest = new BuildMainfest(builds);
-            BuildingAssetBundles.BuildAssetBundles(builds);
+            if (manifest.BuildManifestIsSuccess)
+            {
+                BuildingAssetBundles.BuildAssetBundles(builds);
+            }
+            else
+            {
+                Debug.LogError("manifest打包失败。请检查错误!");
+            }
+        }
 
+        [MenuItem("MyAssetsBundle/BuildLuaAssetBundles", false, 105)]
+        public static void BuildLuaAsset()
+        {
+            if (EditorApplication.isCompiling)
+            {
+                return;
+            }
+
+            BuildLuaAssetBundle.BuildAndroidResource();
         }
     }
 }

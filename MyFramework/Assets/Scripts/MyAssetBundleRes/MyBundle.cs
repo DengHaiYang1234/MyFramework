@@ -76,6 +76,19 @@ namespace Res
             return assetBundle.LoadAsset(assetName, typeof(T)) as T;
         }
 
+        public Object LoadAsset(string assetName, System.Type assetType)
+        {
+            return assetBundle.LoadAsset(assetName, assetType);
+        }
+
+        public void Release()
+        {
+            if (--references < 0)
+            {
+                MyDebug.LogErrorFormat("references < 0");
+            }
+        }
+
     }
 }
 
