@@ -19,7 +19,7 @@ namespace MyAssetBundleEditor
 
             if (builds == null || builds.Count == 0)
             {
-                Debug.LogError("BuildAssetBundles is Called. But builds == null || builds.Count == 0 !   Check!!!");
+                Debug.LogError("BuildAssetBundles is Called. But builds == null || builds.Count == 0 !   检查错误!!!");
             }
             else
             {

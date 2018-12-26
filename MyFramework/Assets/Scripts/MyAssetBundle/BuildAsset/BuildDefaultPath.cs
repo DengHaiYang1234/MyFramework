@@ -27,6 +27,11 @@ namespace MyAssetBundleEditor
         public const string BuildAssetsWithDirectroyName = "BuildAssetsWithDirectroyName";//最大粒度打包.直接按文件夹打包
         public const string BuildAssetsWithFilename = "BuildAssetsWithFilename";//小粒度.适用于prefab打包。  将prefab与其依赖的资源共同打包
 
+        public static string GetManifestAsset
+        {
+            get { return string.Format("{0}{1}", assetManifestName, assetSuffix); }
+        }
+
         public static string GetAssetDataPath()
         {
             return string.Format("{0}/{1}/",assetPath,dataPath);
@@ -41,6 +46,8 @@ namespace MyAssetBundleEditor
         {
             return string.Format("{0}/{1}/{2}/{3}{4}", assetPath, dataPath, assetsManifestFloder, assetManifestName, assetSuffix);
         }
+
+
 
         public static string BuildAssetBunldNameWithAssetPath(string assetPath)
         {

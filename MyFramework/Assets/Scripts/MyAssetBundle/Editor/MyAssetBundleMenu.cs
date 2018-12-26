@@ -7,47 +7,48 @@ namespace MyAssetBundleEditor
 {
     public class MyAssetBundleMenu
     {
-        [MenuItem("Assets/MyAssetBundle/Build Manifest")]
-        public static void BuildAssetManifest()
+        //[MenuItem("Assets/CheckPackagingMethod/BuildAssetsWithFilename",false,4)]
+        //public static void SetManifestWithBuildAssetsWithFilename()
+        //{
+        //    if (EditorApplication.isCompiling)
+        //    {
+        //        return;
+        //    }
+        //    BuildPackPattern method = new BuildPackPattern(Selection.activeObject,BuildType.BuildAssetsWithFilename);
+        //}
+
+        //[MenuItem("Assets/CheckPackagingMethod/BuildAssetsWithDirectroyName",false,5)]
+        //public static void SetManifestWithBuildAssetsWithDirectroyName()
+        //{
+        //    if (EditorApplication.isCompiling)
+        //    {
+        //        return;
+        //    }
+        //    BuildPackPattern method = new BuildPackPattern(Selection.activeObject, BuildType.BuildAssetsWithDirectroyName);
+        //}
+
+        //[MenuItem("Assets/CheckPackagingMethod/BuildAssetsWithAssetBundleName",false,6)]
+        //public static void SetManifestWithBuildAssetsWithAssetBundleName()
+        //{
+        //    if (EditorApplication.isCompiling)
+        //    {
+        //        return;
+        //    }
+        //    BuildPackPattern method = new BuildPackPattern(Selection.activeObject, BuildType.BuildAssetsWithAssetBundleName);
+        //}
+
+        [MenuItem("Assets/CheckBuildPattern/ShowOrUpdateBuildPattern", false, 6)]
+        public static void GetOrUpdatePattern()
         {
             if (EditorApplication.isCompiling)
             {
                 return;
             }
-            List<AssetBundleBuild> bundles;
+
+            BuildPackPattern method = new BuildPackPattern();
         }
 
-        [MenuItem("Assets/CheckPackagingMethod/BuildAssetsWithFilename",false,4)]
-        public static void SetManifestWithBuildAssetsWithFilename()
-        {
-            if (EditorApplication.isCompiling)
-            {
-                return;
-            }
-            BuildPackPattern method = new BuildPackPattern(Selection.activeObject,BuildDefaultPath.BuildAssetsWithFilename);
-        }
-
-        [MenuItem("Assets/CheckPackagingMethod/BuildAssetsWithDirectroyName",false,5)]
-        public static void SetManifestWithBuildAssetsWithDirectroyName()
-        {
-            if (EditorApplication.isCompiling)
-            {
-                return;
-            }
-            BuildPackPattern method = new BuildPackPattern(Selection.activeObject, BuildDefaultPath.BuildAssetsWithDirectroyName);
-        }
-
-        [MenuItem("Assets/CheckPackagingMethod/BuildAssetsWithAssetBundleName",false,6)]
-        public static void SetManifestWithBuildAssetsWithAssetBundleName()
-        {
-            if (EditorApplication.isCompiling)
-            {
-                return;
-            }
-            BuildPackPattern method = new BuildPackPattern(Selection.activeObject, BuildDefaultPath.BuildAssetsWithAssetBundleName);
-        }
-
-        [MenuItem("Assets/CheckPackagingMethod/ClearPackageMethod",false,7)]
+        [MenuItem("Assets/CheckBuildPattern/ClearBuildPattern", false,7)]
         public static void ClearPackageMethod()
         {
             if (EditorApplication.isCompiling)
@@ -66,7 +67,14 @@ namespace MyAssetBundleEditor
             }
 
             List<AssetBundleBuild> builds = BaseBuild.GetBuilds();
-            BuildMainfest manifest = new BuildMainfest(builds);
+            if (builds == null)
+            {
+                Debug.LogError("manifest打包失败。请检查错误!");
+            }
+            else
+            {
+                BuildMainfest manifest = new BuildMainfest(builds);
+            }
         }
 
 
@@ -79,7 +87,7 @@ namespace MyAssetBundleEditor
             }
             List<AssetBundleBuild> builds = BaseBuild.GetBuilds();
             BuildMainfest manifest = new BuildMainfest(builds);
-            if (manifest.BuildManifestIsSuccess)
+            if (manifest.BuildManifestIsSuccess && builds != null)
             {
                 BuildingAssetBundles.BuildAssetBundles(builds);
             }
@@ -89,16 +97,16 @@ namespace MyAssetBundleEditor
             }
         }
 
-        [MenuItem("MyAssetsBundle/BuildLuaAssetBundles", false, 105)]
-        public static void BuildLuaAsset()
-        {
-            if (EditorApplication.isCompiling)
-            {
-                return;
-            }
+        //[MenuItem("MyAssetsBundle/BuildLuaAssetBundles", false, 105)]
+        //public static void BuildLuaAsset()
+        //{
+        //    if (EditorApplication.isCompiling)
+        //    {
+        //        return;
+        //    }
 
-            BuildLuaAssetBundle.BuildAndroidResource();
-        }
+        //    BuildLuaAssetBundle.BuildAndroidResource();
+        //}
     }
 }
 

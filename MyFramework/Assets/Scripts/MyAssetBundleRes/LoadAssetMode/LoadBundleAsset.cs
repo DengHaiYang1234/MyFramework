@@ -7,7 +7,7 @@ namespace Res
 {
     public class LoadBundleAsset : MyAsset
     {
-        protected MyBundle request;
+        protected MyBundle bundle;
 
         public LoadBundleAsset(string path,System.Type type) : base(path,type)
         {
@@ -16,8 +16,8 @@ namespace Res
 
         protected override void OnLoad()
         {
-            request = MyBundles.Load(MyAssets.GetBundleByAssetName(assetName));
-            asset = request.LoadAsset(MyAssets.GetAssetPathByAssetName(assetName), assetType);
+            bundle = MyBundles.Load(MyAssets.GetBundleByAssetName(assetName));
+            asset = bundle.LoadAsset(MyAssets.GetAssetPathByAssetName(assetName), assetType);
         }
     }
 }

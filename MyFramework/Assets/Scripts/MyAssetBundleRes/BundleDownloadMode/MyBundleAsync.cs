@@ -22,7 +22,8 @@ namespace Res
             _request = AssetBundle.LoadFromFileAsync(path);
             if (_request == null)
             {
-                MyDebug.LogErrorFormat("LoadFromFileAsync is falied. path:{0}",path);
+                error = path + "LoadFromFileAsync is falied. path";
+                MyDebug.LogErrorFormat("LoadFromFileAsync is falied. path:{0}", path);
             }
         }
 
@@ -36,7 +37,7 @@ namespace Res
             }
         }
 
-        internal MyBundleAsync(string url,Hash128 hash):base(url,hash)
+        public MyBundleAsync(string url,Hash128 hash):base(url,hash)
         {
             
         }

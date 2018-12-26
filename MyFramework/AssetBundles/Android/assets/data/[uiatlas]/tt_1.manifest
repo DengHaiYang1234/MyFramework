@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 3433786552
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 9dac103b74647f54cca266dc55e070e2
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 36c33a819640bead83b84b1645a12e6d
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/data/[UIAtlas]/TT/BG_1.png
+Dependencies: []

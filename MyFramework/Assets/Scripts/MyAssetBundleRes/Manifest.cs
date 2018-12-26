@@ -15,6 +15,17 @@ namespace Res
         public string[] allAssets { get; private set; }
         public string[] allBundles { get; private set; }
 
+        private bool isInit = false;
+
+        public bool IsInit
+        {
+            get { return isInit; }
+            set { isInit = value; }
+
+        }
+
+        
+
         void Init()
         {
             assetsMaps.Clear();
@@ -24,6 +35,7 @@ namespace Res
 
             allAssets = new string[0];
             allBundles = new string[0];
+            isInit = true;
         }
         
         public void Load(PackageManifest manifestAsset)

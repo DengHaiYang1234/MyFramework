@@ -6,6 +6,9 @@ using UnityEngine;
 
 namespace MyAssetBundleEditor
 {
+    /// <summary>
+    /// 构造打包数据
+    /// </summary>
     public class PackagePattern : ScriptableObject
     {
         [SerializeField]
@@ -55,10 +58,10 @@ namespace MyAssetBundleEditor
     public class BuildPackageInfo
     {
         public string assetName;
-        public string BuildType;
+        public BuildType BuildType;
         public string searchPath;
         public string searchPattern;
-        public SearchOption option;
+        public SearchOption searchOption;
         public string bundleName;
     }
 }

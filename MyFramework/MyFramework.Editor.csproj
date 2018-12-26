@@ -131,9 +131,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Editor\Custom\CustomSettings.cs" />
-    <Compile Include="Assets\Editor\Package\Test.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundle\Editor\BaseBuild.cs" />
-    <Compile Include="Assets\Scripts\MyAssetBundle\Editor\BuildLuaAssetBundle.cs" />
+    <Compile Include="Assets\Scripts\MyAssetBundle\Editor\BuildLuaAssetBundles.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundle\Editor\BuildMainfest.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundle\Editor\BuildPackPattern.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundle\Editor\BuildingAssetBundles.cs" />

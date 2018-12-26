@@ -85,7 +85,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Builder.cs" />
     <Compile Include="Assets\Scripts\Base\AppFacade.cs" />
     <Compile Include="Assets\Scripts\Base\ArrayBufferStruct.cs" />
     <Compile Include="Assets\Scripts\Base\BaseClass.cs" />
@@ -119,6 +118,7 @@
     <Compile Include="Assets\Scripts\Manager\ThreadInfos\ThreadEvent.cs" />
     <Compile Include="Assets\Scripts\Manager\ThreadInfos\ThreadManager.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundle\BuildAsset\BuildDefaultPath.cs" />
+    <Compile Include="Assets\Scripts\MyAssetBundle\BuildAsset\BuildType.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundle\BuildAsset\PackageManifest.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundle\BuildAsset\PackagePattern.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundle\Util\ResFileInfo.cs" />
@@ -126,11 +126,13 @@
     <Compile Include="Assets\Scripts\MyAssetBundleRes\BundleDownloadMode\MyBundleAsync.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundleRes\BundleDownloadMode\MyBundleWWW.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundleRes\LoadAssetMode\LoadBundleAsset.cs" />
+    <Compile Include="Assets\Scripts\MyAssetBundleRes\LoadAssetMode\LoadBundleAssetSync.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundleRes\Manifest.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundleRes\MyAsset.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundleRes\MyAssets.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundleRes\MyBundle.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundleRes\MyBundles.cs" />
+    <Compile Include="Assets\Scripts\MyAssetBundleRes\Util\RuntimeResPath.cs" />
     <Compile Include="Assets\Scripts\State\CheckStage.cs" />
     <Compile Include="Assets\Scripts\State\GameUIState.cs" />
     <Compile Include="Assets\Scripts\Tools\FilePathTools.cs" />

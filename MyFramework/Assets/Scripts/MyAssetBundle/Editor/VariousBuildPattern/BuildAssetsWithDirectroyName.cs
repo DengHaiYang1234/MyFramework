@@ -44,14 +44,12 @@ namespace MyAssetBundleEditor
 
                 bundles[path].Add(item);
                 bundles[path].AddRange(GetDependencies(item));
-
             }
             int count = 0;
             foreach (var item in bundles)
             {
                 AssetBundleBuild build = new AssetBundleBuild();
-                build.assetBundleName = BuildDefaultPath.BuildAssetBunldNameWithAssetPath(item.Key) + "_" +
-                                        item.Value.Count;
+                build.assetBundleName = BuildDefaultPath.BuildAssetBunldNameWithAssetPath(item.Key);
                 build.assetNames = item.Value.ToArray();
                 packedAssets.AddRange(build.assetNames);
                 builds.Add(build);

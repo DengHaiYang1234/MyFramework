@@ -54,7 +54,8 @@ namespace MyAssetBundleEditor
             if(!File.Exists(packagePatternPath))
                 new BuildPackPattern();
 
-            LoadEachPatterns();
+            if (!LoadEachPatterns())
+                return null;
 
             foreach (var item in patterns)
             {
@@ -86,9 +87,10 @@ namespace MyAssetBundleEditor
 
             return builds;
         }
-
-        private static void LoadEachPatterns()
+        
+        private static bool LoadEachPatterns()
         {
+            bool isError = true;
             //在程序编译阶段，编译器会自动将using语句生成为try-finally语句，并在finally块中调用对象的Dispose方法，来清理资源。所以，using语句等效于try-finally语句
             patterns.Clear();
             var pkgPattern = AssetDatabase.LoadAssetAtPath<PackagePattern>(BuildDefaultPath.GetBuildPattrenAssetPath());
@@ -101,8 +103,15 @@ namespace MyAssetBundleEditor
                 {
                     if (e.Current.Value.assetName != null)
                     {
+                        if (e.Current.Value.BuildType == BuildType.None)
+                        {
+                            MyDebug.LogErrorFormat("LoadEachPatterns is Called,But  BuildType == None! 【assetName】:{0}", e.Current.Value.assetName);
+                            isError = false;
+                            continue;
+                        }
+
                         var type =
-                            typeof (BaseBuild).Assembly.GetType("MyAssetBundleEditor." + e.Current.Value.BuildType); //反射得到对应对象
+                            typeof (BaseBuild).Assembly.GetType("MyAssetBundleEditor." + Enum.GetName(typeof(BuildType), e.Current.Value.BuildType)); //反射得到对应对象
 
                         if (type != null)
                         {
@@ -111,7 +120,7 @@ namespace MyAssetBundleEditor
                             pattern.searchPath = e.Current.Value.searchPath;
                             pattern.searchPattern = e.Current.Value.searchPattern;
                             pattern.bundleName = e.Current.Value.bundleName;
-                            pattern.option = e.Current.Value.option;
+                            pattern.option = e.Current.Value.searchOption;
                             pattern.assetName = e.Current.Value.assetName;
                             patterns.Add(pattern);
                         }
@@ -126,6 +135,8 @@ namespace MyAssetBundleEditor
                     }
                 }
             }
+
+            return isError;
         }
         /// <summary>
         /// 搜集依赖

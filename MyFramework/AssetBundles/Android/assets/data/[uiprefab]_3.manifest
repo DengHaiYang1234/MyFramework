@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1238476394
+CRC: 2143328580
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 12587c34215b35f247bf7266b8e95ddd
+    Hash: 976665e826f27e9c0f1fd91594e6f403
   TypeTreeHash:
     serializedVersion: 2
     Hash: 58a158943c69964ce8d5397a7a0dac56
@@ -36,4 +36,4 @@ Assets:
 - Assets/data/[UIPrefab]/Test.prefab
 - Assets/data/[UIPrefab]/Image.prefab
 Dependencies:
-- D:/MyFramework/MyFramework/AssetBundles/Android/assets/data/[uiatlas]/test/_source_2
+- D:/MyFramework/MyFramework/AssetBundles/Android/assets/data/[uiatlas]/test_2

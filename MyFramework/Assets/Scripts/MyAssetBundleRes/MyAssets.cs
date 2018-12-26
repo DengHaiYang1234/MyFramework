@@ -30,11 +30,14 @@ namespace Res
         public static bool Initialize()
         {
             CheckInstace();
-            InitManifest();
 #if UNITY_EDITOR
             if (!ResUtility.useEditorPrefab)
             {
                 return InitializeBundle();
+            }
+            else
+            {
+                InitManifest();
             }
             return true;
 #else
@@ -44,6 +47,7 @@ namespace Res
 
         static bool InitializeBundle()
         {
+            //资源目录
             string relativePath = Path.Combine(ResUtility.AssetBundlesOutputPath, ResUtility.GetPlatformName());
             var url = 
 #if UNITY_EDITOR
@@ -51,37 +55,56 @@ namespace Res
 #else
                 Path.Combine(Application.streamingAssetsPath, relativePath) + "/";
 #endif
-            if (MyBundles.Initialize(url))
+            if (MyBundles.Initialize(url)) //初始化Bundles信息
             {
-                var bundle = MyBundles.Load("manifest");
+                var bundle = MyBundles.Load(RuntimeResPath.GetManifestAssetPathExceptSuffix);
                 if (bundle != null)
                 {
+                    InitManifest();
                     bundle.Release();
                     MyDebug.Log("manifest Load Is Complete!");
                 }
                 return true;
             }
             MyDebug.LogErrorFormat("bundle manifest not exist.!");
-
             return false;
         }
 
+        /// <summary>
+        /// 初始化manifestAsset。方便直接读取
+        /// </summary>
         private static void InitManifest()
         {
-
 #if UNITY_EDITOR
-            string path = BuildDefaultPath.GetManifestAssetPath();
-            var manifestAsset = UnityEditor.AssetDatabase.LoadAssetAtPath<PackageManifest>(path);
-            manifestAsset.MapingAssetData();
+            //直接读取项目资源
+            if (ResUtility.useEditorPrefab)
+            {
+                string path = BuildDefaultPath.GetManifestAssetPath();
+                var manifestAsset = UnityEditor.AssetDatabase.LoadAssetAtPath<PackageManifest>(path);
+                manifestAsset.MapingAssetData();
+                manifest.Load(manifestAsset);
+            }
+            else //从Bundle中读取
+            {
+                var manifestAsset = Load<PackageManifest>("manifest");
+                PackageManifest assets = manifestAsset.asset as PackageManifest;
+                assets.MapingAssetData();
+                manifest.Load(assets);
+            }
+#else
+                var manifestAsset = Load<PackageManifest>("manifest");
+                PackageManifest assets = manifestAsset.asset as PackageManifest;
+                assets.MapingAssetData();
+                manifest.Load(assets);
 #endif
-            manifest.Load(manifestAsset);
+
         }
 
         static MyAsset CreatAssetRuntime(string name,System.Type type,bool asyncMode)
         {
             if (asyncMode)
             {
-                return null;
+                return new LoadBundleAssetSync(name, type);
             }
             else
                 return new LoadBundleAsset(name, type);
@@ -135,15 +158,20 @@ namespace Res
                 }
                 else
                     asset = new MyAsset(name, type);
-
 #else
                 asset = CreatAssetRuntime(name, type, asyncMode);
-
 #endif
                 assets.Add(asset);
-                asset.Load();
-            }
-            asset.Retain();
+                if (!manifest.IsInit)
+                {
+                    asset.OnLoadManifest();
+                }
+                else
+                {
+                    asset.Load();
+                }
+            }   
+            asset.Retain(); //资源依赖数量
             return asset;
         }
         

@@ -16,22 +16,30 @@ namespace Res
 
         internal static readonly Dictionary<string, MyBundle> bundles = new Dictionary<string, MyBundle>();
         
+        /// <summary>
+        /// 初始化当前目录Bundle信息
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
         public static bool Initialize(string path)
         {
             activeVariants = new string[0];
             dataPath = path;
 
+            //初始化当前Bundle信息
             var request = LoadInternal(ResUtility.GetPlatformName(), true, false);
+
             if (request == null || request.error != null)
                 return false;
 
+            //加载对应的Manifest文件
             manifest = request.LoadAsset<AssetBundleManifest>("AssetBundleManifest");
             if (manifest == null)
                 return false;
+
             return true;
         }
-
-
+        
         static MyBundle LoadInternal(string assetBundleName, bool isLoadingAssetBundleManifest, bool asyncRequest)
         {
             if (!isLoadingAssetBundleManifest)
@@ -44,7 +52,7 @@ namespace Res
                 assetBundleName = RemapVariantName(assetBundleName);
             }
 
-            var url = GetDataPath(assetBundleName) + assetBundleName;
+            var url = GetDataPath() + assetBundleName;
             MyBundle bundle = null;
             if (!bundles.TryGetValue(assetBundleName, out bundle))
             {
@@ -56,19 +64,19 @@ namespace Res
                 {
                     if (url.StartsWith("file://"))
                     {
-                        bundle = new MyBundleWWW(url, hash);
+                        bundle = new MyBundleWWW(url, hash); //启动WWW下载
                     }
                     else
                     {
-                        if (asyncRequest)
+                        if (asyncRequest) //是否开启异步
                             bundle = new MyBundleAsync(url, hash);
                         else
-                            bundle = new MyBundle(url, hash);
+                            bundle = new MyBundle(url, hash); //同步下载
                     }
 
                     bundle.name = assetBundleName;
                     bundles.Add(assetBundleName, bundle);
-                    bundle.Load();
+                    bundle.Load(); //开始下载
                     if (!isLoadingAssetBundleManifest)
                         LoadDependencies(bundle, assetBundleName, asyncRequest);
                 }
@@ -122,7 +130,7 @@ namespace Res
             return assetBundleName;
         }
 
-        public static string GetDataPath(string bundleName)
+        public static string GetDataPath()
         {
             return dataPath;
         }
@@ -138,13 +146,18 @@ namespace Res
         }
 
         /// <summary>
-        /// 记载BUndle
+        /// 加载Bundle
         /// </summary>
         /// <param name="assetBundleName"> assetBundle名称(注意是包里的名称) </param>
         /// <returns></returns>
         public static MyBundle Load(string assetBundleName)
         {
             return LoadInternal(assetBundleName, false, false);
+        }
+
+        public static MyBundle LoadSync(string assetBundleName)
+        {
+            return LoadInternal(assetBundleName, false, true);
         }
     }
 }

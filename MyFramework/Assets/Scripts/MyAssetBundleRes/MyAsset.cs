@@ -89,8 +89,14 @@ namespace Res
             
         }
 
+        public void OnLoadManifest()
+        {
+            var request = MyBundles.Load(RuntimeResPath.GetManifestAssetPathExceptSuffix);
+            asset = request.LoadAsset(RuntimeResPath.GetManifestAssetPath, assetType);
+        }
+
         /// <summary>
-        /// 回调
+        /// 加载完成执行回调
         /// </summary>
         /// <returns></returns>
         public bool Update()
@@ -117,7 +123,7 @@ namespace Res
         }
 
         /// <summary>
-        /// 释放
+        /// 释放引用
         /// </summary>
         public void Release()
         {

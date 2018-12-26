@@ -38,7 +38,8 @@ namespace Res
 
         internal void Load()
         {
-            
+            MyDebug.LogFormat("开始下载Bundle【Path】：{0}", path);
+            OnLoad();
         }
 
         internal void UnLoad()
@@ -50,7 +51,10 @@ namespace Res
         {
             _assetBundle = AssetBundle.LoadFromFile(path);
             if (_assetBundle == null)
-                MyDebug.LogErrorFormat("LoadFromFile failed . path: {0}",path);
+            {
+                error = path + "LoadFromFile is falied. path";
+                MyDebug.LogErrorFormat("LoadFromFile failed . path: {0}", path);
+            }
         }
 
 
@@ -79,6 +83,21 @@ namespace Res
         public Object LoadAsset(string assetName, System.Type assetType)
         {
             return assetBundle.LoadAsset(assetName, assetType);
+        }
+
+        public AssetBundleRequest LoadAssetSync(string assetName, System.Type assetType)
+        {
+            if (error != null)
+            {
+                return null;
+            }
+
+            if (assetName == null)
+            {
+                return null;
+            }
+
+            return assetBundle.LoadAssetAsync(assetName, assetType);
         }
 
         public void Release()

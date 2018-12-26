@@ -6,7 +6,7 @@ using UnityEditor;
 
 public class ResUtility
 {
-    public static bool useEditorPrefab = true;
+    public static bool useEditorPrefab = false;
 
     public const string AssetBundlesOutputPath = "AssetBundles";
 

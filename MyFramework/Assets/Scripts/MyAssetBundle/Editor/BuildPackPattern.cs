@@ -30,7 +30,7 @@ namespace MyAssetBundleEditor
         /// <param name="SelectionObj"></param>
         /// <param name="buildMethod"></param>
         /// <param name="isClear"></param>
-        public BuildPackPattern(Object SelectionObj,string buildMethod)
+        public BuildPackPattern(Object SelectionObj,BuildType buildMethod)
         {
             pkgMethod = AssetDatabase.LoadAssetAtPath<PackagePattern>(BuildDefaultPath.GetBuildPattrenAssetPath());
             if (pkgMethod != null)
@@ -71,6 +71,15 @@ namespace MyAssetBundleEditor
         /// <param name="assetDataPath"></param>
         public BuildPackPattern()
         {
+            pkgMethod = AssetDatabase.LoadAssetAtPath<PackagePattern>(BuildDefaultPath.GetBuildPattrenAssetPath());
+            if (pkgMethod != null)
+            {
+                pkgMethod.Clear();
+                AssetDatabase.DeleteAsset(BuildDefaultPath.GetBuildPattrenAssetPath());
+            }
+
+
+
             CreatScriptableObject();
             SaveAndRefresh();
         }
@@ -103,14 +112,14 @@ namespace MyAssetBundleEditor
                 if (CheckIsVaildFolder(dir))
                 {
                     string name = dir.Substring(dir.LastIndexOf('/') + 1);
-                    asset.packagInfos.Add(SetData(name, BuildDefaultPath.BuildAssetsWithDirectroyName, dir,
+                    asset.packagInfos.Add(SetData(name, GetBuildType(name), dir,
                         GetSerchPattern(name), SearchOption.AllDirectories));
                 }
             }
             AssetDatabase.CreateAsset(asset, BuildDefaultPath.GetBuildPattrenAssetPath());
         }
         
-        private static void CreatScriptableObject(string name,string buildMethod,string searchPath,string searchPattern, SearchOption option)
+        private static void CreatScriptableObject(string name,BuildType buildMethod,string searchPath,string searchPattern, SearchOption option)
         {
             string path = BuildDefaultPath.GetBuildPattrenAssetPath();
             var asset = ScriptableObject.CreateInstance<PackagePattern>();
@@ -118,19 +127,19 @@ namespace MyAssetBundleEditor
             AssetDatabase.CreateAsset(asset, path);
         }
 
-        private static void UpdatePackgInfos(string name, string buildMethod, string searchPath, string searchPattern, SearchOption option)
+        private static void UpdatePackgInfos(string name, BuildType buildMethod, string searchPath, string searchPattern, SearchOption option)
         {
             pkgMethod.RemovePackagInfoByAssetName(name);
             pkgMethod.packagInfos.Add(SetData(name, buildMethod, searchPath, searchPattern, option));
         }
 
-        private static void AddPackgInfos(string name, string buildMethod, string searchPath, string searchPattern,
+        private static void AddPackgInfos(string name, BuildType buildMethod, string searchPath, string searchPattern,
             SearchOption option)
         {
             pkgMethod.packagInfos.Add(SetData(name, buildMethod, searchPath, searchPattern, option));
         }
 
-        private static BuildPackageInfo SetData(string name, string buildMethod, string searchPath, string searchPattern, SearchOption option)
+        private static BuildPackageInfo SetData(string name, BuildType buildMethod, string searchPath, string searchPattern, SearchOption option)
         {
             BuildPackageInfo pInfo = new BuildPackageInfo
             {
@@ -138,7 +147,7 @@ namespace MyAssetBundleEditor
                 BuildType = buildMethod,
                 searchPath = searchPath,
                 searchPattern = searchPattern,
-                option = option,
+                searchOption = option,
                 bundleName = BuildDefaultPath.bundleName,
             };
             return pInfo;
@@ -157,12 +166,26 @@ namespace MyAssetBundleEditor
             return "";
         }
 
+        private static BuildType GetBuildType(string path)
+        {
+            switch (path)
+            {
+                case BuildDefaultPath.assetsAtlasFloder:
+                    return BuildType.BuildAssetsWithDirectroyName;
+                case BuildDefaultPath.assetsPrefabFloder:
+                    return BuildType.BuildAssetsWithFilename;
+            }
+            Debug.LogError(string.Format("GetBuildDefaultPath Is Called .But return Null.Check 【path】:{0} ", path));
+            return BuildType.None;
+        }
+
         private static void SaveAndRefresh()
         {
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
         }
-
     }
+
+
 }
 
