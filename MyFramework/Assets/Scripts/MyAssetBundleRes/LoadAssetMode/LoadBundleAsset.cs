@@ -19,6 +19,14 @@ namespace Res
             bundle = MyBundles.Load(MyAssets.GetBundleByAssetName(assetName));
             asset = bundle.LoadAsset(MyAssets.GetAssetPathByAssetName(assetName), assetType);
         }
+
+        protected override void OnUnload()
+        {
+            if (bundle != null)
+                bundle.Release(); //减少依赖
+
+            bundle = null; //清除引用
+        }
     }
 }
 

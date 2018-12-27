@@ -64,10 +64,10 @@ namespace Res
             if (asset != null)
             {
                 if (asset.GetType() != typeof (GameObject))
-                    Resources.UnloadAsset(asset);
+                    Resources.UnloadAsset(asset);  //释放指定已经没有引用的Asset.
                 asset = null;
             }
-            OnUnload();
+            OnUnload(); //更新资源与Bundle之间的引用关系
             assetName = null;
         }
 

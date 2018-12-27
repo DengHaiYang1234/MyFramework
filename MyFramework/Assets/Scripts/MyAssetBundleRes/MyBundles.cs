@@ -77,7 +77,7 @@ namespace Res
                     bundle.name = assetBundleName;
                     bundles.Add(assetBundleName, bundle);
                     bundle.Load(); //开始下载
-                    if (!isLoadingAssetBundleManifest)
+                    if (!isLoadingAssetBundleManifest) //Bundle下载完成之后 加载对应依赖
                         LoadDependencies(bundle, assetBundleName, asyncRequest);
                 }
             }
@@ -145,6 +145,16 @@ namespace Res
             }
         }
 
+        static void UnLoadDependencies(MyBundle bundle)
+        {
+            foreach (var item in bundle.dependencies)
+            {
+                item.Release();
+            }
+
+            bundle.dependencies.Clear();
+        }
+
         /// <summary>
         /// 加载Bundle
         /// </summary>
@@ -158,6 +168,29 @@ namespace Res
         public static MyBundle LoadSync(string assetBundleName)
         {
             return LoadInternal(assetBundleName, false, true);
+        }
+
+        public static void Update()
+        {
+            List<MyBundle> bundleToDestroy = new List<MyBundle>(); //需要卸载的Bundle
+            foreach (var item in bundles)
+            {
+                if (item.Value.isDone && item.Value.references <= 0)
+                {
+                    bundleToDestroy.Add(item.Value);
+                }
+            }
+
+            for (int i = 0; i < bundleToDestroy.Count; i++)
+            {
+                var bundle = bundleToDestroy[i];
+                bundles.Remove(bundle.name);
+                bundle.UnLoad();
+                UnLoadDependencies(bundle);
+                bundle = null;
+            }
+
+            bundleToDestroy.Clear();
         }
     }
 }

@@ -44,7 +44,8 @@ namespace Res
 
         internal void UnLoad()
         {
-            
+            MyDebug.LogFormat("正在卸载Bundle【Path】：{0}", path);
+            OnUnLoad();
         }
 
         protected virtual void OnLoad()
@@ -62,7 +63,8 @@ namespace Res
         {
             if (_assetBundle != null)
             {
-                _assetBundle.Unload(false);
+                _assetBundle.Unload(false); //是释放AssetBundle文件的内存镜像，不包含Load创建的Asset内存对象。  
+                                            //若设置为tue是释放那个AssetBundle文件内存镜像和并销毁所有用Load创建的Asset内存对象。
                 _assetBundle = null;
             }
         }

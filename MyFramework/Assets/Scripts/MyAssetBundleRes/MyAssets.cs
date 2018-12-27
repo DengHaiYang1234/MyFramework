@@ -45,6 +45,10 @@ namespace Res
 #endif
         }
 
+        /// <summary>
+        /// 初始化必要AssetBulde 
+        /// </summary>
+        /// <returns></returns>
         static bool InitializeBundle()
         {
             //资源目录
@@ -57,7 +61,7 @@ namespace Res
 #endif
             if (MyBundles.Initialize(url)) //初始化Bundles信息
             {
-                var bundle = MyBundles.Load(RuntimeResPath.GetManifestAssetPathExceptSuffix);
+                var bundle = MyBundles.Load(RuntimeResPath.GetManifestAssetPathExceptSuffix); //初始化配置文件
                 if (bundle != null)
                 {
                     InitManifest();
@@ -174,7 +178,63 @@ namespace Res
             asset.Retain(); //资源依赖数量
             return asset;
         }
-        
+
+        /// <summary>
+        /// 卸载指定资源
+        /// </summary>
+        /// <param name="asset"></param>
+        public static void UndLoad(MyAsset asset)
+        {
+            asset.UnLoad();
+        }
+
+        /// <summary>
+        /// 检测资源是否可以卸载
+        /// </summary>
+        public static void CheckAssetIsCanUnload(MyAsset asset)
+        {
+            bool removed = false;
+            
+        }
+
+        private System.Collections.IEnumerator gc = null;
+
+        System.Collections.IEnumerator GC()
+        {
+            yield return 0;
+            yield return Resources.UnloadUnusedAssets(); //释放所有已经没有引用的Asset.
+        }
+
+        private void Update()
+        {
+            bool removed = false;
+            for (int i = 0; i < assets.Count; i++)
+            {
+                var asset = assets[i];
+                if (!asset.Update() && asset.references <= 0) //资源下载完毕并且资源没有被引用
+                {
+                    asset.UnLoad();
+                    asset = null; //清除该资源的引用
+                    assets.RemoveAt(i);
+                    i--;
+                    removed = true;
+                }
+            }
+
+            if (removed)
+            {
+                if (gc != null)
+                {
+                    StopCoroutine(gc);
+                }
+
+                gc = GC();
+                StartCoroutine(gc);
+            }
+            
+            //bundle卸载
+            MyBundles.Update();
+        }
     }
 }
 
