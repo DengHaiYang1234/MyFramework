@@ -16,7 +16,7 @@ namespace Res
         //资源类型
         public Type assetType { get; private set; }
 
-        //资源
+        //资源Obj
         public UnityEngine.Object asset { get; protected set; }
 
         //是否加载完成

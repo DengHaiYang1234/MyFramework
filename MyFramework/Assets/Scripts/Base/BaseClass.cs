@@ -48,8 +48,7 @@ namespace MyFramework
                 return m_hotFixMgr;
             }
         }
-
-
+        
         public ResourceManager ResourceManager_
         {
             get
@@ -70,8 +69,6 @@ namespace MyFramework
                 return m_GameMgr;
             }
         }
-
-
     }
 }
 

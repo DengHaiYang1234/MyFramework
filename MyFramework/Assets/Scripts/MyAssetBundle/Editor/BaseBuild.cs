@@ -234,8 +234,8 @@ namespace MyAssetBundleEditor
                             var tag = item.assetBundleName.Replace("/", "_");
                             if (!tag.Equals(ti.spritePackingTag))
                             {
-                                var settings = ti.GetPlatformTextureSettings(ResUtility.GetPlatformName());
-                                settings.format = ti.GetAutomaticFormat(ResUtility.GetPlatformName());
+                                var settings = ti.GetPlatformTextureSettings(ResUtility.GetPlatformName);
+                                settings.format = ti.GetAutomaticFormat(ResUtility.GetPlatformName);
                                 settings.overridden = true;
                                 ti.SetPlatformTextureSettings(settings);
                                 ti.spritePackingTag = tag;

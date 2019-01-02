@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using MyAssetBundleEditor;
+using Object = UnityEngine.Object;
 
 namespace Res
 {
@@ -31,7 +33,7 @@ namespace Res
         {
             CheckInstace();
 #if UNITY_EDITOR
-            if (!ResUtility.useEditorPrefab)
+            if (!FrameworkSwitch.useEditorPrefab)
             {
                 return InitializeBundle();
             }
@@ -52,7 +54,7 @@ namespace Res
         static bool InitializeBundle()
         {
             //资源目录
-            string relativePath = Path.Combine(ResUtility.AssetBundlesOutputPath, ResUtility.GetPlatformName());
+            string relativePath = Path.Combine(ResUtility.AssetBundlesOutputPath, ResUtility.GetPlatformName);
             var url = 
 #if UNITY_EDITOR
                 relativePath + "/";
@@ -81,7 +83,7 @@ namespace Res
         {
 #if UNITY_EDITOR
             //直接读取项目资源
-            if (ResUtility.useEditorPrefab)
+            if (FrameworkSwitch.useEditorPrefab)
             {
                 string path = BuildDefaultPath.GetManifestAssetPath();
                 var manifestAsset = UnityEditor.AssetDatabase.LoadAssetAtPath<PackageManifest>(path);
@@ -139,24 +141,35 @@ namespace Res
             return manifest.GetAssetByName(name);
         }
 
-        public static MyAsset Load<T>(string name) where T : Object
+        public static MyAsset Load<T>(string name,Action<MyAsset> callback = null) where T : Object
         {
             name = name.ToLower();
-            return Load(name, typeof (T));
+            return Load(name, typeof (T), callback);
         }
 
-        public static MyAsset Load(string name, System.Type type)
+        public static MyAsset Load(string name, System.Type type, Action<MyAsset> callback = null)
         {
-            return LoadInternam(name,type,false);
+            return LoadInternam(name, type, false, callback);
+        }
+        
+        public static MyAsset LoadSync<T>(string name, Action<MyAsset> callback = null) where T : Object
+        {
+            name = name.ToLower();
+            return LoadSync(name, typeof(T), callback);
         }
 
-        private static MyAsset LoadInternam(string name, System.Type type, bool asyncMode)
+        public static MyAsset LoadSync(string name, System.Type type, Action<MyAsset> callback = null)
+        {
+            return LoadInternam(name, type, true, callback);
+        }
+        
+        private static MyAsset LoadInternam(string name, System.Type type, bool asyncMode, Action<MyAsset> callback = null)
         {
             MyAsset asset = assets.Find(obj => { return obj.assetName == name; });
             if (asset == null)
             {
 #if UNITY_EDITOR
-                if (!ResUtility.useEditorPrefab)
+                if (!FrameworkSwitch.useEditorPrefab)
                 {
                     asset = CreatAssetRuntime(name, type, asyncMode);
                 }
@@ -176,6 +189,11 @@ namespace Res
                 }
             }   
             asset.Retain(); //资源依赖数量
+
+            if (callback != null)
+            {
+                asset.AddCompletedLisenter(callback);
+            }
             return asset;
         }
 
@@ -188,15 +206,8 @@ namespace Res
             asset.UnLoad();
         }
 
-        /// <summary>
-        /// 检测资源是否可以卸载
-        /// </summary>
-        public static void CheckAssetIsCanUnload(MyAsset asset)
-        {
-            bool removed = false;
-            
-        }
 
+        
         private System.Collections.IEnumerator gc = null;
 
         System.Collections.IEnumerator GC()

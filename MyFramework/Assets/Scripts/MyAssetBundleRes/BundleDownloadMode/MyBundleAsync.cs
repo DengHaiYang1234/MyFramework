@@ -9,10 +9,7 @@ namespace Res
 
         public override AssetBundle assetBundle
         {
-            get
-            {
-                return base.assetBundle;
-            }
+            get { return _request.assetBundle; }
         }
 
         private AssetBundleCreateRequest _request;

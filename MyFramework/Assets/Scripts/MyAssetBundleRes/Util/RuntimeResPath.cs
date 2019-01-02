@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 namespace Res
 {
     public class RuntimeResPath
@@ -29,8 +28,6 @@ namespace Res
                 }
             }
         }
-
-
     }
 }
 

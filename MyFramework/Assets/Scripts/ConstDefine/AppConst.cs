@@ -11,7 +11,7 @@ namespace MyFramework
         //资源扩展名
         public const string BundleName = ".assetbundle";
         //临时目录
-        public const string LuaTempDir = "LuaTempDir/";
+        public const string LuaTempDir = "LuaTemp/";
         
         //!调试模式-用于内部测试
         public static bool DebugMode = true;

@@ -8,12 +8,16 @@ namespace MyAssetBundleEditor
 {
     public class BuildingAssetBundles
     {
-        public static void BuildAssetBundles(List<AssetBundleBuild> builds)
+        public static void BuildAssetBundles(List<AssetBundleBuild> builds,BuildTarget target)
         {
-            string output = BuildDefaultPath.CreateAssetBundleDirectory();
+            string output = BuildDefaultPath.GetAssetBundleDirectory;
 
-            if (!Directory.Exists(output))
-                Directory.CreateDirectory(output);
+            if (Directory.Exists(output))
+            {
+                Directory.Delete(output, true);
+            }
+
+            Directory.CreateDirectory(output);
 
             BuildAssetBundleOptions options = BuildAssetBundleOptions.None;
 
@@ -23,11 +27,10 @@ namespace MyAssetBundleEditor
             }
             else
             {
-                BuildPipeline.BuildAssetBundles(output, builds.ToArray(), options,
-                    EditorUserBuildSettings.activeBuildTarget);
+                BuildPipeline.BuildAssetBundles(output, builds.ToArray(), options,target);
+                AfterBuild ab = new AfterBuild();
             }
         }
-
     }
 }
 

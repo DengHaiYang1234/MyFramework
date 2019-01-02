@@ -22,6 +22,7 @@ namespace MyAssetBundleEditor
         BuildAssetsWithAssetBundleName,
         BuildAssetsWithDirectroyName,
         BuildAssetsWithFilename,
+        BuildLua,
         None,
     }
 }

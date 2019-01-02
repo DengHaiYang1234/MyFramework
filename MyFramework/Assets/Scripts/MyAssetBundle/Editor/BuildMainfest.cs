@@ -33,6 +33,7 @@ namespace MyAssetBundleEditor
             foreach (var build in builds)
             {
                 List<string> infoList = new List<string>();
+
                 string name = build.assetBundleName.Substring(build.assetBundleName.LastIndexOf('/') + 1);
 
                 foreach (var assetPath in build.assetNames)

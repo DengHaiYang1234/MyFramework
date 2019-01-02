@@ -6,34 +6,36 @@ using UnityEditor;
 
 public class ResUtility
 {
-    public static bool useEditorPrefab = false;
-
     public const string AssetBundlesOutputPath = "AssetBundles";
 
-    public static string GetPlatformName()
+    public static string GetPlatformName
     {
+        get
+        { 
 #if UNITY_EDITOR
+        
         return GetPlatformForAssetBundles(EditorUserBuildSettings.activeBuildTarget);
 #else
             return GetPlatformForAssetBundles(Application.platform);
 #endif
+        }
     }
 
     static string GetPlatformForAssetBundles(RuntimePlatform platform)
     {
         if (platform == RuntimePlatform.Android)
         {
-            return "Android";
+            return Application.persistentDataPath + "/Android";
         }
 
         if (platform == RuntimePlatform.IPhonePlayer)
         {
-            return "iOS";
+            return Application.persistentDataPath + "/iOS";
         }
 
         if (platform == RuntimePlatform.WindowsPlayer || platform == RuntimePlatform.WindowsEditor)
         {
-            return "Windows";
+            return Application.streamingAssetsPath + "/Windows";
         }
 
         return null;

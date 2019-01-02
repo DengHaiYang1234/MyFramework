@@ -14,7 +14,7 @@ namespace MyFramework
     public enum MyStage
     {
         check = 0, //检查资源更新
-        gameUI = 1, //进入UI界面
+        startGame = 1, //启动游戏
     }
 }
 

@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 3659157437
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 9c177b1095db2f35d7a158a1d9932c78
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 1033bf7ddfd4c6d43e7a6382c0a0a61a
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+Assets:
+- Assets/LuaTemp/event.lua.bytes
+- Assets/LuaTemp/slot.lua.bytes
+- Assets/LuaTemp/tolua.lua.bytes
+- Assets/LuaTemp/list.lua.bytes
+- Assets/LuaTemp/socket.lua.bytes
+- Assets/LuaTemp/ltn12.lua.bytes
+- Assets/LuaTemp/typeof.lua.bytes
+- Assets/LuaTemp/mime.lua.bytes
+- Assets/LuaTemp/SceneCreate.lua.bytes
+Dependencies: []

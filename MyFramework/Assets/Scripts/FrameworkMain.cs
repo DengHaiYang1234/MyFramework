@@ -31,12 +31,16 @@ namespace MyFramework
             get { return _realScreenSize; }
             set { _realScreenSize = value; }
         }
-
+        /// <summary>
+        /// 状态机
+        /// </summary>
         public StateMachine<FrameworkMain> FSM
         {
             get { return _gameStateFsm; }
         }
-
+        /// <summary>
+        /// 启动state Running
+        /// </summary>
         public bool Run
         {
             set { _doFsmUpdate = value; }
@@ -49,9 +53,8 @@ namespace MyFramework
         {
             _instance = this;
             Init();
-            InitGlobalManager();
             InitFsm();
-            Loom.Initialize();
+            Loom.Initialize();//初始化消息监听
         }
 
         void Start()
@@ -62,23 +65,18 @@ namespace MyFramework
         public void Init()
         {
             DontDestroyOnLoad(gameObject);
-            SDRootPath.Instance.Init();
-            LTDebugOutput.Instance.Init();
+            SDRootPath.Instance.Init(); //初始化UI Canvas
+            LTDebugOutput.Instance.Init();//初始化 Debug管理
+            AppFacade.Instance.StartUp(); //启动游戏
         }
         
-        //启动游戏
-        public void InitGlobalManager()
-        {
-            AppFacade.Instance.StartUp();
-        }
-
         //初始状态机
         private void InitFsm()
         {
             MyDebug.LogError("初始状态机  初始状态机  初始状态机");
 
             _gameStateFsm.Add(new CheckStage(this));
-            _gameStateFsm.Add(new GameUIState(this));
+            _gameStateFsm.Add(new StartGameState(this));
         }
 
         //初始状态

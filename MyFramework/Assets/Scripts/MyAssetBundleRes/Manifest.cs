@@ -12,9 +12,6 @@ namespace Res
         private static Dictionary<string, string> bundleNameMaps = new Dictionary<string, string>();
         private static Dictionary<string, string> assetBundleName = new Dictionary<string, string>();
 
-        public string[] allAssets { get; private set; }
-        public string[] allBundles { get; private set; }
-
         private bool isInit = false;
 
         public bool IsInit
@@ -23,9 +20,7 @@ namespace Res
             set { isInit = value; }
 
         }
-
         
-
         void Init()
         {
             assetsMaps.Clear();
@@ -33,37 +28,22 @@ namespace Res
             bundleNameMaps.Clear();
             assetBundleName.Clear();
 
-            allAssets = new string[0];
-            allBundles = new string[0];
             isInit = true;
         }
         
         public void Load(PackageManifest manifestAsset)
         {
+            if (manifestAsset == null)
+            {
+                MyDebug.LogError("Manifest初始化失败！manifestAsset == null");
+                return;
+            }
+
             Init();
             assetsMaps = manifestAsset.GetManifestAssetDic();
             bundleMaps = manifestAsset.GetManifestDic();
             bundleNameMaps = manifestAsset.GetManifestNameDic();
             assetBundleName = manifestAsset.GetManifestAssetBundleDic();
-
-            List<string> bundles = new List<string>();
-            List<string> assets = new List<string>();
-
-            string bundle = null;
-            
-            var e = bundleMaps.GetEnumerator();
-            while (e.MoveNext())
-            {
-                if (e.Current.Value.Count > 0)
-                {
-                    bundles.Add(e.Current.Key);
-                    assets = e.Current.Value;
-                }
-            }
-
-            allBundles = bundles.ToArray();
-            allAssets = bundles.ToArray();
-
         }
 
         /// <summary>

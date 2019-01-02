@@ -78,18 +78,22 @@ namespace MyAssetBundleEditor
         }
 
 
-        [MenuItem("MyAssetsBundle/BuildAssetBundles", false, 105)]
-        public static void BuildAssetBundles()
+        [MenuItem("MyAssetsBundle/BuildAllAssetBundles/Windows", false, 105)]
+        public static void BuildWindowsAssetBundles()
         {
             if (EditorApplication.isCompiling)
             {
                 return;
             }
+            //添加Lua
+            //BuildLuaAssetBundles.BuildLuaResource(BuildTarget.StandaloneWindows);
+            //添加资源
             List<AssetBundleBuild> builds = BaseBuild.GetBuilds();
+
             BuildMainfest manifest = new BuildMainfest(builds);
             if (manifest.BuildManifestIsSuccess && builds != null)
             {
-                BuildingAssetBundles.BuildAssetBundles(builds);
+                BuildingAssetBundles.BuildAssetBundles(builds,BuildTarget.StandaloneWindows);
             }
             else
             {
@@ -97,16 +101,53 @@ namespace MyAssetBundleEditor
             }
         }
 
-        //[MenuItem("MyAssetsBundle/BuildLuaAssetBundles", false, 105)]
-        //public static void BuildLuaAsset()
-        //{
-        //    if (EditorApplication.isCompiling)
-        //    {
-        //        return;
-        //    }
+        [MenuItem("MyAssetsBundle/BuildAllAssetBundles/Android", false, 105)]
+        public static void BuildAndroidAssetBundles()
+        {
+            if (EditorApplication.isCompiling)
+            {
+                return;
+            }
+            //添加Lua
+            BuildLuaAssetBundles.BuildLuaResource(BuildTarget.StandaloneWindows);
+            //添加资源
+            List<AssetBundleBuild> builds = BaseBuild.GetBuilds();
 
-        //    BuildLuaAssetBundle.BuildAndroidResource();
-        //}
+            BuildMainfest manifest = new BuildMainfest(builds);
+            if (manifest.BuildManifestIsSuccess && builds != null)
+            {
+                BuildingAssetBundles.BuildAssetBundles(builds, BuildTarget.Android);
+            }
+            else
+            {
+                Debug.LogError("manifest打包失败。请检查错误!");
+            }
+        }
+
+        [MenuItem("MyAssetsBundle/BuildAllAssetBundles/IOS", false, 105)]
+        public static void BuildIosAssetBundles()
+        {
+            if (EditorApplication.isCompiling)
+            {
+                return;
+            }
+
+            //添加Lua
+            BuildLuaAssetBundles.BuildLuaResource(BuildTarget.StandaloneWindows);
+            //添加资源
+            List<AssetBundleBuild> builds = BaseBuild.GetBuilds();
+
+            BuildMainfest manifest = new BuildMainfest(builds);
+            
+            if (manifest.BuildManifestIsSuccess && builds != null)
+            {
+                BuildingAssetBundles.BuildAssetBundles(builds, BuildTarget.iOS);
+            }
+            else
+            {
+                Debug.LogError("manifest打包失败。请检查错误!");
+            }
+        }
     }
 }
 

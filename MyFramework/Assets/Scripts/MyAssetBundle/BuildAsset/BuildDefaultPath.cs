@@ -16,6 +16,8 @@ namespace MyAssetBundleEditor
         public const string assetsBuildMethodFloder = "BuildPattern";
         public const string assetsAtlasFloder = "[UIAtlas]";
         public const string assetsPrefabFloder = "[UIPrefab]";
+        public const string assetsLuaFloder = "LuaScripts";
+
 
         public const string assetSuffix = ".asset";
         public const string bundleName = ".assetbundle";
@@ -23,9 +25,16 @@ namespace MyAssetBundleEditor
         public const string assetBuildMethodName = "buildPattern";
         public const string assetManifestName = "manifest";
 
-        public const string BuildAssetsWithAssetBundleName = "BuildAssetsWithAssetBundleName"; //粒度大。适用于无依赖的且体积小的资源(适用于需动态加载的资源)
-        public const string BuildAssetsWithDirectroyName = "BuildAssetsWithDirectroyName";//最大粒度打包.直接按文件夹打包
-        public const string BuildAssetsWithFilename = "BuildAssetsWithFilename";//小粒度.适用于prefab打包。  将prefab与其依赖的资源共同打包
+        public const string LuaScriptsDir = "LuaScripts";
+
+        public const string BuildAssetsWithAssetBundleName = "BuildAssetsWithAssetBundleName";
+        //粒度大。适用于无依赖的且体积小的资源(适用于需动态加载的资源)
+
+        public const string BuildAssetsWithDirectroyName = "BuildAssetsWithDirectroyName"; //最大粒度打包.直接按文件夹打包
+        public const string BuildAssetsWithFilename = "BuildAssetsWithFilename"; //小粒度.适用于prefab打包。  将prefab与其依赖的资源共同打包
+        public const string BuildLuaAssets = "BuildLua"; //Lua 打包
+
+        public const string LuaTempDir = "LuaTemp";
 
         public static string GetManifestAsset
         {
@@ -34,7 +43,41 @@ namespace MyAssetBundleEditor
 
         public static string GetAssetDataPath()
         {
-            return string.Format("{0}/{1}/",assetPath,dataPath);
+            return string.Format("{0}/{1}/", assetPath, dataPath);
+        }
+
+        public static string GetLuaDataPath
+        {
+            get
+            {
+                return string.Format("{0}/{1}/", assetPath, assetsLuaFloder);
+            }
+            
+        }
+
+        public static string GetLuaTempDataPath
+        {
+            get
+            {
+                return string.Format("{0}/{1}/", assetPath, LuaTempDir);
+            }
+        }
+
+        public static string GetToLuaDataPath
+        {
+            get
+            {
+                return string.Format("{0}/{1}/{2}/", assetPath, "ToLua", "Lua");
+            }
+        }
+
+        public static string GetBuildLuaPath
+        {
+            get
+            {
+                return string.Format("{0}/{1}/{2}/{3}/", ResUtility.AssetBundlesOutputPath, ResUtility.GetPlatformName,
+                    assetPath.ToLower(), LuaTempDir.ToLower());
+            }
         }
 
         public static string GetBuildPattrenAssetPath()
@@ -47,8 +90,6 @@ namespace MyAssetBundleEditor
             return string.Format("{0}/{1}/{2}/{3}{4}", assetPath, dataPath, assetsManifestFloder, assetManifestName, assetSuffix);
         }
 
-
-
         public static string BuildAssetBunldNameWithAssetPath(string assetPath)
         {
             return
@@ -57,14 +98,31 @@ namespace MyAssetBundleEditor
                     .ToLower();
         }
 
-        public static string CreateAssetBundleDirectory()
+        public static string GetAssetBundleDirectory
         {
-            string outputPath = Path.Combine(ResUtility.AssetBundlesOutputPath, ResUtility.GetPlatformName());
+            get
+            {
+                string outputPath = Path.Combine(ResUtility.AssetBundlesOutputPath, ResUtility.GetPlatformName);
+                return outputPath;
+            }
+        }
 
-            if (Directory.Exists(outputPath))
-                Directory.Delete(outputPath, true);
+        public static string GetAssetBundlePath
+        {
+            get
+            {
+                return string.Format("{0}/{1}/", ResUtility.AssetBundlesOutputPath, ResUtility.GetPlatformName);
+            }
+        }
 
-            return outputPath;
+        public static string BuildLuaAssetBundlePath
+        {
+            get
+            {
+                string luaPath = ResUtility.GetPlatformName + "/assets/luascripts";
+                return Path.Combine(ResUtility.AssetBundlesOutputPath, luaPath);
+            }
+
         }
     }
 }

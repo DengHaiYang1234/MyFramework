@@ -48,6 +48,9 @@ namespace MyAssetBundleEditor
                 {
                     string str = assetPath.Substring(0, assetPath.LastIndexOf('.'));
                     string itemName = str.Substring(str.LastIndexOf('/') + 1).ToLower();
+                    if(itemName.IndexOf('.') != -1)
+                        itemName = itemName.Substring(0, itemName.LastIndexOf('.'));
+
                     _caheAssetInfos[itemName] = assetPath;
                     _caheAssetBundleInfos[itemName] = asset.bundle;
                 }

@@ -16,10 +16,7 @@ namespace Res
         {
             bundle = MyBundles.LoadSync(MyAssets.GetBundleByAssetName(assetName));
         }
-
-
-        
-
+            
         protected override void OnUnload()
         {
             base.OnUnload();
@@ -52,7 +49,7 @@ namespace Res
                         return true;
                     }
                 }
-
+                    
                 if (loadState == 1)
                 {
                     if (assetBundleRequest.isDone) //资源下载成功

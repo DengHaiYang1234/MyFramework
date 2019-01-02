@@ -21,18 +21,18 @@ namespace MyFramework
             {
                 string game = AppConst.AppName.ToLower();
                 if (Application.isMobilePlatform)
-                    return Application.persistentDataPath + "/" + game + "/";
+                    return Application.persistentDataPath + "/" + game + "/"; //可读写
                 if (Application.platform == RuntimePlatform.WindowsPlayer)
                     return Application.streamingAssetsPath + "/";
                 if (AppConst.DebugMode && Application.isEditor)
-                    return Application.streamingAssetsPath + "/";
+                    return Application.streamingAssetsPath + "/"; //只读不写
                 if(Application.platform == RuntimePlatform.OSXEditor)
                 {
                     int i = Application.dataPath.LastIndexOf("/");
                     return Application.dataPath.Substring(0, i + 1) + game + "/";
                 }
 
-                return "d:/" + game + "/";
+                return "d:/" + game + "/";   //可读写
             }
         }
 

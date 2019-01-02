@@ -103,9 +103,18 @@ namespace MyAssetBundleEditor
         /// <summary>
         /// 所有资源采用默认方法打包
         /// </summary>
-        private static void CreatScriptableObject()
+        private static void CreatScriptableObject(bool isBuildLua = true)
         {
             var asset = ScriptableObject.CreateInstance<PackagePattern>();
+
+            if (isBuildLua)
+            {
+                string[] sts = Directory.GetFiles(BuildDefaultPath.GetLuaDataPath);
+                string name = BuildDefaultPath.assetsLuaFloder;
+                asset.packagInfos.Add(SetData(name, GetBuildType(name), BuildDefaultPath.GetLuaDataPath,
+                    GetSerchPattern(name), SearchOption.AllDirectories));
+            }
+
             string[] dirs = Directory.GetDirectories(BuildDefaultPath.GetAssetDataPath());
             foreach (var dir in dirs)
             {
@@ -161,6 +170,8 @@ namespace MyAssetBundleEditor
                     return "*.png";
                 case BuildDefaultPath.assetsPrefabFloder:
                     return "*.prefab";
+                case BuildDefaultPath.assetsLuaFloder:
+                    return "*.lua";
             }
 
             return "";
@@ -174,6 +185,8 @@ namespace MyAssetBundleEditor
                     return BuildType.BuildAssetsWithDirectroyName;
                 case BuildDefaultPath.assetsPrefabFloder:
                     return BuildType.BuildAssetsWithFilename;
+                case BuildDefaultPath.assetsLuaFloder:
+                    return BuildType.BuildLua;
             }
             Debug.LogError(string.Format("GetBuildDefaultPath Is Called .But return Null.Check 【path】:{0} ", path));
             return BuildType.None;

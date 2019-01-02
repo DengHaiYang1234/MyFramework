@@ -27,7 +27,7 @@ namespace Res
             dataPath = path;
 
             //初始化当前Bundle信息
-            var request = LoadInternal(ResUtility.GetPlatformName(), true, false);
+            var request = LoadInternal(ResUtility.GetPlatformName, true, false);
 
             if (request == null || request.error != null)
                 return false;
