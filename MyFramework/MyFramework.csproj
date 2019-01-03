@@ -13,14 +13,12 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectGenerator>VSTU</UnityProjectGenerator>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.6.2f1</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -122,6 +120,7 @@
     <Compile Include="Assets\Scripts\Manager\ThreadInfos\ThreadManager.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundle\BuildAsset\BuildDefaultPath.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundle\BuildAsset\BuildType.cs" />
+    <Compile Include="Assets\Scripts\MyAssetBundle\BuildAsset\CopyAssets.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundle\BuildAsset\PackageManifest.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundle\BuildAsset\PackagePattern.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundle\Util\ResFileInfo.cs" />
@@ -307,6 +306,8 @@
     <Compile Include="Assets\ToLua\Reflection\LuaReflection.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\StreamingAssets\AssetBundles\Windows\files.txt" />
+    <None Include="Assets\StreamingAssets\AssetBundles\Windows\version.txt" />
     <None Include="Assets\ToLua\Injection\InjectionBlackList.txt" />
     <None Include="Assets\ToLua\Injection\InjectionBridgeEditorInfo.xml" />
     <None Include="Assets\ToLua\Injection\LuaInjectionSkipPaths.txt" />

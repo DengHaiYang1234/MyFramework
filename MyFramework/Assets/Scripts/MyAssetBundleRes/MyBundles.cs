@@ -27,7 +27,7 @@ namespace Res
             dataPath = path;
 
             //初始化当前Bundle信息
-            var request = LoadInternal(ResUtility.GetPlatformName, true, false);
+            var request = LoadInternal(ResUtility.GetPlatformPath, true, false);
 
             if (request == null || request.error != null)
                 return false;
@@ -49,7 +49,7 @@ namespace Res
                     MyDebug.LogErrorFormat("Please initialize AssetBundleManifest by calling Bundles.Initialize()");
                     return null;
                 }
-                assetBundleName = RemapVariantName(assetBundleName);
+                //assetBundleName = RemapVariantName(assetBundleName);
             }
 
             var url = GetDataPath() + assetBundleName;

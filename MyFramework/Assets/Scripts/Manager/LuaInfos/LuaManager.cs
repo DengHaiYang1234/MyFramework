@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using LuaInterface;
+using Res;
 
  
 namespace MyFramework
@@ -59,11 +60,11 @@ namespace MyFramework
             if (AppConst.DebugMode)
             {
                 string rootPath = AppConst.HotFixRoot;
-                lua.AddSearchPath(rootPath + "/LuaScripts/");
-                lua.AddSearchPath(rootPath + "/ToLua/Lua/");
+                lua.AddSearchPath(RuntimeResPath.GetLuaDataPath );
+                lua.AddSearchPath(RuntimeResPath.GetToLuaDataPath);
             }
             else
-                lua.AddSearchPath(Util.DataPath + "lua");
+                lua.AddSearchPath(RuntimeResPath.GetLuaTempDataPath);
         }
 
         /// <summary>

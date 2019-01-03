@@ -133,7 +133,6 @@
     <Compile Include="Assets\Editor\Custom\CustomSettings.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundle\Editor\AfterBuild.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundle\Editor\BaseBuild.cs" />
-    <Compile Include="Assets\Scripts\MyAssetBundle\Editor\BuildLuaAssetBundles.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundle\Editor\BuildMainfest.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundle\Editor\BuildPackPattern.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundle\Editor\BuildingAssetBundles.cs" />
@@ -167,6 +166,8 @@
     <Compile Include="Assets\ToLua\Injection\Editor\ToluaInjectionBlackListPanel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\StreamingAssets\AssetBundles\Windows\files.txt" />
+    <None Include="Assets\StreamingAssets\AssetBundles\Windows\version.txt" />
     <None Include="Assets\ToLua\Injection\InjectionBlackList.txt" />
     <None Include="Assets\ToLua\Injection\InjectionBridgeEditorInfo.xml" />
     <None Include="Assets\ToLua\Injection\LuaInjectionSkipPaths.txt" />

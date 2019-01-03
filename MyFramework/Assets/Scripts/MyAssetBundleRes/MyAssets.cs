@@ -54,7 +54,7 @@ namespace Res
         static bool InitializeBundle()
         {
             //资源目录
-            string relativePath = Path.Combine(ResUtility.AssetBundlesOutputPath, ResUtility.GetPlatformName);
+            string relativePath = Path.Combine(ResUtility.AssetBundlesOutputPath, ResUtility.GetPlatformPath);
             var url = 
 #if UNITY_EDITOR
                 relativePath + "/";

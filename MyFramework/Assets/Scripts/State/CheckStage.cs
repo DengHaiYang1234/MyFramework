@@ -12,6 +12,7 @@ namespace MyFramework
     public class CheckStage : BaseStage
     {
         private HotManager hotFix;
+
         private ResourceManager res;
 
         public CheckStage(FrameworkMain owner) : base((int) MyStage.check, owner)
@@ -20,20 +21,22 @@ namespace MyFramework
             res = owner.GetManager<ResourceManager>(ManagersName.resource);
         }
 
+        public override void BeforeEnter(object p)
+        {
+            if (!(hotFix.InitLoaclFilesInfo(false)))
+                hotFix.InitLocalFilesInfoByResource();
+
+            hotFix.Init();
+        }
+
         public override void OnEnter(StateBase<FrameworkMain> exitState, object param)
         {
-            base.OnEnter(exitState, param);
-            hotFix.Init();
-            bool isExists = Directory.Exists(Util.DataPath) && Directory.Exists(Util.DataPath + "lua/") && File.Exists(Util.DataPath + "files.txt");
-            if (isExists || AppConst.DebugMode)
+            if (!(hotFix.IsInit))
             {
-                hotFix.UpdateResource();
+                MyDebug.LogError("HotManager初始化失败！请检查");
+                return;
             }
-            else
-            {
-                hotFix.ExtractResource();
-            }
-
+            hotFix.UpdateResource();
             FrameworkMain.Instance.Run = true;
         }
 
@@ -44,7 +47,10 @@ namespace MyFramework
             bool isComplete = hotFix.IsComplete();
 
             if (isComplete)
+            {
                 OnCheckUpdateComplete();
+                isComplete = false;
+            }
         }
 
         public override void OnExit(object param)
@@ -55,8 +61,6 @@ namespace MyFramework
 
         public void OnCheckUpdateComplete()
         {
-            //res.Initialize();
-
             Owner.FSM.ChangeState((int) MyStage.startGame);
         }
     }

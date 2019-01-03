@@ -52,7 +52,7 @@ namespace MyAssetBundleEditor
             {
                 return string.Format("{0}/{1}/", assetPath, assetsLuaFloder);
             }
-            
+
         }
 
         public static string GetLuaTempDataPath
@@ -75,7 +75,7 @@ namespace MyAssetBundleEditor
         {
             get
             {
-                return string.Format("{0}/{1}/{2}/{3}/", ResUtility.AssetBundlesOutputPath, ResUtility.GetPlatformName,
+                return string.Format("{0}/{1}/{2}/{3}/", ResUtility.AssetBundlesOutputPath, ResUtility.GetPlatformPath,
                     assetPath.ToLower(), LuaTempDir.ToLower());
             }
         }
@@ -93,16 +93,17 @@ namespace MyAssetBundleEditor
         public static string BuildAssetBunldNameWithAssetPath(string assetPath)
         {
             return
-                Path.Combine(Path.GetDirectoryName(assetPath), Path.GetFileNameWithoutExtension(assetPath))
-                    .Replace('\\', '/')
-                    .ToLower();
+
+            Path.Combine(Path.GetDirectoryName(assetPath), Path.GetFileNameWithoutExtension(assetPath))
+                .Replace('\\', '/')
+                .ToLower();
         }
 
         public static string GetAssetBundleDirectory
         {
             get
             {
-                string outputPath = Path.Combine(ResUtility.AssetBundlesOutputPath, ResUtility.GetPlatformName);
+                string outputPath = Path.Combine(ResUtility.AssetBundlesOutputPath, ResUtility.GetPlatformPath);
                 return outputPath;
             }
         }
@@ -111,7 +112,7 @@ namespace MyAssetBundleEditor
         {
             get
             {
-                return string.Format("{0}/{1}/", ResUtility.AssetBundlesOutputPath, ResUtility.GetPlatformName);
+                return string.Format("{0}/{1}/", ResUtility.AssetBundlesOutputPath, ResUtility.GetPlatformPath);
             }
         }
 
@@ -119,7 +120,7 @@ namespace MyAssetBundleEditor
         {
             get
             {
-                string luaPath = ResUtility.GetPlatformName + "/assets/luascripts";
+                string luaPath = ResUtility.GetPlatformPath + "/assets/luascripts";
                 return Path.Combine(ResUtility.AssetBundlesOutputPath, luaPath);
             }
 
