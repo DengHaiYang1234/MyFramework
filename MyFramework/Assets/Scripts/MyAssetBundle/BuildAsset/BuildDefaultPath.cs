@@ -18,7 +18,6 @@ namespace MyAssetBundleEditor
         public const string assetsPrefabFloder = "[UIPrefab]";
         public const string assetsLuaFloder = "LuaScripts";
 
-
         public const string assetSuffix = ".asset";
         public const string bundleName = ".assetbundle";
 

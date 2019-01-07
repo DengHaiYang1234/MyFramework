@@ -5,35 +5,16 @@ using System.IO;
 using System;
 using Res;
 
-#region 热更部分解释
-/*  热更部分
- *  
- *   实测可完成PC和Android热更.
-1.资源打包入口: PackageBuild() ---> 选择不同平台 打包不同平台资源资源  资源默认打包.Lua打包需设置AppConst中LuaBunldeMode = true；
-                                  打包资源切记刷新 AssetDatabase.Refresh();
-2.项目入口： Main（）
-3.资源下载更新：HotManager() ---> 检查是否存在已经资源文件.
-                         若不存在（第一次安装游戏）,先解压项目的文件资源（游戏包资源目录 只读）至本地数据目录（可读可写）.
-                         若已经存在，那么通过网络资源地址中的网络资源，与本地文件比对。检测是否需要更新（是否能进行更新主要是通过比对文件MD5）.
-4.资源下载：ThreadManager() ---> 通过检测队列中是否有元素来下载资源.（lock还有点问题）
-5.Lua虚拟机：LuaManager()  ---> (1) 设置lua的加载路径（可直接加载也可打包加载）.
-                               (2) 启动lua虚拟机.使在Lua中也可调用C#的方法等
-6.资源加载：ResourceManager() ---> 加载AB中的资源
-7.日志输出：LTDebugOutput() ---> 控制Debug的打印至屏幕。并将Debug日志跟随游戏保存.
-*/
-
-#endregion
 namespace MyFramework
 {
-    public class HotManager : BaseClass
+    public class HotManager : MonoBehaviour
     {
         #region  热更管理类
         string updateWord = "";
 
         float updatePercent = 0;
 
-        //缓存已下载的文件
-
+        //缓存已下载的文件 便于比对文件
         public List<string> downLoadFiles;
 
         private bool isComplete = false;
@@ -53,9 +34,10 @@ namespace MyFramework
         //初始化
         public void Init()
         {
+            MyDebug.LogError("DataPath:" + Application.dataPath);
             downLoadFiles = new List<string>();
         }
-        
+
         //更新资源
         public void UpdateResource()
         {
@@ -65,7 +47,7 @@ namespace MyFramework
         /// <summary>
         /// 初始化本地文件信息
         /// </summary>
-        public bool InitLoaclFilesInfo(bool isText,string filesInfos = null)
+        public bool InitLoaclFilesInfo(bool isText, string filesInfos = null)
         {
             localFileInfosDic.Clear();
             if (!Directory.Exists(RuntimeResPath.GetLocalDataPath))
@@ -135,7 +117,9 @@ namespace MyFramework
         {
             StartCoroutine(GetLocalFilesInfos());
         }
-        
+
+        //"jar:file://" + 
+
         IEnumerator GetLocalFilesInfos()
         {
             string resourceDataPath = string.Empty;
@@ -163,22 +147,24 @@ namespace MyFramework
                 yield break;
             }
         }
-        
+
         IEnumerator OnUpdateResource()
         {
             downLoadFiles.Clear();
 
-            if (!AppConst.UpdateMode)
+            if (!FrameworkDefaultSetting.UpdateMode)
             {
                 OnUpdateMessageComplete();
                 yield break;
             }
 
-            string url = string.Format("{0}{1}/", ResUtility.WebUrl, RuntimeResPath.GetAssetBundleDirectory);
+            string url = string.Format("{0}{1}/", FrameworkDefaultSetting.WebUrl, RuntimeResPath.GetAssetBundleDirectory);
 
             string random = DateTime.Now.ToString("yyyymmddhhmmss");
             //远端文件列表地址
             string remoteFileTextUrl = url + "files.txt?v=" + random;
+
+            MyDebug.LogError("remoteFileTextUrl" + remoteFileTextUrl);
 
             WWW www = new WWW(remoteFileTextUrl);
 
@@ -194,7 +180,7 @@ namespace MyFramework
             //远端文件
             string remoteFilesText = www.text;
             //文件信息
-            string[] remoteFiles = remoteFilesText.Split('|');
+            string[] remoteFiles = remoteFilesText.Split('\n');
             //是否已经检测过版本文件
             bool isCheckVer = false;
             //远端文件Url
@@ -242,8 +228,8 @@ namespace MyFramework
                 if (canUpdate)
                     File.Delete(localFile);
 
-                    //-------------------------------------第一次检测到版本文件
-                    if (!isCheckVer && isVerFile)
+                //-------------------------------------第一次检测到版本文件
+                if (!isCheckVer && isVerFile)
                 {
                     isCheckVer = true;//标记已检测过版本文件
                     remoteVerUrl = remoteFileUrl; //获取版本文件的下载地址
@@ -265,7 +251,7 @@ namespace MyFramework
                     BeginDownload(remoteFileUrl, localFile); //开始下载
                     while (!(IsDownOk(localFile)))
                     {
-                        OnUpdateMessageDownLoad(i,remoteFile.Length);
+                        OnUpdateMessageDownLoad(i, remoteFiles.Length);
                         yield return new WaitForEndOfFrame();
                     }
                 }
@@ -279,6 +265,8 @@ namespace MyFramework
                 {
                     yield return new WaitForEndOfFrame();
                 }
+                //将远端信息更新至本地
+                File.WriteAllBytes(RuntimeResPath.GetLocalDataPath + "files.txt", www.bytes);
             }
 
             OnUpdateMessageComplete();
@@ -303,9 +291,9 @@ namespace MyFramework
             MyDebug.Log(updateWord);
         }
 
-        void OnUpdateMessageDownLoad(int curr,int count)
+        void OnUpdateMessageDownLoad(int curr, int count)
         {
-            updateWord = "下载进度：=======================<已下载文件个数:" + curr + "/" + count + "> 下载文件进度：" + Math.Ceiling(((float) curr / count) * 100) + "%";
+            updateWord = "下载进度：=======================<已下载文件个数:" + curr + "/" + count + "> 下载文件进度：" + Math.Ceiling(((float)curr / count) * 100) + "%";
             MyDebug.Log(updateWord);
 
         }
@@ -328,7 +316,7 @@ namespace MyFramework
             //添加实现了ICollection接口的一个集合的所有元素到指定集合的末尾
             ev.evParams.AddRange(param);
             //添加线程事件.通过线程开始执行下载
-            ThreadManager_.AddEvent(ev, OnThreadCompleted);
+            FrameworkMain.Instance.ThreadMgr.AddEvent(ev, OnThreadCompleted);
         }
 
         /// <summary>

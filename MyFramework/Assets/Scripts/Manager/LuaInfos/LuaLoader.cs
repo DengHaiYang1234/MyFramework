@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using LuaInterface;
+using Res;
 
 namespace MyFramework
 {
@@ -11,22 +12,18 @@ namespace MyFramework
         public LuaLoader()
         {
             instance = this;
-            beZip = AppConst.LuaBunldeMode;
+            beZip = FrameworkDefaultSetting.LuaBunldeMode;
         }
 
 
         public void AddBundle(string bundleName)
         {
-            if (!bundleName.EndsWith(AppConst.BundleName))
-                bundleName += AppConst.BundleName;
-
-            string url = Util.DataPath + bundleName.ToLower();
+            string url = RuntimeResPath.GetLuaAssetsDataPath + bundleName.ToLower();
             if (File.Exists(url))
             {
                 AssetBundle bundle = AssetBundle.LoadFromFile(url);
                 if (bundle != null)
                 {
-                    bundleName = bundleName.Replace("lua/", "").Replace(AppConst.BundleName, "");
                     base.AddSearchBundle(bundleName.ToLower(), bundle);
                 }
             }

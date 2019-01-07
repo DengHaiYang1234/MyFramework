@@ -17,7 +17,6 @@ public class EventDispatchCenter
         }
     }
 
-
     public void Registry(string iMsgId, Action<object> callback, bool doImd)
     {
         LTEventCenter.Regist(iMsgId,callback,!doImd);

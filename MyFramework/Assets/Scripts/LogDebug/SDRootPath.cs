@@ -32,19 +32,19 @@ namespace MyFramework
             {
                 _rootPath = Application.dataPath + "/../" + RootFolderName;
                 _buildInPackageRoot = string.Format("file://{0}/{1}", Application.streamingAssetsPath,
-                    Util.GetPlatfromFoldername());
+                    ResUtility.GetPlatformPath);
             }
             else if (Application.platform == RuntimePlatform.Android)
             {
                 _rootPath = Application.persistentDataPath + "/" + RootFolderName;
                 _buildInPackageRoot = string.Format("{0}/{1}", Application.streamingAssetsPath,
-                    Util.GetPlatfromFoldername());
+                    ResUtility.GetPlatformPath);
             }
             else if (Application.platform == RuntimePlatform.IPhonePlayer)
             {
                 _rootPath = Application.persistentDataPath + "/" + RootFolderName;
                 string.Format("{0}/{1}", Application.streamingAssetsPath,
-                    Util.GetPlatfromFoldername());
+                    ResUtility.GetPlatformPath);
             }
             else
             {
@@ -52,7 +52,7 @@ namespace MyFramework
                 _rootPath = Application.dataPath;
             }
 
-            _assetPath = string.Format("{0}/{1}", _rootPath, AppConst.BinFolderName);
+            _assetPath = string.Format("{0}/{1}", _rootPath, FrameworkDefaultSetting.BinFolderName);
             _logFolderPath = string.Format("{0}/{1}", _assetPath, "log");
             _curLogFilePath = string.Format("{0}/outLog_{1}.txt", _logFolderPath,
                 DateTime.Now.ToString("yy_MM_dd_hh_mm_ss"));

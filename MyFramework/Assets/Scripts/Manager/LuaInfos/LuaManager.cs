@@ -7,7 +7,7 @@ using Res;
  
 namespace MyFramework
 {
-    public class LuaManager : BaseClass
+    public class LuaManager : MonoBehaviour
     {
         # region Lua管理类.主要负责通过lua虚拟机，加载Lua文件或方法
         private LuaState lua;
@@ -35,7 +35,7 @@ namespace MyFramework
             InitLuaPath();
             InitLuaBunlde();
             this.lua.Start();
-            this.StartMain();
+            //this.StartMain();
             this.StartLooper();
         }
 
@@ -52,19 +52,20 @@ namespace MyFramework
             lua.LuaSetField(-2, "cjson.safe");
         }
 
+
+
         /// <summary>
         /// 初始化lua文件的加载路径
         /// </summary>
         void InitLuaPath()
         {
-            if (AppConst.DebugMode)
+            if (FrameworkDefaultSetting.DebugMode)
             {
-                string rootPath = AppConst.HotFixRoot;
                 lua.AddSearchPath(RuntimeResPath.GetLuaDataPath );
                 lua.AddSearchPath(RuntimeResPath.GetToLuaDataPath);
             }
             else
-                lua.AddSearchPath(RuntimeResPath.GetLuaTempDataPath);
+                lua.AddSearchPath(RuntimeResPath.GetLuaAssetsDataPath);
         }
 
         /// <summary>
@@ -74,12 +75,12 @@ namespace MyFramework
         {
             if (loader.beZip)
             {
-                loader.AddBundle("lua/lua");
-                loader.AddBundle("lua/lua_cjson");
-                loader.AddBundle("lua/lua_misc");
-                loader.AddBundle("lua/lua_system");
-                loader.AddBundle("lua/lua_system_reflection");
-                loader.AddBundle("lua/lua_unityengine");
+                loader.AddBundle("lua");
+                loader.AddBundle("lua_cjson");
+                loader.AddBundle("lua_misc");
+                loader.AddBundle("lua_system");
+                loader.AddBundle("lua_system_reflection");
+                loader.AddBundle("lua_unityengine");
             }
         }
 

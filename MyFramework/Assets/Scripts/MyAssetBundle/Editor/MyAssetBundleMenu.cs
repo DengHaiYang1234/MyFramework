@@ -54,8 +54,8 @@ namespace MyAssetBundleEditor
         }
 
 
-        [MenuItem("MyAssetsBundle/BuildAllAssetBundles/Windows", false, 105)]
-        public static void BuildWindowsAssetBundles()
+        [MenuItem("MyAssetsBundle/BuildAll", false, 105)]
+        public static void BuildAssetBundles()
         {
             if (EditorApplication.isCompiling)
             {
@@ -68,7 +68,7 @@ namespace MyAssetBundleEditor
             BuildMainfest manifest = new BuildMainfest(builds);
             if (manifest.BuildManifestIsSuccess && builds != null)
             {
-                BuildingAssetBundles.BuildAssetBundles(builds,BuildTarget.StandaloneWindows);
+                BuildingAssetBundles.BuildAssetBundles(builds);
             }
             else
             {
@@ -76,50 +76,72 @@ namespace MyAssetBundleEditor
             }
         }
 
-        [MenuItem("MyAssetsBundle/BuildAllAssetBundles/Android", false, 105)]
-        public static void BuildAndroidAssetBundles()
-        {
-            if (EditorApplication.isCompiling)
-            {
-                Debug.LogError("代码正在编译中，请重试.....");
-                return;
-            }
-            //添加资源
-            List<AssetBundleBuild> builds = BaseBuild.GetBuilds();
+        //[MenuItem("MyAssetsBundle/BuildAllAssetBundles/Windows", false, 105)]
+        //public static void BuildWindowsAssetBundles()
+        //{
+        //    if (EditorApplication.isCompiling)
+        //    {
+        //        Debug.LogError("代码正在编译中，请重试.....");
+        //        return;
+        //    }
+        //    //添加资源
+        //    List<AssetBundleBuild> builds = BaseBuild.GetBuilds();
 
-            BuildMainfest manifest = new BuildMainfest(builds);
-            if (manifest.BuildManifestIsSuccess && builds != null)
-            {
-                BuildingAssetBundles.BuildAssetBundles(builds, BuildTarget.Android);
-            }
-            else
-            {
-                Debug.LogError("manifest打包失败。请检查错误!");
-            }
-        }
+        //    BuildMainfest manifest = new BuildMainfest(builds);
+        //    if (manifest.BuildManifestIsSuccess && builds != null)
+        //    {
+        //        BuildingAssetBundles.BuildAssetBundles(builds,BuildTarget.StandaloneWindows);
+        //    }
+        //    else
+        //    {
+        //        Debug.LogError("manifest打包失败。请检查错误!");
+        //    }
+        //}
 
-        [MenuItem("MyAssetsBundle/BuildAllAssetBundles/IOS", false, 105)]
-        public static void BuildIosAssetBundles()
-        {
-            if (EditorApplication.isCompiling)
-            {
-                Debug.LogError("代码正在编译中，请重试.....");
-                return;
-            }
+        //[MenuItem("MyAssetsBundle/BuildAllAssetBundles/Android", false, 105)]
+        //public static void BuildAndroidAssetBundles()
+        //{
+        //    if (EditorApplication.isCompiling)
+        //    {
+        //        Debug.LogError("代码正在编译中，请重试.....");
+        //        return;
+        //    }
+        //    //添加资源
+        //    List<AssetBundleBuild> builds = BaseBuild.GetBuilds();
 
-            //添加资源
-            List<AssetBundleBuild> builds = BaseBuild.GetBuilds();
+        //    BuildMainfest manifest = new BuildMainfest(builds);
+        //    if (manifest.BuildManifestIsSuccess && builds != null)
+        //    {
+        //        BuildingAssetBundles.BuildAssetBundles(builds, BuildTarget.Android);
+        //    }
+        //    else
+        //    {
+        //        Debug.LogError("manifest打包失败。请检查错误!");
+        //    }
+        //}
 
-            BuildMainfest manifest = new BuildMainfest(builds);
-            if (manifest.BuildManifestIsSuccess && builds != null)
-            {
-                BuildingAssetBundles.BuildAssetBundles(builds, BuildTarget.iOS);
-            }
-            else
-            {
-                Debug.LogError("manifest打包失败。请检查错误!");
-            }
-        }
+        //[MenuItem("MyAssetsBundle/BuildAllAssetBundles/IOS", false, 105)]
+        //public static void BuildIosAssetBundles()
+        //{
+        //    if (EditorApplication.isCompiling)
+        //    {
+        //        Debug.LogError("代码正在编译中，请重试.....");
+        //        return;
+        //    }
+
+        //    //添加资源
+        //    List<AssetBundleBuild> builds = BaseBuild.GetBuilds();
+
+        //    BuildMainfest manifest = new BuildMainfest(builds);
+        //    if (manifest.BuildManifestIsSuccess && builds != null)
+        //    {
+        //        BuildingAssetBundles.BuildAssetBundles(builds, BuildTarget.iOS);
+        //    }
+        //    else
+        //    {
+        //        Debug.LogError("manifest打包失败。请检查错误!");
+        //    }
+        //}
 
         [MenuItem("MyAssetsBundle/CopyAssetsToStreamingAssets", false, 105)]
         public static void CopyAssetsToStreamingAssets()

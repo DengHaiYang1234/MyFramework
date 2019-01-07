@@ -13,44 +13,6 @@ namespace MyFramework
     {
         #region  辅助方法
         /// <summary>
-        /// 数据目录  注：除了在调试模式，Lua文件的加载路径都是通过DataPath
-        /// </summary>
-        public static string DataPath
-        {
-            get
-            {
-                string game = AppConst.AppName.ToLower();
-                if (Application.isMobilePlatform)
-                    return Application.persistentDataPath + "/" + game + "/"; //可读写
-                if (Application.platform == RuntimePlatform.WindowsPlayer)
-                    return Application.streamingAssetsPath + "/";
-                if (AppConst.DebugMode && Application.isEditor)
-                    return Application.streamingAssetsPath + "/"; //只读不写
-                if(Application.platform == RuntimePlatform.OSXEditor)
-                {
-                    int i = Application.dataPath.LastIndexOf("/");
-                    return Application.dataPath.Substring(0, i + 1) + game + "/";
-                }
-
-                return "d:/" + game + "/";   //可读写
-            }
-        }
-
-        public static void Log(object str)
-        {
-            MyDebug.Log(str);
-        }
-
-        public static void LogErr(object str)
-        {
-            MyDebug.LogError(str);
-        }
-
-        public static void LogWarn(object str)
-        {
-            MyDebug.LogWarning(str);
-        }
-        /// <summary>
         /// 编写文件的MD5校验码
         /// </summary>
         /// <param name="file"></param>
@@ -77,25 +39,6 @@ namespace MyFramework
             }
         }
 
-        public static string AppContentPath()
-        {
-            string path = string.Empty;
-            switch (Application.platform)
-            {
-                case RuntimePlatform.Android:
-                    path = "jar:file://" + Application.dataPath + "!/assets/";
-                    break;
-                case RuntimePlatform.IPhonePlayer:
-                    path = Application.dataPath + "/Raw/";
-                    break;
-                default:
-                    path = Application.dataPath + "/StreamingAssets/";
-                    break;
-            }
-
-            return path;
-        }
-
         /// <summary>
         /// 访问lua方法
         /// </summary>
@@ -105,7 +48,7 @@ namespace MyFramework
         /// <returns></returns>
         public static object[] CallMethod(string module, string func, params object[] args)
         {
-            LuaManager luaMgr = AppFacade.Instance.GetManager<LuaManager>(ManagersName.lua);
+            LuaManager luaMgr = GameFacade.Instance.GetManager<LuaManager>(ManagersName.lua);
             if (luaMgr == null)
                 return null;
             return luaMgr.CallFunction(TrimPath(module) + "." + func);
@@ -130,54 +73,6 @@ namespace MyFramework
             return fileName;
         }
 
-        /// <summary>
-        /// 加载AssetBundle资源.
-        /// </summary>
-        /// <param name="bundle"></param>
-        /// <param name="name"></param> name为AssetBundle中的prefab名称 
-        /// <returns></returns>
-        public static GameObject LoadAsset(AssetBundle bundle, string name)
-        {
-            try
-            {
-#if UNITY_5
-                Util.LogErr("LoadAsset:" + name);
-                return bundle.LoadAsset(name, typeof (GameObject)) as GameObject;
-#else
-                return bundle.Load(name, typeof(GameObject)) as GameObject;
-#endif
-            }
-            catch(Exception ex)
-            {
-                throw new Exception(ex.Message);
-                return null;
-            }
-        }
-
-        public static string GetPlatfromFoldername()
-        {
-            switch (Application.platform)
-            {
-                case RuntimePlatform.WindowsEditor:
-                case RuntimePlatform.WindowsPlayer:
-                {
-                    return AppConst.StandaloneWindows;
-                }
-                case RuntimePlatform.Android:
-                    return AppConst.Android;
-                case RuntimePlatform.IPhonePlayer:
-                    return AppConst.Ios;
-                default:
-                    return AppConst.StandaloneWindows;
-            }
-        }
-
-        public static string GetBundleFileName(string dataPath)
-        {
-            return dataPath.Substring(dataPath.LastIndexOf('/'));
-        }
-
-        
 
         #endregion
     }

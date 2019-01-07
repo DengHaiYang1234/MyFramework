@@ -1,0 +1,58 @@
+ManifestFileVersion: 0
+CRC: 3631911824
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: assets/data/manifestdir/manifest
+      Dependencies: {}
+    Info_1:
+      Name: assets/luatemp//lua_cjson
+      Dependencies: {}
+    Info_2:
+      Name: assets/luatemp//lua_jit
+      Dependencies: {}
+    Info_3:
+      Name: assets/luatemp//lua_lpeg
+      Dependencies: {}
+    Info_4:
+      Name: assets/luatemp//lua_misc
+      Dependencies: {}
+    Info_5:
+      Name: assets/luatemp//lua_protobuf
+      Dependencies: {}
+    Info_6:
+      Name: assets/luatemp//lua_socket
+      Dependencies: {}
+    Info_7:
+      Name: assets/luatemp//lua_system
+      Dependencies: {}
+    Info_8:
+      Name: assets/luatemp//lua_unityengine
+      Dependencies: {}
+    Info_9:
+      Name: assets/luatemp//lua_system_injection
+      Dependencies: {}
+    Info_10:
+      Name: assets/luatemp//lua_system_reflection
+      Dependencies: {}
+    Info_11:
+      Name: assets/luatemp//lua
+      Dependencies: {}
+    Info_12:
+      Name: assets/data/[uiatlas]/test
+      Dependencies: {}
+    Info_13:
+      Name: assets/data/[uiatlas]/tt
+      Dependencies: {}
+    Info_14:
+      Name: assets/data/[uiprefab]/downloadpanel
+      Dependencies:
+        Dependency_0: assets/data/[uiatlas]/test
+    Info_15:
+      Name: assets/data/[uiprefab]/image
+      Dependencies:
+        Dependency_0: assets/data/[uiatlas]/test
+    Info_16:
+      Name: assets/data/[uiprefab]/test
+      Dependencies:
+        Dependency_0: assets/data/[uiatlas]/test

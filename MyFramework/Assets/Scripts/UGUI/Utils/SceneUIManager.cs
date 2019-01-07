@@ -22,8 +22,10 @@ namespace MyFramework
             LuaDataAgent.UILayers.Layer_4 = layer4;
             LuaDataAgent.UILayers.Layer_5 = layer5;
             LuaDataAgent.UILayers.Layer_Mask = mask;
-            //Canvas can = this.gameObject.GetComponent<Canvas>();
-            //can.worldCamera = FrameworkMain.Instance.UiCamera;
+            DontDestroyOnLoad(this.gameObject);
+            Canvas can = this.gameObject.GetComponent<Canvas>();
+            can.worldCamera = GameObject.Find("Camera").gameObject.GetComponent<Camera>();
+            ChgReferenceResolution();
         }
 
         
@@ -44,7 +46,7 @@ namespace MyFramework
             vDest.y = fy;
             canvasScalerTemp.referenceResolution = vDest;
 
-            FrameworkMain.RealScreenSize = vDest;
+            //FrameworkMain.RealScreenSize = vDest;
         }
     }
 }

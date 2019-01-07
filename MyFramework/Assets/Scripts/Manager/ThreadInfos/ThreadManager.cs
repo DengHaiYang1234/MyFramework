@@ -23,7 +23,7 @@ namespace MyFramework
     }
 
 
-    public class ThreadManager : BaseClass
+    public class ThreadManager : MonoBehaviour
     {
         #region 线程下载管理类
         private Thread thread;
@@ -141,7 +141,7 @@ namespace MyFramework
                 sw.Reset();
                 data = new NotiData(NotiConst.UPDATE_DOWNLOAD, currDownFile);
                 //防止下载完成并不会执行回调
-                HotManager_.downLoadFiles.Add(data.evParam.ToString());
+                FrameworkMain.Instance.HotMgr.downLoadFiles.Add(data.evParam.ToString());
                 if (m_SyncEvent != null) m_SyncEvent(data);
             }
         }

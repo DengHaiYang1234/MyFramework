@@ -68,12 +68,12 @@ namespace Res
             }
         }
 
-        public static string GetLuaTempDataPath
+        /// <summary>
+        /// lua 资源加载路径
+        /// </summary>
+        public static string GetLuaAssetsDataPath
         {
-            get
-            {
-                return string.Format("{0}{1}/", GetLocalDataPath, LuaTempDir);
-            }
+            get { return string.Format("{0}{1}/{2}/", GetLocalDataPath, "assets", "luatemp"); }
         }
     }
 }

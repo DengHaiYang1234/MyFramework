@@ -14,8 +14,12 @@ namespace MyAssetBundleEditor
     {
         public CopyAssets(string outputPath)
         {
-            if (!Directory.Exists(outputPath))
-                Directory.CreateDirectory(outputPath);
+            if (Directory.Exists(Application.streamingAssetsPath))
+            {
+                Directory.CreateDirectory(Application.streamingAssetsPath);
+            }
+
+            Directory.CreateDirectory(outputPath);
 
             string outputFolder = ResUtility.GetPlatformPath;
 

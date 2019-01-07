@@ -33,8 +33,9 @@ namespace Res
         {
             CheckInstace();
 #if UNITY_EDITOR
-            if (!FrameworkSwitch.useEditorPrefab)
+            if (!FrameworkDefaultSetting.useEditorPrefab)
             {
+                
                 return InitializeBundle();
             }
             else
@@ -55,11 +56,13 @@ namespace Res
         {
             //资源目录
             string relativePath = Path.Combine(ResUtility.AssetBundlesOutputPath, ResUtility.GetPlatformPath);
-            var url = 
+            var url =
 #if UNITY_EDITOR
-                relativePath + "/";
+
+            relativePath + "/";
 #else
-                Path.Combine(Application.streamingAssetsPath, relativePath) + "/";
+                ResUtility.GetDataPathByPlatform;
+                //Path.Combine(Application.streamingAssetsPath, relativePath) + "/";
 #endif
             if (MyBundles.Initialize(url)) //初始化Bundles信息
             {
@@ -83,7 +86,7 @@ namespace Res
         {
 #if UNITY_EDITOR
             //直接读取项目资源
-            if (FrameworkSwitch.useEditorPrefab)
+            if (FrameworkDefaultSetting.useEditorPrefab)
             {
                 string path = BuildDefaultPath.GetManifestAssetPath();
                 var manifestAsset = UnityEditor.AssetDatabase.LoadAssetAtPath<PackageManifest>(path);
@@ -169,7 +172,7 @@ namespace Res
             if (asset == null)
             {
 #if UNITY_EDITOR
-                if (!FrameworkSwitch.useEditorPrefab)
+                if (!FrameworkDefaultSetting.useEditorPrefab)
                 {
                     asset = CreatAssetRuntime(name, type, asyncMode);
                 }

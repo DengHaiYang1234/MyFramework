@@ -11,8 +11,7 @@ public class ResUtility
 {
     public const string AssetBundlesOutputPath = "AssetBundles";
 
-    //下载地址
-    public static string WebUrl = "http://192.168.93.230:8081/StreamingAssets/";
+
 
     public static string GetPlatformPath
     {
@@ -122,7 +121,7 @@ public class ResUtility
             switch (Application.platform)
             {
                 case RuntimePlatform.Android:
-                    return Application.dataPath + "!assets/";
+                    return Application.dataPath + "!/assets/";
                 case RuntimePlatform.IPhonePlayer:
                     return Application.dataPath + "/Raw/";
                 default:

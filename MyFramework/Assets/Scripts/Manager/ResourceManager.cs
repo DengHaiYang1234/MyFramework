@@ -8,7 +8,7 @@ using Res;
 
 namespace MyFramework
 {
-    public class ResourceManager : BaseClass
+    public class ResourceManager : MonoBehaviour
     {
         public bool Init()
         {

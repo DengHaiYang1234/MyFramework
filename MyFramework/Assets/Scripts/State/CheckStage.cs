@@ -11,32 +11,26 @@ namespace MyFramework
     /// </summary>
     public class CheckStage : BaseStage
     {
-        private HotManager hotFix;
-
-        private ResourceManager res;
-
         public CheckStage(FrameworkMain owner) : base((int) MyStage.check, owner)
         {
-            hotFix = owner.GetManager<HotManager>(ManagersName.hot);
-            res = owner.GetManager<ResourceManager>(ManagersName.resource);
         }
 
         public override void BeforeEnter(object p)
         {
-            if (!(hotFix.InitLoaclFilesInfo(false)))
-                hotFix.InitLocalFilesInfoByResource();
+            if (!(Owner.HotMgr.InitLoaclFilesInfo(false)))
+                Owner.HotMgr.InitLocalFilesInfoByResource();
 
-            hotFix.Init();
+            Owner.HotMgr.Init();
         }
 
         public override void OnEnter(StateBase<FrameworkMain> exitState, object param)
         {
-            if (!(hotFix.IsInit))
-            {
-                MyDebug.LogError("HotManager初始化失败！请检查");
-                return;
-            }
-            hotFix.UpdateResource();
+            //if (!(Owner.HotMgr.IsInit))
+            //{
+            //    MyDebug.LogError("HotManager初始化失败！请检查");
+            //    return;
+            //}
+            Owner.HotMgr.UpdateResource();
             FrameworkMain.Instance.Run = true;
         }
 
@@ -44,7 +38,7 @@ namespace MyFramework
         {
             base.OnRunning(param);
 
-            bool isComplete = hotFix.IsComplete();
+            bool isComplete = Owner.HotMgr.IsComplete();
 
             if (isComplete)
             {

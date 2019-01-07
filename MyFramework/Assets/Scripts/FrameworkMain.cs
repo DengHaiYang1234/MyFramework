@@ -14,6 +14,12 @@ namespace MyFramework
         private static Vector2 _realScreenSize = new Vector2(1280, 720);
         private readonly StateMachine<FrameworkMain> _gameStateFsm = new StateMachine<FrameworkMain>();
         private bool _doFsmUpdate = false;
+
+        private LuaManager luaMgr;
+        private ResourceManager resMgr;
+        private HotManager hotMgr;
+        private ThreadManager threadMgr;
+
         #endregion
 
         #region public
@@ -31,6 +37,29 @@ namespace MyFramework
             get { return _realScreenSize; }
             set { _realScreenSize = value; }
         }
+
+        public LuaManager LuaMgr
+        {
+            get { return luaMgr; }
+        }
+
+        public ResourceManager ResMgr
+        {
+            get { return resMgr; }
+        }
+
+        public HotManager HotMgr
+        {
+            get { return hotMgr; }
+        }
+
+        public ThreadManager ThreadMgr
+        {
+            get { return threadMgr; }
+        }
+
+
+
         /// <summary>
         /// 状态机
         /// </summary>
@@ -51,6 +80,7 @@ namespace MyFramework
 
         private void Awake()
         {
+            DontDestroyOnLoad(gameObject);
             _instance = this;
             Init();
             InitFsm();
@@ -67,7 +97,8 @@ namespace MyFramework
             DontDestroyOnLoad(gameObject);
             SDRootPath.Instance.Init(); //初始化UI Canvas
             LTDebugOutput.Instance.Init();//初始化 Debug管理
-            AppFacade.Instance.StartUp(); //启动游戏
+            GameFacade.Instance.StartUp(); //启动游戏
+            InitManager();
         }
         
         //初始状态机
@@ -77,6 +108,14 @@ namespace MyFramework
 
             _gameStateFsm.Add(new CheckStage(this));
             _gameStateFsm.Add(new StartGameState(this));
+        }
+
+        private void InitManager()
+        {
+            resMgr = GetManager<ResourceManager>(ManagersName.resource);
+            luaMgr = GetManager<LuaManager>(ManagersName.lua);
+            hotMgr = GetManager<HotManager>(ManagersName.hot);
+            threadMgr =  GetManager<ThreadManager>(ManagersName.thread);
         }
 
         //初始状态
@@ -95,7 +134,7 @@ namespace MyFramework
         //获取Manager
         public T GetManager<T>(string name) where T : Component
         {
-            return AppFacade.Instance.GetManager<T>(name);
+            return GameFacade.Instance.GetManager<T>(name);
         }
 
         #endregion

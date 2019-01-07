@@ -1,0 +1,19 @@
+ManifestFileVersion: 0
+CRC: 2266646964
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 50a167f1f431c4943c595d1b46d654c0
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 36c33a819640bead83b84b1645a12e6d
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/data/[UIAtlas]/Test/vip_bg.png
+- Assets/data/[UIAtlas]/Test/bg_left.png
+Dependencies: []
