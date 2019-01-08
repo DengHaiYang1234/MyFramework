@@ -44,7 +44,8 @@ namespace MyFramework
 
         public static void SetSprite(string name)
         {
-            //sprite.sprite = ResMain.Instance.GetSpriteByName(name);
+            MyDebug.LogError("设置图片：" + name);
+            sprite.sprite = FrameworkMain.Instance.ResMgr.Load<Sprite>(name);
         }
 
     }

@@ -1,0 +1,8 @@
+﻿MyDebugInfos##Error:1/8/2019 6:41:24 PM::aaaaaaaaaaaaa12
+MyDebugInfos##Error:1/8/2019 6:41:33 PM::aaaaaaaaaaa啊啊啊啊
+MyDebugInfos##Error:1/8/2019 6:42:45 PM::NullReferenceException: Object reference not set to an instance of an object
+MyFramework.CheckStage.BeforeEnter (System.Object p) (at Assets/Scripts/State/CheckStage.cs:20)
+MyFramework.StateMachine`1[MyFramework.FrameworkMain].ChangeState (Int32 id, System.Object param1, System.Object param2) (at Assets/Scripts/FSMState/StateMachine.cs:115)
+MyFramework.FrameworkMain.DoGameStart () (at Assets/Scripts/FrameworkMain.cs:127)
+MyFramework.FrameworkMain.Start () (at Assets/Scripts/FrameworkMain.cs:94)
+

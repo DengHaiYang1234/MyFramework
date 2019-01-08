@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1358996514
+CRC: 699409144
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 07978558e85f414bd1be2ecd2e208140
+    Hash: a7e6e1349239efd010477435e6566fe5
   TypeTreeHash:
     serializedVersion: 2
     Hash: 1033bf7ddfd4c6d43e7a6382c0a0a61a
@@ -12,18 +12,18 @@ ClassTypes:
 - Class: 49
   Script: {instanceID: 0}
 Assets:
-- Assets/LuaTemp/UnityEngine/RaycastHit.lua.bytes
-- Assets/LuaTemp/UnityEngine/Quaternion.lua.bytes
-- Assets/LuaTemp/UnityEngine/Vector3.lua.bytes
-- Assets/LuaTemp/UnityEngine/Touch.lua.bytes
+- Assets/LuaTemp/UnityEngine/Profiler.lua.bytes
 - Assets/LuaTemp/UnityEngine/LayerMask.lua.bytes
-- Assets/LuaTemp/UnityEngine/Vector2.lua.bytes
-- Assets/LuaTemp/UnityEngine/Plane.lua.bytes
 - Assets/LuaTemp/UnityEngine/Mathf.lua.bytes
+- Assets/LuaTemp/UnityEngine/Ray.lua.bytes
+- Assets/LuaTemp/UnityEngine/Touch.lua.bytes
+- Assets/LuaTemp/UnityEngine/RaycastHit.lua.bytes
+- Assets/LuaTemp/UnityEngine/Vector3.lua.bytes
+- Assets/LuaTemp/UnityEngine/Bounds.lua.bytes
+- Assets/LuaTemp/UnityEngine/Vector2.lua.bytes
+- Assets/LuaTemp/UnityEngine/Quaternion.lua.bytes
 - Assets/LuaTemp/UnityEngine/Color.lua.bytes
 - Assets/LuaTemp/UnityEngine/Vector4.lua.bytes
-- Assets/LuaTemp/UnityEngine/Bounds.lua.bytes
-- Assets/LuaTemp/UnityEngine/Profiler.lua.bytes
-- Assets/LuaTemp/UnityEngine/Ray.lua.bytes
+- Assets/LuaTemp/UnityEngine/Plane.lua.bytes
 - Assets/LuaTemp/UnityEngine/Time.lua.bytes
 Dependencies: []

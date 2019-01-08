@@ -109,7 +109,7 @@ namespace MyFramework
             }
             catch(Exception e)
             {
-                MyDebug.LogException(e);
+                MyDebug.LogError(e);
             }
         }
 

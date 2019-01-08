@@ -25,11 +25,10 @@ namespace MyFramework
 
         public override void OnEnter(StateBase<FrameworkMain> exitState, object param)
         {
-            //if (!(Owner.HotMgr.IsInit))
-            //{
-            //    MyDebug.LogError("HotManager初始化失败！请检查");
-            //    return;
-            //}
+            if (!(Owner.HotMgr.IsInitLocalFile))
+            {
+                MyDebug.Log("HotManager初始化本地文件失败！开始下载服务器资源!");
+            }
             Owner.HotMgr.UpdateResource();
             FrameworkMain.Instance.Run = true;
         }

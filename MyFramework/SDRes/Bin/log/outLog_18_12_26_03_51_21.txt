@@ -1,3 +1,0 @@
-﻿SDDebug##Error:12/26/2018 3:51:23 PM::初始状态机  初始状态机  初始状态机
-SDDebug##Error:12/26/2018 3:51:23 PM::CheckStage  OnEnter!  CheckStage  OnEnter!
-SDDebug##Error:12/26/2018 3:52:10 PM::LoadFromFile failed . path: AssetBundles\Android/manifest

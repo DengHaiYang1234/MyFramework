@@ -15,9 +15,9 @@ namespace MyFramework
             return MyAssets.Initialize();
         }
 
-        public MyAsset Load<T>(string assetName,Action<MyAsset> callback = null) where T : UnityEngine.Object
+        public T Load<T>(string assetName,Action<MyAsset> callback = null) where T : UnityEngine.Object
         {
-            return MyAssets.Load<T>(assetName,callback);
+            return MyAssets.Load<T>(assetName,callback).asset as T;
         }
         
         public void LoadSync<T>(string assetName, Action<MyAsset> callback) where T : UnityEngine.Object

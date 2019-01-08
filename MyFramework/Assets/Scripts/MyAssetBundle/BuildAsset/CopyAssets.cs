@@ -16,16 +16,13 @@ namespace MyAssetBundleEditor
         {
             if (Directory.Exists(Application.streamingAssetsPath))
             {
-                Directory.CreateDirectory(Application.streamingAssetsPath);
+                Directory.Delete(Application.streamingAssetsPath,true);
             }
 
             Directory.CreateDirectory(outputPath);
 
-            string outputFolder = ResUtility.GetPlatformPath;
-
             string source =
-                Path.Combine(Path.Combine(System.Environment.CurrentDirectory, ResUtility.AssetBundlesOutputPath),
-                    outputFolder);
+                Path.Combine(ResUtility.AssetBundlesOutputPath, ResUtility.GetPlatformPath).Replace('\\', '/');
 
             if (!Directory.Exists(source))
             {
@@ -33,15 +30,10 @@ namespace MyAssetBundleEditor
                 return;
             }
 
-            string destination = Path.Combine(outputPath, outputFolder);
-#if UNITY_EDITOR
-            if (Directory.Exists(destination))
-                FileUtil.DeleteFileOrDirectory(destination);
-
-            FileUtil.CopyFileOrDirectory(source, destination);
-#endif
+            string destination = Path.Combine(outputPath, ResUtility.GetPlatformPath).Replace('\\', '/');
+            string[] sources = {source};
+            CopyFiles.Copy(destination, sources);
         }
-
     }
 }
 

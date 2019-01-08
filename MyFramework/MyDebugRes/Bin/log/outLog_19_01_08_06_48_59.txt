@@ -1,0 +1,52 @@
+﻿MyDebugInfos##Error:1/8/2019 6:48:59 PM::DataPath:D:/MyFramework/MyFramework/Assets
+MyDebugInfos##Error:1/8/2019 6:48:59 PM::DataPath:D:/MyFramework/MyFramework/Assets
+UnityEngine.Debug:LogError(Object)
+MyDebug:LogError(Object) (at Assets/Scripts/MyDebug/MyDebug.cs:123)
+MyFramework.HotManager:Init() (at Assets/Scripts/Manager/HotManager.cs:37)
+MyFramework.CheckStage:BeforeEnter(Object) (at Assets/Scripts/State/CheckStage.cs:23)
+MyFramework.StateMachine`1:ChangeState(Int32, Object, Object) (at Assets/Scripts/FSMState/StateMachine.cs:115)
+MyFramework.FrameworkMain:DoGameStart() (at Assets/Scripts/FrameworkMain.cs:125)
+MyFramework.FrameworkMain:Start() (at Assets/Scripts/FrameworkMain.cs:94)
+
+MyDebugInfos##Error:1/8/2019 6:48:59 PM::资源更新完毕!
+MyDebugInfos##Error:1/8/2019 6:48:59 PM::资源更新完毕!
+UnityEngine.Debug:LogError(Object)
+MyDebug:LogError(Object) (at Assets/Scripts/MyDebug/MyDebug.cs:123)
+MyFramework.HotManager:OnUpdateMessageComplete() (at Assets/Scripts/Manager/HotManager.cs:285)
+MyFramework.<OnUpdateResource>c__Iterator1:MoveNext() (at Assets/Scripts/Manager/HotManager.cs:157)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
+MyFramework.HotManager:UpdateResource() (at Assets/Scripts/Manager/HotManager.cs:44)
+MyFramework.CheckStage:OnEnter(StateBase`1, Object) (at Assets/Scripts/State/CheckStage.cs:32)
+MyFramework.StateMachine`1:ChangeState(Int32, Object, Object) (at Assets/Scripts/FSMState/StateMachine.cs:116)
+MyFramework.FrameworkMain:DoGameStart() (at Assets/Scripts/FrameworkMain.cs:125)
+MyFramework.FrameworkMain:Start() (at Assets/Scripts/FrameworkMain.cs:94)
+
+MyDebugInfos##Error:1/8/2019 6:48:59 PM::PackageManifest【name】存在重复！！！ test
+UnityEngine.Debug:LogError(Object)
+MyAssetBundleEditor.PackageManifest:MapingAssetData() (at Assets/Scripts/MyAssetBundle/BuildAsset/PackageManifest.cs:44)
+Res.MyAssets:InitManifest() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:100)
+Res.MyAssets:InitializeBundle() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:72)
+Res.MyAssets:Initialize() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:39)
+MyFramework.ResourceManager:Init() (at Assets/Scripts/Manager/ResourceManager.cs:15)
+MyFramework.StartGameState:BeforeEnter(Object) (at Assets/Scripts/State/StartGameState.cs:24)
+MyFramework.StateMachine`1:ChangeState(Int32, Object, Object) (at Assets/Scripts/FSMState/StateMachine.cs:115)
+MyFramework.CheckStage:OnCheckUpdateComplete() (at Assets/Scripts/State/CheckStage.cs:57)
+MyFramework.CheckStage:OnRunning(Object) (at Assets/Scripts/State/CheckStage.cs:44)
+MyFramework.FrameworkMain:Update() (at Assets/Scripts/FrameworkMain.cs:132)
+
+MyDebugInfos##Error:1/8/2019 6:48:59 PM::设置图片：BG_1
+MyDebugInfos##Error:1/8/2019 6:48:59 PM::设置图片：BG_1
+UnityEngine.Debug:LogError(Object)
+MyDebug:LogError(Object) (at Assets/Scripts/MyDebug/MyDebug.cs:123)
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:47)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:73)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:91)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+

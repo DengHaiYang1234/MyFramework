@@ -92,7 +92,7 @@ public class Loom : MonoBehaviour
             }
             catch(Exception e)
             {
-                MyDebug.LogException(e);
+                MyDebug.LogError(e);
             }
         }
     }

@@ -1,3 +1,0 @@
-﻿SDDebug##Error:12/21/2018 4:30:39 PM::初始状态机  初始状态机  初始状态机
-SDDebug##Error:12/21/2018 4:30:39 PM::CheckStage  OnEnter!  CheckStage  OnEnter!
-SDDebug##Error:12/21/2018 4:30:39 PM::Please initialize AssetBundleManifest by calling Bundles.Initialize()

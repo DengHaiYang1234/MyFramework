@@ -104,10 +104,6 @@
     <Compile Include="Assets\Scripts\FSMTest\State_Dead.cs" />
     <Compile Include="Assets\Scripts\FSMTest\State_Walk.cs" />
     <Compile Include="Assets\Scripts\FrameworkMain.cs" />
-    <Compile Include="Assets\Scripts\LogDebug\LTDebugOutput.cs" />
-    <Compile Include="Assets\Scripts\LogDebug\LTDebugText.cs" />
-    <Compile Include="Assets\Scripts\LogDebug\MyDebug.cs" />
-    <Compile Include="Assets\Scripts\LogDebug\SDRootPath.cs" />
     <Compile Include="Assets\Scripts\Manager\HotManager.cs" />
     <Compile Include="Assets\Scripts\Manager\LuaInfos\LuaLoader.cs" />
     <Compile Include="Assets\Scripts\Manager\LuaInfos\LuaManager.cs" />
@@ -131,8 +127,13 @@
     <Compile Include="Assets\Scripts\MyAssetBundleRes\MyBundle.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundleRes\MyBundles.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundleRes\Util\RuntimeResPath.cs" />
+    <Compile Include="Assets\Scripts\MyDebug\DebugOutput.cs" />
+    <Compile Include="Assets\Scripts\MyDebug\DebugRootPath.cs" />
+    <Compile Include="Assets\Scripts\MyDebug\DebugText.cs" />
+    <Compile Include="Assets\Scripts\MyDebug\MyDebug.cs" />
     <Compile Include="Assets\Scripts\State\CheckStage.cs" />
     <Compile Include="Assets\Scripts\State\StartGameState.cs" />
+    <Compile Include="Assets\Scripts\Tools\CopyFiles.cs" />
     <Compile Include="Assets\Scripts\UGUI\Common\LuaDataAgent.cs" />
     <Compile Include="Assets\Scripts\UGUI\Utils\SceneGlobalUI.cs" />
     <Compile Include="Assets\Scripts\UGUI\Utils\SceneUIManager.cs" />

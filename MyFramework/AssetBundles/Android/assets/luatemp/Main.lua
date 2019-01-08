@@ -13,7 +13,8 @@ end
 
 function Main.SetValue()
     DownPanel = MyFramework.DownPanel
-    DownPanel.SetProgressValue("嘻嘻嘻嘻嘻")
-    DownPanel.SetFileValue("哈哈哈哈哈")
+    DownPanel.SetProgressValue("成功完成热更")
+    DownPanel.SetFileValue("!!!!!!!!!!!!!!!!")
+    DownPanel.SetSprite("BG_1")
     --DownPanel.GetTitle()
 end

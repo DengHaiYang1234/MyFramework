@@ -34,8 +34,7 @@ namespace MyAssetBundleEditor
                 BuildDefaultPath.GetLuaDataPath,
                 BuildDefaultPath.GetToLuaDataPath,
             };
-
-            CopyLuaFiles(destDir, sourcesDirs);
+            CopyFiles.Copy(destDir, sourcesDirs);
         }
 
         private void CopyLuaFiles(string destDir, string[] sourcesDirs)

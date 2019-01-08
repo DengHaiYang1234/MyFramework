@@ -80,6 +80,8 @@ namespace MyFramework
 
         private void Awake()
         {
+            ClearConsole();
+            Debug.Log("Launcher 启动");
             DontDestroyOnLoad(gameObject);
             _instance = this;
             Init();
@@ -95,8 +97,8 @@ namespace MyFramework
         public void Init()
         {
             DontDestroyOnLoad(gameObject);
-            SDRootPath.Instance.Init(); //初始化UI Canvas
-            LTDebugOutput.Instance.Init();//初始化 Debug管理
+            DebugRootPath.Instance.Init(); //初始化UI Canvas
+            DebugOutput.Instace.Init();//初始化 Debug管理
             GameFacade.Instance.StartUp(); //启动游戏
             InitManager();
         }
@@ -104,10 +106,9 @@ namespace MyFramework
         //初始状态机
         private void InitFsm()
         {
-            MyDebug.LogError("初始状态机  初始状态机  初始状态机");
-
             _gameStateFsm.Add(new CheckStage(this));
             _gameStateFsm.Add(new StartGameState(this));
+            MyDebug.Log("状态机初始化完毕");
         }
 
         private void InitManager()
@@ -135,6 +136,16 @@ namespace MyFramework
         public T GetManager<T>(string name) where T : Component
         {
             return GameFacade.Instance.GetManager<T>(name);
+        }
+
+
+        private void ClearConsole()
+        {
+#if UNITY_EDITOR
+            var logEntries = System.Type.GetType("UnityEditorInternal.LogEntries,UnityEditor.dll");
+            var clearMethod = logEntries.GetMethod("Clear", System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.Public);
+            clearMethod.Invoke(null, null);
+#endif
         }
 
         #endregion

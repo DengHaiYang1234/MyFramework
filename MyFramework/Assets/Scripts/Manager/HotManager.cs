@@ -19,12 +19,12 @@ namespace MyFramework
 
         private bool isComplete = false;
 
-        public bool IsInit
+        public bool IsInitLocalFile
         {
-            get { return isInit; }
+            get { return isInitLocalFile; }
         }
 
-        private bool isInit = false;
+        private bool isInitLocalFile = false;
 
         //key: file   value:MD5
         private Dictionary<string, string> localFileInfosDic = new Dictionary<string, string>();
@@ -98,7 +98,7 @@ namespace MyFramework
                         if (!Directory.Exists(dir))
                             Directory.CreateDirectory(dir);
                     }
-                    isInit = true;
+                    isInitLocalFile = true;
                     return true;
                 }
             }
@@ -263,6 +263,7 @@ namespace MyFramework
                 BeginDownload(remoteVerUrl, localVerFile);
                 while (!(IsDownOk(localVerFile)))
                 {
+                    OnUpdateMessageDownLoad(remoteFiles.Length - 1, remoteFiles.Length);
                     yield return new WaitForEndOfFrame();
                 }
                 //将远端信息更新至本地

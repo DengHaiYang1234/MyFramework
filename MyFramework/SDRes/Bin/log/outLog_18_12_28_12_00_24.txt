@@ -1,2 +1,0 @@
-﻿SDDebug##Error:12/28/2018 12:00:25 PM::初始状态机  初始状态机  初始状态机
-SDDebug##Error:12/28/2018 12:00:26 PM::CheckStage  OnEnter!  CheckStage  OnEnter!
