@@ -8,7 +8,7 @@ namespace Res
     public class MyAsset
     {
         //回调
-        private Action<MyAsset> completed;
+        private Action<MyAsset> callback;
 
         //资源路径
         public string assetName { get; private set; }
@@ -33,7 +33,7 @@ namespace Res
         /// <param name="lisenter"></param>
         public void AddCompletedLisenter(Action<MyAsset> lisenter)
         {
-            completed += lisenter;
+            callback += lisenter;
         }
 
         /// <summary>
@@ -42,7 +42,7 @@ namespace Res
         /// <param name="lisenter"></param>
         public void RemoveCompletedLisenter(Action<MyAsset> lisenter)
         {
-            completed -= lisenter;
+            callback -= lisenter;
         }
 
         public MyAsset(string path,Type type)
@@ -103,10 +103,10 @@ namespace Res
         {
             if (isDone)
             {
-                if (completed != null)
+                if (callback != null)
                 {
-                    completed.Invoke(this);
-                    completed = null;
+                    callback.Invoke(this);
+                    callback = null;
                 }
                 return false;
             }

@@ -49,7 +49,6 @@ namespace Res
                     MyDebug.LogErrorFormat("Please initialize AssetBundleManifest by calling Bundles.Initialize()");
                     return null;
                 }
-                //assetBundleName = RemapVariantName(assetBundleName);
             }
 
             var url = GetDataPath() + assetBundleName;
@@ -59,6 +58,8 @@ namespace Res
                 var hash = isLoadingAssetBundleManifest
                     ? new Hash128(1, 0, 0, 0)
                     : manifest.GetAssetBundleHash(assetBundleName);
+
+                MyDebug.LogErrorFormat("加载依赖文件manifest:{0},Hash：{1}", assetBundleName, hash);
 
                 if (bundle == null)
                 {
@@ -85,51 +86,6 @@ namespace Res
             return bundle;
         }
 
-        static string RemapVariantName(string assetBundleName)
-        {
-            string[] bundlesWithVariant = manifest.GetAllAssetBundlesWithVariant();
-
-            string baseName = assetBundleName.Split('.')[0];
-
-            int bestFit = int.MaxValue;
-            int bestFitIndex = -1;
-
-            for (int i = 0; i < bundlesWithVariant.Length; i++)
-            {
-                string[] curSplit = bundlesWithVariant[i].Split('.');
-                string curBaseName = curSplit[0];
-                string curVariant = curSplit[1];
-
-                if (curBaseName != baseName)
-                {
-                    continue;
-                }
-
-                int found = System.Array.IndexOf(activeVariants, curVariant);
-
-                if (found == -1)
-                    found = int.MaxValue - 1;
-
-                if (found < bestFit)
-                {
-                    bestFit = found;
-                    bestFitIndex = i;
-                }
-            }
-
-            if (bestFit == int.MaxValue - 1)
-            {
-                MyDebug.LogFormat("Ambigious asset bundle variant chosen because there was no matching active variant: " + bundlesWithVariant[bestFitIndex]);
-            }
-
-            if (bestFitIndex != -1)
-            {
-                return bundlesWithVariant[bestFitIndex];
-            }
-
-            return assetBundleName;
-        }
-
         public static string GetDataPath()
         {
             return dataPath;
@@ -141,7 +97,10 @@ namespace Res
             if (dependencies.Length > 0)
             {
                 foreach (var item in dependencies)
+                {
+                    MyDebug.LogErrorFormat("开始下载bundle：{0}，对应依赖资源：{1}",bundle.name,item);
                     bundle.dependencies.Add(LoadInternal(item, false, asyncRequest));
+                }
             }
         }
 

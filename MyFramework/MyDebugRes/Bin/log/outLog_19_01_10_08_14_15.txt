@@ -1,0 +1,3 @@
+﻿MyDebugInfos##Error:1/10/2019 8:14:15 PM::DataPath:D:/MyFramework/MyFramework/Assets
+MyDebugInfos##Error:1/10/2019 8:14:16 PM::remoteFileTextUrlhttp://192.168.93.230:8081/StreamingAssets/AssetBundles/Windows/files.txt?v=20191410081416
+MyDebugInfos##Error:1/10/2019 8:14:16 PM::更新失败：=======================<404 Not Found>

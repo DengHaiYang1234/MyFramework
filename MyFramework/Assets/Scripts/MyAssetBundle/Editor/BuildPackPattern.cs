@@ -77,9 +77,6 @@ namespace MyAssetBundleEditor
                 pkgMethod.Clear();
                 AssetDatabase.DeleteAsset(BuildDefaultPath.GetBuildPattrenAssetPath());
             }
-
-
-
             CreatScriptableObject();
             SaveAndRefresh();
         }
@@ -152,7 +149,7 @@ namespace MyAssetBundleEditor
         {
             BuildPackageInfo pInfo = new BuildPackageInfo
             {
-                assetName = name,
+                assetFolderName = name,
                 BuildType = buildMethod,
                 searchPath = searchPath,
                 searchPattern = searchPattern,

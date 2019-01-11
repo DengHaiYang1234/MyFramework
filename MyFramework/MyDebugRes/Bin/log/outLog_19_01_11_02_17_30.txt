@@ -1,0 +1,10 @@
+﻿MyDebugInfos##Error:1/11/2019 2:17:31 PM::DataPath:D:/MyFramework/MyFramework/Assets
+MyDebugInfos##Error:1/11/2019 2:17:31 PM::资源更新完毕!
+MyDebugInfos##Error:1/11/2019 2:17:31 PM::加载依赖文件manifest:Windows,Hash：01000000000000000000000000000000
+MyDebugInfos##Error:1/11/2019 2:17:31 PM::加载依赖文件manifest:Assets/data/ManifestDir/manifest,Hash：192b57888e2a54ad1840fbe09d41a114
+MyDebugInfos##Error:1/11/2019 2:17:31 PM::加载依赖文件manifest:assets/data/[uiprefab]/downloadpanel,Hash：33e2093a325a1f86d2abcf78efa5096c
+MyDebugInfos##Error:1/11/2019 2:17:31 PM::开始下载bundle：assets/data/[uiprefab]/downloadpanel，对应依赖资源：assets/data/[uiatlas]/test
+MyDebugInfos##Error:1/11/2019 2:17:31 PM::加载依赖文件manifest:assets/data/[uiatlas]/test,Hash：84318db933ee3a7117fef898e6ef762e
+MyDebugInfos##Error:1/11/2019 2:17:31 PM::DownLoadPanel:资源下载完毕.
+MyDebugInfos##Error:1/11/2019 2:17:31 PM::设置图片：vip_bg
+MyDebugInfos##Error:1/11/2019 2:17:31 PM::背景图片名称：bg_left (UnityEngine.Sprite)

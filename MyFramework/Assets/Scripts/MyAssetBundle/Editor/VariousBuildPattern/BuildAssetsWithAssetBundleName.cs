@@ -32,7 +32,7 @@ namespace MyAssetBundleEditor
 
             files.AddRange(list); //自身 + 对应依赖
             AssetBundleBuild build = new AssetBundleBuild();
-            build.assetBundleName = GetAssetBundleName(assetName);
+            build.assetBundleName = GetAssetBundleName(assetFolderName);
             build.assetNames = files.ToArray();
             builds.Add(build);
             packedAssets.AddRange(files);
@@ -40,7 +40,8 @@ namespace MyAssetBundleEditor
 
         public override string GetAssetBundleName(string assetName)
         {
-            return assetName.Substring(assetName.IndexOf('[') + 1, assetName.LastIndexOf(']') - 1);
+            string path = searchPath.Substring(0, searchPath.LastIndexOf('/') + 1).ToLower();
+            return path + assetName.Substring(assetName.IndexOf('[') + 1, assetName.LastIndexOf(']') - 1);
         }
     }
 }

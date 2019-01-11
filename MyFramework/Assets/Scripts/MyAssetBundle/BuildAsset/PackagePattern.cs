@@ -20,7 +20,7 @@ namespace MyAssetBundleEditor
         {
             foreach (var info in packagInfos)
             {
-                _cachedPackagInfos[info.assetName] = info;
+                _cachedPackagInfos[info.assetFolderName] = info;
             }
         }
 
@@ -57,7 +57,7 @@ namespace MyAssetBundleEditor
     [Serializable]
     public class BuildPackageInfo
     {
-        public string assetName;
+        public string assetFolderName;
         public BuildType BuildType;
         public string searchPath;
         public string searchPattern;

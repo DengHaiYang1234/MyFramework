@@ -34,6 +34,21 @@ namespace Res
             }
         }
 
+        // <summary>
+        // 是否成功下载
+        // </summary>
+        public override bool isDone
+        {
+            get
+            {
+                if (error != null)
+                {
+                    return true;
+                }
+                return _request.isDone;
+            }
+        }
+
         public MyBundleAsync(string url,Hash128 hash):base(url,hash)
         {
             

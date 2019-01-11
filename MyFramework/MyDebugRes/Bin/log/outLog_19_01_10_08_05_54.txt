@@ -1,0 +1,567 @@
+﻿MyDebugInfos##Error:1/10/2019 8:05:54 PM:: files.txt 文件不存在.请检查!:D:/MyFramework/MyFramework/AssetBundles/Windows/files.txt
+MyDebugInfos##Error:1/10/2019 8:05:54 PM:: files.txt 文件不存在.请检查!:files.txt
+MyDebugInfos##Error:1/10/2019 8:05:54 PM::DataPath:D:/MyFramework/MyFramework/Assets
+MyDebugInfos##Error:1/10/2019 8:05:54 PM::资源更新完毕!
+MyDebugInfos##Error:1/10/2019 8:05:54 PM::加载依赖文件manifest:Windows,Hash：01000000000000000000000000000000
+MyDebugInfos##Error:1/10/2019 8:05:54 PM::LoadFromFile failed . path: AssetBundles\Windows/Windows
+MyDebugInfos##Error:1/10/2019 8:05:54 PM::bundle manifest not exist.!
+MyDebugInfos##Error:1/10/2019 8:05:54 PM::ResourceManager.Init failed!
+MyDebugInfos##Error:1/10/2019 8:05:54 PM::Please initialize AssetBundleManifest by calling Bundles.Initialize()
+MyDebugInfos##异常：:1/10/2019 8:05:54 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.MyAsset.OnLoadManifest () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:95)
+Res.MyAssets.LoadInternam (System.String name, System.Type type, Boolean asyncMode, System.Action`1 callback) (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:187)
+Res.MyAssets.LoadSync (System.String name, System.Type type, System.Action`1 callback) (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:166)
+Res.MyAssets.LoadSync[GameObject] (System.String name, System.Action`1 callback) (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:161)
+MyFramework.ResourceManager.LoadSync[GameObject] (System.String assetName, System.Action`1 callback) (at Assets/Scripts/Manager/ResourceManager.cs:25)
+MyFramework.StartGameState.LoadInitPrefab () (at Assets/Scripts/State/StartGameState.cs:67)
+MyFramework.StartGameState.OnEnter (MyFramework.StateBase`1 exitState, System.Object param) (at Assets/Scripts/State/StartGameState.cs:34)
+MyFramework.StateMachine`1[MyFramework.FrameworkMain].ChangeState (Int32 id, System.Object param1, System.Object param2) (at Assets/Scripts/FSMState/StateMachine.cs:116)
+MyFramework.CheckStage.OnCheckUpdateComplete () (at Assets/Scripts/State/CheckStage.cs:57)
+MyFramework.CheckStage.OnRunning (System.Object param) (at Assets/Scripts/State/CheckStage.cs:44)
+MyFramework.FrameworkMain.Update () (at Assets/Scripts/FrameworkMain.cs:132)
+
+MyDebugInfos##异常：:1/10/2019 8:05:54 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:54 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:54 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:54 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:54 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:54 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:54 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:54 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:54 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:54 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:54 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:54 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:54 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:54 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:54 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:54 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:54 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:55 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:56 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:57 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:57 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:57 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:57 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:57 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+
+MyDebugInfos##异常：:1/10/2019 8:05:57 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.LoadBundleAssetSync.get_isDone () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAssetSync.cs:39)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:104)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:228)
+

@@ -11,6 +11,7 @@ namespace MyFramework
         static Text text_2;
         static Text text_Title;
         private static Image sprite;
+        private static Image BG;
 
         private void Awake()
         {
@@ -18,6 +19,7 @@ namespace MyFramework
             text_2 = transform.Find("Test2").gameObject.GetComponent<Text>();
             text_Title = transform.Find("Title").gameObject.GetComponent<Text>();
             sprite = transform.Find("sprite").gameObject.GetComponent<Image>();
+            BG = transform.Find("BG").gameObject.GetComponent<Image>();
         }
         
         public static void SetProgressValue(string str)
@@ -46,6 +48,7 @@ namespace MyFramework
         {
             MyDebug.LogError("设置图片：" + name);
             sprite.sprite = FrameworkMain.Instance.ResMgr.Load<Sprite>(name);
+            MyDebug.LogError("背景图片名称：" + BG.sprite);
         }
 
     }

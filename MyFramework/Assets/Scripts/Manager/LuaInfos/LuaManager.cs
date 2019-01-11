@@ -19,12 +19,12 @@ namespace MyFramework
         /// </summary>
         private void Awake()
         {
-            loader = new LuaLoader();
-            lua = new LuaState();
-            this.OpenLibs();
+            loader = new LuaLoader();//Lua  AssetBundle加载
+            lua = new LuaState();//创建tolua提供的LuaState对象。
+            this.OpenLibs();//启动第三方库
             lua.LuaSetTop(0);
-            LuaBinder.Bind(lua);
-            LuaCoroutine.Register(lua, this);
+            LuaBinder.Bind(lua);//向lua注册C#的代码
+            LuaCoroutine.Register(lua, this);//注册协程
         }
 
         /// <summary>
@@ -34,7 +34,7 @@ namespace MyFramework
         {
             InitLuaPath();
             InitLuaBunlde();
-            this.lua.Start();
+            this.lua.Start(); //启动lua虚拟机
             //this.StartMain();
             this.StartLooper();
         }

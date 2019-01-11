@@ -1,0 +1,78 @@
+ManifestFileVersion: 0
+CRC: 451159677
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e8761f54ccc31bf8361e71f6aa20df66
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c1642440719609290a7e09a50a7286f4
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/data/[texture]/ui_playerbody/liuchuanfeng.PNG
+- Assets/data/[texture]/ui_playerbody/anxijiaolian.png
+- Assets/data/[texture]/ui_playerbody/xiandaozhang.PNG
+- Assets/data/[texture]/ui_playerbody/yuzhuchun.png
+- Assets/data/[texture]/ui_playerbody/hehemali.png
+- Assets/data/[texture]/ui_playerbody/yingmuhuadao_lbw.png
+- Assets/data/[texture]/ui_playerbody/sanjingshou.png
+- Assets/data/[texture]/ui_playerbody/futianjizhao.PNG
+- Assets/data/[texture]/ui_playerbody/yueyehongming.png
+- Assets/data/[texture]/ui_playerbody/gongbenhecheng.png
+- Assets/data/[texture]/ui_playerbody/jiaotianwu.png
+- Assets/data/[texture]/ui_playerbody/chimugangxian_pve.png
+- Assets/data/[texture]/ui_playerbody/chishanglianger_lnbl.png
+- Assets/data/[texture]/ui_playerbody/liuchuanfeng_dxx.png
+- Assets/data/[texture]/ui_playerbody/chaoqizheshi.png
+- Assets/data/[texture]/ui_playerbody/changguchuanyizhi.png
+- Assets/data/[texture]/ui_playerbody/jiaotianwu_bai.png
+- Assets/data/[texture]/ui_playerbody/cunyujianwu.png
+- Assets/data/[texture]/ui_playerbody/neitengtieye.png
+- Assets/data/[texture]/ui_playerbody/gaojinhong.png
+- Assets/data/[texture]/ui_playerbody/gongchengliangtian_dghs.PNG
+- Assets/data/[texture]/ui_playerbody/chuangqizhaoxiong.png
+- Assets/data/[texture]/ui_playerbody/wutengzheng.png
+- Assets/data/[texture]/ui_playerbody/zhicaozhizhi.png
+- Assets/data/[texture]/ui_playerbody/antianjingchun_bai.png
+- Assets/data/[texture]/ui_playerbody/xiandaozhang_hp.PNG
+- Assets/data/[texture]/ui_playerbody/chimugangxian.png
+- Assets/data/[texture]/ui_playerbody/huangmuyixiong.png
+- Assets/data/[texture]/ui_playerbody/chaoqizheshi_bai.png
+- Assets/data/[texture]/ui_playerbody/tengzhenjiansi.png
+- Assets/data/[texture]/ui_playerbody/zhicaozhizhi_lsw.png
+- Assets/data/[texture]/ui_playerbody/gongchengliangtian.PNG
+- Assets/data/[texture]/ui_playerbody/chimuqingzi_xsz.png
+- Assets/data/[texture]/ui_playerbody/yuzhuchun_pve.png
+- Assets/data/[texture]/ui_playerbody/yueyehongming_fdj.png
+- Assets/data/[texture]/ui_playerbody/gongyiyifan.png
+- Assets/data/[texture]/ui_playerbody/mushenyi.PNG
+- Assets/data/[texture]/ui_playerbody/mumugongyan_zgz.png
+- Assets/data/[texture]/ui_playerbody/yingmuhuadao.png
+- Assets/data/[texture]/ui_playerbody/tiangangjiaolian.png
+- Assets/data/[texture]/ui_playerbody/employ_xiangtianyanyi.png
+- Assets/data/[texture]/ui_playerbody/chishanglianger.png
+- Assets/data/[texture]/ui_playerbody/gaoshayima.png
+- Assets/data/[texture]/ui_playerbody/yitengzhuo.png
+- Assets/data/[texture]/ui_playerbody/xiangtianyanyi.png
+- Assets/data/[texture]/ui_playerbody/jingshangcaizi.png
+- Assets/data/[texture]/ui_playerbody/xiandaozhang_pve.PNG
+- Assets/data/[texture]/ui_playerbody/img_manager_pattern_008.png
+- Assets/data/[texture]/ui_playerbody/chimugangxian_zz.png
+- Assets/data/[texture]/ui_playerbody/employ_xiangtianmisheng.png
+- Assets/data/[texture]/ui_playerbody/antianjingchun.png
+- Assets/data/[texture]/ui_playerbody/futianjizhao_dfjq.PNG
+- Assets/data/[texture]/ui_playerbody/sanjingshou_bf.png
+- Assets/data/[texture]/ui_playerbody/gaoyezhaoyi.png
+- Assets/data/[texture]/ui_playerbody/huaxingtou.png
+- Assets/data/[texture]/ui_playerbody/qingtianxinchang.png
+- Assets/data/[texture]/ui_playerbody/mumugongyan.png
+- Assets/data/[texture]/ui_playerbody/yuzhuchun_rydw.png
+- Assets/data/[texture]/ui_playerbody/yingmuhuadao_bbx.png
+- Assets/data/[texture]/ui_playerbody/xiangtianyanyi_pve.png
+- Assets/data/[texture]/ui_playerbody/yongyeman.png
+- Assets/data/[texture]/ui_playerbody/shenzongyilang.png
+- Assets/data/[texture]/ui_playerbody/employ_hehemali.png
+Dependencies: []

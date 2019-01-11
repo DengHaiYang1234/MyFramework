@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 3890024745
+CRC: 445952139
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -39,20 +39,23 @@ AssetBundleManifest:
       Name: assets/luatemp//lua
       Dependencies: {}
     Info_12:
-      Name: assets/data/[uiatlas]/test
+      Name: assets/data/[texture]/ui_playerbody
       Dependencies: {}
     Info_13:
-      Name: assets/data/[uiatlas]/tt
+      Name: assets/data/[uiatlas]/experience
       Dependencies: {}
     Info_14:
+      Name: assets/data/[uiatlas]/test
+      Dependencies: {}
+    Info_15:
+      Name: assets/data/[uiatlas]/tt
+      Dependencies: {}
+    Info_16:
       Name: assets/data/[uiprefab]/downloadpanel
       Dependencies:
-        Dependency_0: assets/data/[uiatlas]/test
-    Info_15:
+        Dependency_0: assets/data/[texture]/ui_playerbody
+        Dependency_1: assets/data/[uiatlas]/test
+    Info_17:
       Name: assets/data/[uiprefab]/image
-      Dependencies:
-        Dependency_0: assets/data/[uiatlas]/test
-    Info_16:
-      Name: assets/data/[uiprefab]/test
       Dependencies:
         Dependency_0: assets/data/[uiatlas]/test

@@ -56,13 +56,14 @@ namespace MyAssetBundleEditor
                 }
             }
 
-
             Directory.CreateDirectory(output);
 
-            BuildAssetBundleOptions options = BuildAssetBundleOptions.CollectDependencies |
-                                              BuildAssetBundleOptions.CompleteAssets |
-                                              BuildAssetBundleOptions.DeterministicAssetBundle |
-                                              BuildAssetBundleOptions.UncompressedAssetBundle;
+            //BuildAssetBundleOptions options = BuildAssetBundleOptions.CollectDependencies | BuildAssetBundleOptions.CompleteAssets |
+            //                              BuildAssetBundleOptions.DeterministicAssetBundle | BuildAssetBundleOptions.UncompressedAssetBundle;
+
+            //BuildAssetBundleOptions options = BuildAssetBundleOptions.None;
+
+            BuildAssetBundleOptions options = BuildAssetBundleOptions.ChunkBasedCompression;
 
             if (builds == null || builds.Count == 0)
             {

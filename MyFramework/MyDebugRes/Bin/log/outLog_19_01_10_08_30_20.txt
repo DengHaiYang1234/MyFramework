@@ -1,0 +1,9 @@
+﻿MyDebugInfos##Error:1/10/2019 8:30:21 PM::DataPath:D:/MyFramework/MyFramework/Assets
+MyDebugInfos##Error:1/10/2019 8:30:21 PM::资源更新完毕!
+MyDebugInfos##Error:1/10/2019 8:30:21 PM::加载依赖文件manifest:Windows,Hash：01000000000000000000000000000000
+MyDebugInfos##Error:1/10/2019 8:30:21 PM::加载依赖文件manifest:Assets/data/ManifestDir/manifest,Hash：aef40171fe7ddf00b27fd8a3c2f074b7
+MyDebugInfos##Error:1/10/2019 8:30:21 PM::加载依赖文件manifest:assets/data/[uiprefab]/downloadpanel,Hash：2e660ddad4342d23f0e3481f9022b837
+MyDebugInfos##Error:1/10/2019 8:30:21 PM::加载依赖文件manifest:assets/data/[uiatlas]/test,Hash：84318db933ee3a7117fef898e6ef762e
+MyDebugInfos##Error:1/10/2019 8:30:21 PM::当前bundle:assets/data/[uiprefab]/downloadpanel,的依赖文件:assets/data/[uiatlas]/test:
+MyDebugInfos##Error:1/10/2019 8:30:21 PM::DownLoadPanel:资源下载完毕.
+MyDebugInfos##Error:1/10/2019 8:30:21 PM::设置图片：bg_left

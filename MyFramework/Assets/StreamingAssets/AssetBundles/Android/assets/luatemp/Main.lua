@@ -15,6 +15,6 @@ function Main.SetValue()
     DownPanel = MyFramework.DownPanel
     DownPanel.SetProgressValue("成功完成热更")
     DownPanel.SetFileValue("!!!!!!!!!!!!!!!!")
-    DownPanel.SetSprite("BG_1")
+    DownPanel.SetSprite("vip_bg")
     --DownPanel.GetTitle()
 end

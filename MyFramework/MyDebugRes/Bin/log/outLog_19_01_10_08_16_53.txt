@@ -1,0 +1,9 @@
+﻿MyDebugInfos##Error:1/10/2019 8:16:53 PM::DataPath:D:/MyFramework/MyFramework/Assets
+MyDebugInfos##Error:1/10/2019 8:16:53 PM::remoteFileTextUrlhttp://192.168.93.230:8081/StreamingAssets/AssetBundles/Windows/files.txt?v=20191610081653
+MyDebugInfos##Error:1/10/2019 8:16:54 PM::资源更新完毕!
+MyDebugInfos##Error:1/10/2019 8:16:54 PM::加载依赖文件manifest:Windows,Hash：01000000000000000000000000000000
+MyDebugInfos##Error:1/10/2019 8:16:54 PM::加载依赖文件manifest:Assets/data/ManifestDir/manifest,Hash：a75b21b66a7d9e81470d391e03271067
+MyDebugInfos##Error:1/10/2019 8:16:54 PM::加载依赖文件manifest:assets/data/[uiprefab]/downloadpanel,Hash：6ab55efdde950f017fc56b86991ab3c8
+MyDebugInfos##Error:1/10/2019 8:16:54 PM::加载依赖文件manifest:assets/data/[uiatlas]/test,Hash：84318db933ee3a7117fef898e6ef762e
+MyDebugInfos##Error:1/10/2019 8:16:54 PM::当前bundle:assets/data/[uiprefab]/downloadpanel,的依赖文件:assets/data/[uiatlas]/test:
+MyDebugInfos##Error:1/10/2019 8:16:54 PM::设置图片：bg_left
