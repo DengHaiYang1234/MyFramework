@@ -11,6 +11,7 @@ namespace MyFramework
         public const string hot = "HotManager";
         public const string game = "GamerManager";
         public const string resource = "ResourceManager";
+        public const string ui = "UIManager";
     }
 }
 

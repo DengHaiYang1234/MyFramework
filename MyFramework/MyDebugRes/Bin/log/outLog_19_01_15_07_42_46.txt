@@ -1,0 +1,16 @@
+﻿MyDebugInfos##Error:1/15/2019 7:42:46 PM::DataPath:D:/MyFramework/MyFramework/Assets
+MyDebugInfos##Error:1/15/2019 7:42:46 PM::资源更新完毕!
+MyDebugInfos##Error:1/15/2019 7:42:46 PM::加载依赖文件manifest:Android,Hash：01000000000000000000000000000000
+MyDebugInfos##Error:1/15/2019 7:42:46 PM::加载依赖文件manifest:Assets/data/ManifestDir/manifest,Hash：e679a92801d088dd813bb0afe5ec2289
+MyDebugInfos##Error:1/15/2019 7:42:46 PM::加载依赖文件manifest:assets/data/[uiprefab]/downloadpanel,Hash：6c76d6f3a83a32b28d8ee82a4898763d
+MyDebugInfos##Error:1/15/2019 7:42:46 PM::开始下载bundle：assets/data/[uiprefab]/downloadpanel，对应依赖资源：assets/data/[texture]/ui_playerbody
+MyDebugInfos##Error:1/15/2019 7:42:46 PM::加载依赖文件manifest:assets/data/[texture]/ui_playerbody,Hash：e8761f54ccc31bf8361e71f6aa20df66
+MyDebugInfos##Error:1/15/2019 7:42:46 PM::开始下载bundle：assets/data/[uiprefab]/downloadpanel，对应依赖资源：assets/data/[uiatlas]/test
+MyDebugInfos##Error:1/15/2019 7:42:46 PM::加载依赖文件manifest:assets/data/[uiatlas]/test,Hash：6998b78c7b4176123889591ff905eaaa
+MyDebugInfos##Error:1/15/2019 7:42:47 PM::DownLoadPanel:资源下载完毕.
+MyDebugInfos##Error:1/15/2019 7:42:47 PM::加载依赖文件manifest:,Hash：00000000000000000000000000000000
+MyDebugInfos##Error:1/15/2019 7:42:47 PM::LoadFromFile failed . path: AssetBundles\Android/
+MyDebugInfos##Error:1/15/2019 7:42:47 PM::MyBundle LoadAsset Is Called .【assetName】: 。But Have Err:System.NullReferenceException: Object reference not set to an instance of an object
+  at Res.MyBundle.LoadAsset (System.String assetName, System.Type assetType) [0x0000a] in D:\MyFramework\MyFramework\Assets\Scripts\MyAssetBundleRes\MyBundle.cs:91 ,
+MyDebugInfos##Error:1/15/2019 7:42:47 PM::设置图片：vip_bg
+MyDebugInfos##Error:1/15/2019 7:42:47 PM::背景图片名称：bg_left (UnityEngine.Sprite)

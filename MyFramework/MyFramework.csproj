@@ -126,6 +126,7 @@
     <Compile Include="Assets\Scripts\MyAssetBundleRes\MyAssets.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundleRes\MyBundle.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundleRes\MyBundles.cs" />
+    <Compile Include="Assets\Scripts\MyAssetBundleRes\ReleaseAssetOnDestroy.cs" />
     <Compile Include="Assets\Scripts\MyAssetBundleRes\Util\RuntimeResPath.cs" />
     <Compile Include="Assets\Scripts\MyDebug\DebugOutput.cs" />
     <Compile Include="Assets\Scripts\MyDebug\DebugRootPath.cs" />
@@ -138,7 +139,9 @@
     <Compile Include="Assets\Scripts\UGUI\Utils\SceneGlobalUI.cs" />
     <Compile Include="Assets\Scripts\UGUI\Utils\SceneUIManager.cs" />
     <Compile Include="Assets\Scripts\UGUI\Utils\UILayers.cs" />
+    <Compile Include="Assets\Scripts\UI\BasePanel.cs" />
     <Compile Include="Assets\Scripts\UI\DownPanel.cs" />
+    <Compile Include="Assets\Scripts\UI\UIManager.cs" />
     <Compile Include="Assets\Source\Generate\DelegateFactory.cs" />
     <Compile Include="Assets\Source\Generate\LuaBinder.cs" />
     <Compile Include="Assets\Source\Generate\LuaInterface_DebuggerWrap.cs" />

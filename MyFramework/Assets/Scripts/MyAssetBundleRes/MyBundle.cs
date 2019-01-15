@@ -1,13 +1,15 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace Res
 {
     public class MyBundle
     {
         public string path { get; protected set; }
-        public string name { get; internal set; }
+        public string name { get; set; }
         public virtual AssetBundle assetBundle {
             get { return _assetBundle; }
         }
@@ -44,7 +46,7 @@ namespace Res
 
         internal void UnLoad()
         {
-            MyDebug.LogFormat("正在卸载Bundle【Path】：{0}", path);
+            MyDebug.LogErrorFormat("正在卸载Bundle【Path】：{0}", path);
             OnUnLoad();
         }
 
@@ -72,6 +74,7 @@ namespace Res
         public void Retain()
         {
             references++;
+            MyDebug.LogErrorFormat("【Bundle】：{0}，【Retain】：{1}", name, references);
         }
 
         public T LoadAsset<T>(string assetName) where T : Object
@@ -84,7 +87,22 @@ namespace Res
 
         public Object LoadAsset(string assetName, System.Type assetType)
         {
-            return assetBundle.LoadAsset(assetName, assetType);
+            if (string.IsNullOrEmpty(assetName))
+            {
+                MyDebug.LogErrorFormat("资源加载失败。MyBundle LoadAsset Is Called . But 【assetName】 is Null");
+                return null;
+            }
+
+            try
+            {
+                return assetBundle.LoadAsset(assetName, assetType);
+            }
+            catch(Exception e)
+            {
+                MyDebug.LogErrorFormat("MyBundle LoadAsset Is Called .But Have Error:{0},",e);
+                return null;
+            }
+            
         }
 
         public AssetBundleRequest LoadAssetSync(string assetName, System.Type assetType)
@@ -108,6 +126,8 @@ namespace Res
             {
                 MyDebug.LogErrorFormat("references < 0");
             }
+
+            MyDebug.LogErrorFormat("【Bundle】：{0}，【Release】：{1}",name,references);
         }
 
     }

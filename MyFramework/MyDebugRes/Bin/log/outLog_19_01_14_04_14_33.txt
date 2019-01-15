@@ -1,0 +1,478 @@
+﻿MyDebugInfos##Error:1/14/2019 4:14:33 PM::DataPath:D:/MyFramework/MyFramework/Assets
+MyDebugInfos##Error:1/14/2019 4:14:33 PM::资源更新完毕!
+MyDebugInfos##Error:1/14/2019 4:14:33 PM::加载依赖文件manifest:Android,Hash：01000000000000000000000000000000
+MyDebugInfos##Error:1/14/2019 4:14:33 PM::加载依赖文件manifest:Assets/data/ManifestDir/manifest,Hash：e679a92801d088dd813bb0afe5ec2289
+MyDebugInfos##Error:1/14/2019 4:14:33 PM::加载依赖文件manifest:assets/data/[uiprefab]/downloadpanel,Hash：6c76d6f3a83a32b28d8ee82a4898763d
+MyDebugInfos##Error:1/14/2019 4:14:33 PM::开始下载bundle：assets/data/[uiprefab]/downloadpanel，对应依赖资源：assets/data/[texture]/ui_playerbody
+MyDebugInfos##Error:1/14/2019 4:14:33 PM::加载依赖文件manifest:assets/data/[texture]/ui_playerbody,Hash：e8761f54ccc31bf8361e71f6aa20df66
+MyDebugInfos##Error:1/14/2019 4:14:33 PM::开始下载bundle：assets/data/[uiprefab]/downloadpanel，对应依赖资源：assets/data/[uiatlas]/test
+MyDebugInfos##Error:1/14/2019 4:14:33 PM::加载依赖文件manifest:assets/data/[uiatlas]/test,Hash：6998b78c7b4176123889591ff905eaaa
+MyDebugInfos##Error:1/14/2019 4:14:34 PM::DownLoadPanel:资源下载完毕.
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:34 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:35 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:36 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:36 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+
+MyDebugInfos##异常：:1/14/2019 4:14:36 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.ReleaseAssetOnDestroy.Register (UnityEngine.GameObject go, Res.MyAsset asset) (at Assets/Scripts/MyAssetBundleRes/ReleaseAssetOnDestroy.cs:17)
+MyFramework.StartGameState.LoadSyncCallback (Res.MyAsset asset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset.Update () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets.Update () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:223)
+

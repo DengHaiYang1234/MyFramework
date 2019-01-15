@@ -28,6 +28,7 @@ namespace MyFramework
             AddManager<ThreadManager>(ManagersName.thread);
             AddManager<LuaManager>(ManagersName.lua);
             AddManager<HotManager>(ManagersName.hot);
+            AddManager<UIManager>(ManagersName.ui);
         }
     }
 

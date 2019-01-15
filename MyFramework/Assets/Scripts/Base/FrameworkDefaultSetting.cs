@@ -5,13 +5,13 @@ using UnityEngine;
 public class FrameworkDefaultSetting
 {
     //lua代码Assetbundle模式
-    public static bool LuaBunldeMode = true;
+    public static bool LuaBunldeMode = false;
     //是否直接使用Prefab
     public static bool useEditorPrefab = false;
     //!调试模式-读取项目资源
-    public static bool DebugMode = false;
+    public static bool DebugMode = true;
     //更新模式(开启热更必须关闭 DebugMode)
-    public static bool UpdateMode = true;
+    public static bool UpdateMode = false;
     //Log目录
     public const string BinFolderName = "Bin";
     

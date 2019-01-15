@@ -35,7 +35,6 @@ namespace Res
 #if UNITY_EDITOR
             if (!FrameworkDefaultSetting.useEditorPrefab)
             {
-                
                 return InitializeBundle();
             }
             else
@@ -58,18 +57,16 @@ namespace Res
             string relativePath = Path.Combine(ResUtility.AssetBundlesOutputPath, ResUtility.GetPlatformPath);
             var url =
 #if UNITY_EDITOR
-
             relativePath + "/";
 #else
-                ResUtility.GetDataPathByPlatform;
-                //Path.Combine(Application.streamingAssetsPath, relativePath) + "/";
+            ResUtility.GetDataPathByPlatform;
 #endif
             if (MyBundles.Initialize(url)) //初始化Bundles信息
             {
-                var bundle = MyBundles.Load(RuntimeResPath.GetManifestAssetPathExceptSuffix); //初始化配置文件
+                var bundle = MyBundles.Load(RuntimeResPath.GetManifestAssetPathExceptSuffix); //卸载配置文件
                 if (bundle != null)
                 {
-                    InitManifest();
+                    InitManifest(bundle);
                     bundle.Release();
                     MyDebug.Log("manifest Load Is Complete!");
                 }
@@ -82,7 +79,7 @@ namespace Res
         /// <summary>
         /// 初始化manifestAsset。方便直接读取
         /// </summary>
-        private static void InitManifest()
+        private static void InitManifest(MyBundle bundle = null)
         {
 #if UNITY_EDITOR
             //直接读取项目资源
@@ -95,16 +92,24 @@ namespace Res
             }
             else //从Bundle中读取
             {
-                var manifestAsset = Load<PackageManifest>("manifest");
-                PackageManifest assets = manifestAsset.asset as PackageManifest;
-                assets.MapingAssetData();
-                manifest.Load(assets);
+                if (bundle == null)
+                {
+                    Console.WriteLine("从Bundle中读取Manifest失败！！！！");
+                    return;
+                }
+                var manifestAsset =  bundle.LoadAsset<PackageManifest>(RuntimeResPath.GetManifestAssetPath);
+                manifestAsset.MapingAssetData();
+                manifest.Load(manifestAsset);
             }
 #else
-                var manifestAsset = Load<PackageManifest>("manifest");
-                PackageManifest assets = manifestAsset.asset as PackageManifest;
-                assets.MapingAssetData();
-                manifest.Load(assets);
+                if (bundle == null)
+                {
+                    Console.WriteLine("从Bundle中读取Manifest失败！！！！");
+                    return;
+                }
+                var manifestAsset =  bundle.LoadAsset<PackageManifest>(RuntimeResPath.GetManifestAssetPath);
+                manifestAsset.MapingAssetData();
+                manifest.Load(manifestAsset);
 #endif
 
         }
@@ -206,11 +211,9 @@ namespace Res
         /// <param name="asset"></param>
         public static void UndLoad(MyAsset asset)
         {
-            asset.UnLoad();
+            asset.Release();
         }
-
-
-        
+                
         private System.Collections.IEnumerator gc = null;
 
         System.Collections.IEnumerator GC()

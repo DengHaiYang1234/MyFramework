@@ -13,12 +13,14 @@ namespace MyFramework
     {
         //private ResourceManager res;
         //private LuaManager lua;
+        private float time = 0f;
 
         public StartGameState(FrameworkMain owner) : base((int) MyStage.startGame, owner)
         {
             //res = owner.GetManager<ResourceManager>(ManagersName.resource);
             //lua = owner.GetManager<LuaManager>(ManagersName.lua);
         }
+
         public override void BeforeEnter(object p)
         {
             if (!Owner.ResMgr.Init())
@@ -38,11 +40,12 @@ namespace MyFramework
         public override void OnRunning(object param)
         {
             base.OnRunning(param);
-            //if (ResMain.Instance.IsComplete)
+            //time += Time.deltaTime;
+            //if (time > 15)
             //{
-            //    ResMain.Instance.IsComplete = false;
-            //    ShowGameTestUI();
-            //    FrameworkMain.Instance.Run = false;
+            //    MyDebug.LogError("再次清理资源");
+            //    Resources.UnloadUnusedAssets();
+            //    time = 0f;
             //}
         }
 
@@ -76,11 +79,13 @@ namespace MyFramework
                 {
                     var go = GameObject.Instantiate(prefab) as GameObject;
                     go.AddComponent<DownPanel>();
+                    ReleaseAssetOnDestroy.Register(go, asset);
                     var parent = GameObject.Find("SceneUI/layer1").gameObject;
                     go.transform.parent = parent.transform;
                     go.transform.localPosition = Vector3.zero;
                     go.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
                     go.transform.localScale = Vector3.one;
+                    GameObject.Destroy(go, 10);
                 }
             }
 

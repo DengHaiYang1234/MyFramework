@@ -63,8 +63,9 @@ namespace Res
         {
             if (asset != null)
             {
+                MyDebug.LogErrorFormat("卸载资源：{0}", asset.name);
                 if (asset.GetType() != typeof (GameObject))
-                    Resources.UnloadAsset(asset);  //释放指定已经没有引用的Asset.
+                    Resources.UnloadAsset(asset);  //释放指定已经没有引用的Asset. 注意：只能卸载从磁盘加载的文件
                 asset = null;
             }
             OnUnload(); //更新资源与Bundle之间的引用关系

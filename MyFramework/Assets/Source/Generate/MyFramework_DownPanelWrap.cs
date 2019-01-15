@@ -11,6 +11,7 @@ public class MyFramework_DownPanelWrap
 		L.RegFunction("SetFileValue", SetFileValue);
 		L.RegFunction("GetTitle", GetTitle);
 		L.RegFunction("SetSprite", SetSprite);
+		L.RegFunction("TestLoad", TestLoad);
 		L.RegFunction("__eq", op_Equality);
 		L.RegFunction("__tostring", ToLua.op_ToString);
 		L.EndClass();
@@ -71,6 +72,22 @@ public class MyFramework_DownPanelWrap
 			ToLua.CheckArgsCount(L, 1);
 			string arg0 = ToLua.CheckString(L, 1);
 			MyFramework.DownPanel.SetSprite(arg0);
+			return 0;
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int TestLoad(IntPtr L)
+	{
+		try
+		{
+			ToLua.CheckArgsCount(L, 1);
+			MyFramework.DownPanel obj = (MyFramework.DownPanel)ToLua.CheckObject<MyFramework.DownPanel>(L, 1);
+			obj.TestLoad();
 			return 0;
 		}
 		catch (Exception e)

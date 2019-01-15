@@ -1,0 +1,1591 @@
+﻿MyDebugInfos##Error:1/14/2019 9:12:27 PM::DataPath:D:/MyFramework/MyFramework/Assets
+MyDebugInfos##Error:1/14/2019 9:12:27 PM::资源更新完毕!
+MyDebugInfos##Error:1/14/2019 9:12:27 PM::加载依赖文件manifest:Android,Hash：01000000000000000000000000000000
+MyDebugInfos##Error:1/14/2019 9:12:27 PM::加载依赖文件manifest:Assets/data/ManifestDir/manifest,Hash：e679a92801d088dd813bb0afe5ec2289
+MyDebugInfos##Error:1/14/2019 9:12:27 PM::加载依赖文件manifest:assets/data/[uiprefab]/downloadpanel,Hash：6c76d6f3a83a32b28d8ee82a4898763d
+MyDebugInfos##Error:1/14/2019 9:12:27 PM::开始下载bundle：assets/data/[uiprefab]/downloadpanel，对应依赖资源：assets/data/[texture]/ui_playerbody
+MyDebugInfos##Error:1/14/2019 9:12:27 PM::加载依赖文件manifest:assets/data/[texture]/ui_playerbody,Hash：e8761f54ccc31bf8361e71f6aa20df66
+MyDebugInfos##Error:1/14/2019 9:12:27 PM::开始下载bundle：assets/data/[uiprefab]/downloadpanel，对应依赖资源：assets/data/[uiatlas]/test
+MyDebugInfos##Error:1/14/2019 9:12:27 PM::加载依赖文件manifest:assets/data/[uiatlas]/test,Hash：6998b78c7b4176123889591ff905eaaa
+MyDebugInfos##Error:1/14/2019 9:12:27 PM::DownLoadPanel:资源下载完毕.
+MyDebugInfos##Error:1/14/2019 9:12:27 PM::加载依赖文件manifest:,Hash：00000000000000000000000000000000
+MyDebugInfos##Error:1/14/2019 9:12:27 PM::LoadFromFile failed . path: AssetBundles\Android/
+MyDebugInfos##异常：:1/14/2019 9:12:27 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.MyBundle.LoadAsset (System.String assetName, System.Type assetType) (at Assets/Scripts/MyAssetBundleRes/MyBundle.cs:87)
+Res.LoadBundleAsset.OnLoad () (at Assets/Scripts/MyAssetBundleRes/LoadAssetMode/LoadBundleAsset.cs:20)
+Res.MyAsset.Load () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:56)
+Res.MyAssets.LoadInternam (System.String name, System.Type type, Boolean asyncMode, System.Action`1 callback) (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:196)
+Res.MyAssets.Load (System.String name, System.Type type, System.Action`1 callback) (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:160)
+Res.MyAssets.Load[Sprite] (System.String name, System.Action`1 callback) (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:155)
+MyFramework.ResourceManager.LoadAsset[Sprite] (System.String assetName, System.Action`1 callback) (at Assets/Scripts/Manager/ResourceManager.cs:30)
+MyFramework.DownPanel.TestLoad () (at Assets/Scripts/UI/DownPanel.cs:62)
+MyFramework.DownPanel.Awake () (at Assets/Scripts/UI/DownPanel.cs:24)
+UnityEngine.GameObject:AddComponent()
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:80)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:27 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:27 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:27 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:27 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:27 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:27 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:27 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:27 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:27 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:27 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:27 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:27 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:27 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:27 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:27 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:27 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:28 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:28 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:28 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:28 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:28 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:28 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:28 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:28 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:28 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:28 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:28 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:28 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:28 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:28 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:28 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:28 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:28 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:28 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:28 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:28 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:28 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:28 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:28 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:28 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:28 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:28 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:29 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:29 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:29 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:29 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:29 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:29 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:29 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:29 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:29 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:29 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:29 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:29 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:29 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:29 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:29 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:29 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:29 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:29 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:29 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:29 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:29 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:29 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:30 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:30 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:30 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:30 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:30 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:30 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:30 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:30 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:30 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:30 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:30 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:30 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:30 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:30 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:30 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:30 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:30 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:30 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:30 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:30 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:30 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:30 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:31 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:31 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:31 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:31 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:31 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:31 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:31 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:31 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:31 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:31 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:31 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:31 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:31 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:31 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:31 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:31 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:31 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:31 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:32 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:32 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:32 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:32 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:32 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:32 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:32 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:32 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:32 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:32 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:32 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:32 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:32 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:32 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:32 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:32 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:33 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:33 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:33 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:33 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:33 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:33 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:33 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:33 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:33 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:33 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:33 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:33 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:33 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:33 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:33 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:33 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:34 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:34 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:34 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:34 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:34 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:34 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:34 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:34 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:34 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:34 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:34 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:34 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:34 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:34 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:35 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:35 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:35 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:35 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:35 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:35 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:35 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:35 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:35 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:35 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:35 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:35 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:35 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:35 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:36 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:36 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:36 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:36 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:36 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:36 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:36 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:36 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:36 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:36 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:36 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:36 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:37 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:37 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:37 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:37 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:37 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:37 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/14/2019 9:12:37 PM::设置图片：vip_bg
+MyDebugInfos##异常：:1/14/2019 9:12:37 PM::LuaException: Object reference not set to an instance of an object
+stack traceback:
+	[C]: in function 'SetSprite'
+	Main.lua:18: in function <Main.lua:14>
+MyFramework.DownPanel:SetSprite(String) (at Assets/Scripts/UI/DownPanel.cs:56)
+MyFramework_DownPanelWrap:SetSprite(IntPtr) (at Assets/Source/Generate/MyFramework_DownPanelWrap.cs:74)
+LuaInterface.LuaDLL:lua_pcall(IntPtr, Int32, Int32, Int32)
+LuaInterface.LuaState:PCall(Int32, Int32) (at Assets/ToLua/Core/LuaState.cs:753)
+LuaInterface.LuaFunction:PCall() (at Assets/ToLua/Core/LuaFunction.cs:96)
+LuaInterface.LuaFunction:Call(Object[]) (at Assets/ToLua/Core/LuaFunction.cs:137)
+MyFramework.LuaManager:CallFunction(String, Object[]) (at Assets/Scripts/Manager/LuaInfos/LuaManager.cs:124)
+MyFramework.Util:CallMethod(String, String, Object[]) (at Assets/Scripts/Base/Util.cs:54)
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:95)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:108)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+

@@ -7,9 +7,6 @@ namespace Res
 {
     public class MyBundles
     {
-
-        public static string[] activeVariants { get; private set; }
-
         public static string dataPath { get; private set; }
 
         public static AssetBundleManifest manifest { get; private set; }
@@ -23,16 +20,15 @@ namespace Res
         /// <returns></returns>
         public static bool Initialize(string path)
         {
-            activeVariants = new string[0];
             dataPath = path;
 
-            //初始化当前Bundle信息
+            //加载AssetBundle
             var request = LoadInternal(ResUtility.GetPlatformPath, true, false);
 
             if (request == null || request.error != null)
                 return false;
 
-            //加载对应的Manifest文件
+            //加载AssetBundle的所有依赖资源
             manifest = request.LoadAsset<AssetBundleManifest>("AssetBundleManifest");
             if (manifest == null)
                 return false;
@@ -58,9 +54,6 @@ namespace Res
                 var hash = isLoadingAssetBundleManifest
                     ? new Hash128(1, 0, 0, 0)
                     : manifest.GetAssetBundleHash(assetBundleName);
-
-                MyDebug.LogErrorFormat("加载依赖文件manifest:{0},Hash：{1}", assetBundleName, hash);
-
                 if (bundle == null)
                 {
                     if (url.StartsWith("file://"))
@@ -98,7 +91,6 @@ namespace Res
             {
                 foreach (var item in dependencies)
                 {
-                    MyDebug.LogErrorFormat("开始下载bundle：{0}，对应依赖资源：{1}",bundle.name,item);
                     bundle.dependencies.Add(LoadInternal(item, false, asyncRequest));
                 }
             }

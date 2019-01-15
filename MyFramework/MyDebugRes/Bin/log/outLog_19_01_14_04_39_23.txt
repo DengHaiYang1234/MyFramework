@@ -1,0 +1,17 @@
+﻿MyDebugInfos##Error:1/14/2019 4:39:24 PM::DataPath:D:/MyFramework/MyFramework/Assets
+MyDebugInfos##Error:1/14/2019 4:39:24 PM::资源更新完毕!
+MyDebugInfos##Error:1/14/2019 4:39:24 PM::加载依赖文件manifest:Android,Hash：01000000000000000000000000000000
+MyDebugInfos##Error:1/14/2019 4:39:24 PM::加载依赖文件manifest:Assets/data/ManifestDir/manifest,Hash：e679a92801d088dd813bb0afe5ec2289
+MyDebugInfos##异常：:1/14/2019 4:39:24 PM::ArgumentException: The input asset name cannot be empty.
+UnityEngine.AssetBundle.LoadAsset (System.String name, System.Type type) (at C:/buildslave/unity/build/artifacts/generated/common/runtime/AssetBundleBindings.gen.cs:181)
+Res.MyBundle.LoadAsset[PackageManifest] (System.String assetName) (at Assets/Scripts/MyAssetBundleRes/MyBundle.cs:82)
+Res.MyAssets.InitManifest (Res.MyBundle bundle) (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:100)
+Res.MyAssets.InitializeBundle () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:69)
+Res.MyAssets.Initialize () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:38)
+MyFramework.ResourceManager.Init () (at Assets/Scripts/Manager/ResourceManager.cs:15)
+MyFramework.StartGameState.BeforeEnter (System.Object p) (at Assets/Scripts/State/StartGameState.cs:25)
+MyFramework.StateMachine`1[MyFramework.FrameworkMain].ChangeState (Int32 id, System.Object param1, System.Object param2) (at Assets/Scripts/FSMState/StateMachine.cs:115)
+MyFramework.CheckStage.OnCheckUpdateComplete () (at Assets/Scripts/State/CheckStage.cs:57)
+MyFramework.CheckStage.OnRunning (System.Object param) (at Assets/Scripts/State/CheckStage.cs:44)
+MyFramework.FrameworkMain.Update () (at Assets/Scripts/FrameworkMain.cs:132)
+

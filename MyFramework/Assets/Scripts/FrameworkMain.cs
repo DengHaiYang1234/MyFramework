@@ -19,6 +19,7 @@ namespace MyFramework
         private ResourceManager resMgr;
         private HotManager hotMgr;
         private ThreadManager threadMgr;
+        private UIManager uiMgr;
 
         #endregion
 
@@ -56,6 +57,11 @@ namespace MyFramework
         public ThreadManager ThreadMgr
         {
             get { return threadMgr; }
+        }
+
+        public UIManager UIMgr
+        {
+            get { return uiMgr; }
         }
 
 
@@ -117,6 +123,7 @@ namespace MyFramework
             luaMgr = GetManager<LuaManager>(ManagersName.lua);
             hotMgr = GetManager<HotManager>(ManagersName.hot);
             threadMgr =  GetManager<ThreadManager>(ManagersName.thread);
+            uiMgr = GetManager<UIManager>(ManagersName.ui);
         }
 
         //初始状态

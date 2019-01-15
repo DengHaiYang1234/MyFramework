@@ -1,0 +1,17 @@
+﻿MyDebugInfos##Error:1/14/2019 12:03:15 PM::DataPath:D:/MyFramework/MyFramework/Assets
+MyDebugInfos##Error:1/14/2019 12:03:15 PM::资源更新完毕!
+MyDebugInfos##Error:1/14/2019 12:03:15 PM::Please initialize AssetBundleManifest by calling Bundles.Initialize()
+MyDebugInfos##异常：:1/14/2019 12:03:15 PM::NullReferenceException: Object reference not set to an instance of an object
+Res.MyAsset.OnLoadManifest () (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:95)
+Res.MyAssets.LoadInternam (System.String name, System.Type type, Boolean asyncMode, System.Action`1 callback) (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:180)
+Res.MyAssets.Load (System.String name, System.Type type, System.Action`1 callback) (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:148)
+Res.MyAssets.Load[PackageManifest] (System.String name, System.Action`1 callback) (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:143)
+Res.MyAssets.InitManifest () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:91)
+Res.MyAssets.Initialize () (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:35)
+MyFramework.ResourceManager.Init () (at Assets/Scripts/Manager/ResourceManager.cs:15)
+MyFramework.StartGameState.BeforeEnter (System.Object p) (at Assets/Scripts/State/StartGameState.cs:25)
+MyFramework.StateMachine`1[MyFramework.FrameworkMain].ChangeState (Int32 id, System.Object param1, System.Object param2) (at Assets/Scripts/FSMState/StateMachine.cs:115)
+MyFramework.CheckStage.OnCheckUpdateComplete () (at Assets/Scripts/State/CheckStage.cs:57)
+MyFramework.CheckStage.OnRunning (System.Object param) (at Assets/Scripts/State/CheckStage.cs:44)
+MyFramework.FrameworkMain.Update () (at Assets/Scripts/FrameworkMain.cs:132)
+

@@ -1,0 +1,15 @@
+﻿MyDebugInfos##Error:1/15/2019 8:47:08 PM::DataPath:D:/MyFramework/MyFramework/Assets
+MyDebugInfos##Error:1/15/2019 8:47:08 PM::资源更新完毕!
+MyDebugInfos##Error:1/15/2019 8:47:08 PM::【Bundle】：Android，【Retain】：1
+MyDebugInfos##Error:1/15/2019 8:47:08 PM::【Bundle】：Assets/data/ManifestDir/manifest，【Retain】：1
+MyDebugInfos##Error:1/15/2019 8:47:08 PM::【Bundle】：Assets/data/ManifestDir/manifest，【Release】：0
+MyDebugInfos##Error:1/15/2019 8:47:08 PM::【Bundle】：assets/data/[texture]/ui_playerbody，【Retain】：1
+MyDebugInfos##Error:1/15/2019 8:47:08 PM::【Bundle】：assets/data/[uiatlas]/test，【Retain】：1
+MyDebugInfos##Error:1/15/2019 8:47:08 PM::【Bundle】：assets/data/[uiprefab]/downloadpanel，【Retain】：1
+MyDebugInfos##Error:1/15/2019 8:47:08 PM::正在卸载Bundle【Path】：AssetBundles\Android/Assets/data/ManifestDir/manifest
+MyDebugInfos##Error:1/15/2019 8:47:09 PM::DownLoadPanel:资源下载完毕.
+MyDebugInfos##Error:1/15/2019 8:47:09 PM::【Bundle】：assets/data/[texture]/ui_playerbody，【Retain】：2
+MyDebugInfos##Error:1/15/2019 8:47:09 PM::AddAsset  assetDic:0
+MyDebugInfos##Error:1/15/2019 8:47:09 PM::设置图片：vip_bg
+MyDebugInfos##Error:1/15/2019 8:47:09 PM::背景图片名称：bg_left (UnityEngine.Sprite)
+MyDebugInfos##Error:1/15/2019 8:47:16 PM::Release assetDic:0

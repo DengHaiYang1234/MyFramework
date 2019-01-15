@@ -1,0 +1,24 @@
+﻿MyDebugInfos##Error:1/15/2019 8:25:59 PM::DataPath:D:/MyFramework/MyFramework/Assets
+MyDebugInfos##Error:1/15/2019 8:25:59 PM::资源更新完毕!
+MyDebugInfos##Error:1/15/2019 8:25:59 PM::【Bundle】：Android，【Retain】：1
+MyDebugInfos##Error:1/15/2019 8:25:59 PM::【Bundle】：Assets/data/ManifestDir/manifest，【Retain】：1
+MyDebugInfos##Error:1/15/2019 8:25:59 PM::【Bundle】：Assets/data/ManifestDir/manifest，【Release】：0
+MyDebugInfos##Error:1/15/2019 8:25:59 PM::【Bundle】：assets/data/[texture]/ui_playerbody，【Retain】：1
+MyDebugInfos##Error:1/15/2019 8:25:59 PM::【Bundle】：assets/data/[uiatlas]/test，【Retain】：1
+MyDebugInfos##Error:1/15/2019 8:25:59 PM::【Bundle】：assets/data/[uiprefab]/downloadpanel，【Retain】：1
+MyDebugInfos##Error:1/15/2019 8:25:59 PM::正在卸载Bundle【Path】：AssetBundles\Android/Assets/data/ManifestDir/manifest
+MyDebugInfos##Error:1/15/2019 8:26:00 PM::DownLoadPanel:资源下载完毕.
+MyDebugInfos##Error:1/15/2019 8:26:00 PM::【Bundle】：assets/data/[texture]/ui_playerbody，【Retain】：2
+MyDebugInfos##异常：:1/15/2019 8:26:00 PM::KeyNotFoundException: The given key was not present in the dictionary.
+System.Collections.Generic.Dictionary`2[MyFramework.BasePanel,System.Collections.Generic.List`1[Res.MyAsset]].get_Item (MyFramework.BasePanel key) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Collections.Generic/Dictionary.cs:150)
+MyFramework.BasePanel.AddAsset (Res.MyAsset asset) (at Assets/Scripts/UI/BasePanel.cs:33)
+MyFramework.BasePanel.OnLoadAssets[Texture] (System.String name) (at Assets/Scripts/UI/BasePanel.cs:20)
+MyFramework.DownPanel.TestLoad () (at Assets/Scripts/UI/DownPanel.cs:64)
+MyFramework.DownPanel.Awake () (at Assets/Scripts/UI/DownPanel.cs:25)
+UnityEngine.GameObject:AddComponent()
+MyFramework.StartGameState:LoadSyncCallback(MyAsset) (at Assets/Scripts/State/StartGameState.cs:81)
+Res.MyAsset:Update() (at Assets/Scripts/MyAssetBundleRes/MyAsset.cs:109)
+Res.MyAssets:Update() (at Assets/Scripts/MyAssetBundleRes/MyAssets.cs:231)
+
+MyDebugInfos##Error:1/15/2019 8:26:00 PM::设置图片：vip_bg
+MyDebugInfos##Error:1/15/2019 8:26:00 PM::背景图片名称：bg_left (UnityEngine.Sprite)
