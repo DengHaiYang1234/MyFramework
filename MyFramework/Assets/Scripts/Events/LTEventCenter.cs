@@ -46,7 +46,7 @@ namespace MyFramework
                     findList.Add(action); //添加该回调
                 }
             }
-            else //没有注册过该消息
+            else //该消息还没有注册过回调函数
             {
                 findList = new List<Action<object>>();
                 findList.Add(action);
@@ -97,7 +97,7 @@ namespace MyFramework
         }
 
         /// <summary>
-        /// 执行回调
+        /// 立即执行回调
         /// </summary>
         /// <param name="action"> callback </param>
         /// <param name="obj"> 回调参数 </param>
@@ -114,7 +114,7 @@ namespace MyFramework
         }
 
         /// <summary>
-        /// 多线程队列
+        /// 依次处理回调
         /// </summary>
         /// <param name="action"></param>
         /// <param name="obj"></param>
@@ -126,7 +126,8 @@ namespace MyFramework
 
         public static void UnRegist(string notifyID, Action<object> action)
         {
-            
+            UnRegist(notifyID, action, true);//清空队列表
+            UnRegist(notifyID, action, false);//清空立即执行表
         }
 
         /// <summary>

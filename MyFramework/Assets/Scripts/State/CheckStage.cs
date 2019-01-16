@@ -31,6 +31,7 @@ namespace MyFramework
             }
             Owner.HotMgr.UpdateResource();
             FrameworkMain.Instance.Run = true;
+            base.OnEnter(exitState,param);
         }
 
         public override void OnRunning(object param)

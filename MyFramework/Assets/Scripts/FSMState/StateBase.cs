@@ -27,7 +27,7 @@ namespace MyFramework
             get { return _id; }
         }
 
-        private bool _isFinished;
+        protected bool _isFinished;
         /// <summary>
         /// 当前状态是否已完成
         /// </summary>
@@ -53,6 +53,7 @@ namespace MyFramework
         /// <param name="param"></param>
         public virtual void OnEnter(StateBase<T> exitState, object param)
         {
+            
         }
 
         /// <summary>
@@ -61,6 +62,7 @@ namespace MyFramework
         /// <param name="param"></param>
         public virtual void OnRunning(object param)
         {
+            
         }
 
         /// <summary>

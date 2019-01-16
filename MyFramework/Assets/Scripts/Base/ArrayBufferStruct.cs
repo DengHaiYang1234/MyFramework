@@ -3,11 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// 事件结构
+/// </summary>
+/// <typeparam name="T"></typeparam>
 public class ArrayBufferStruct<T> where T : struct
 {
     private T[] _bufferArray;
 
+
     private int _curIndex;
+
 
     private int _size;
 
@@ -21,6 +28,7 @@ public class ArrayBufferStruct<T> where T : struct
         get { return _size; }
     }
 
+    //索引器
     public T this[int index]
     {
         get { return GetItem(index); }
@@ -36,13 +44,14 @@ public class ArrayBufferStruct<T> where T : struct
         }
     }
 
+
     public ArrayBufferStruct(int size)
     {
         _size = size;
         _curIndex = 0;
         _bufferArray = new T[_size];
     }
-
+    
     public T GetItem(int index)
     {
         if (index >= _curIndex)

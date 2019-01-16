@@ -136,7 +136,7 @@ namespace MyFramework
         private void Update()
         {
             if (_doFsmUpdate)
-                _gameStateFsm.currState.OnRunning(null);
+                _gameStateFsm.OnRunning(null);
         }
 
         //获取Manager

@@ -125,7 +125,7 @@ public class ResUtility
                 case RuntimePlatform.IPhonePlayer:
                     return Application.dataPath + "/Raw/";
                 default:
-                    return Application.dataPath + "/Raw/";
+                    return Application.dataPath + "/StreamingAssets/";
             }
         }
     }

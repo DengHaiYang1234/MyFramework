@@ -48,7 +48,7 @@ public class Loom : MonoBehaviour
     }
 
     /// <summary>
-    /// 添加事件队列
+    /// 添加事件队列依次执行回调
     /// </summary>
     /// <param name="action"> callback </param>
     /// <param name="parmeter"> 参数 </param>
@@ -76,11 +76,11 @@ public class Loom : MonoBehaviour
 
     private void Update()
     {
-        lock (_actions)
+        lock (_actions) //等待当前事件执行完毕
         {
-            _currentActions.Clear();
-            AddRange(_actions,_currentActions);
-            _actions.Clear();
+            _currentActions.Clear(); //防止执行上一次事件的回调
+            AddRange(_actions,_currentActions); //添加当前事件回调
+            _actions.Clear();//清空缓存事件
         }
 
         for (int i = 0; i < _currentActions.Count; i++)
@@ -100,8 +100,8 @@ public class Loom : MonoBehaviour
     /// <summary>
     /// 添加至目标集合
     /// </summary>
-    /// <param name="source"></param>
-    /// <param name="target"></param>
+    /// <param name="source"> 源集合 </param>
+    /// <param name="target"> 目标 集合</param>
     private void AddRange(ArrayBufferStruct<QueueCallItem> source,ArrayBufferStruct<QueueCallItem> target)
     {
         for (int i = 0; i < source.Count; i++)

@@ -94,7 +94,7 @@ namespace MyFramework
         }
 
         /// <summary>
-        /// 退出当前状态.执行指定状态
+        /// 退出当前状态.执行指定状态 (切换状态)
         /// </summary>
         /// <param name="id"></param>
         /// <param name="param1"></param>

@@ -6,7 +6,7 @@ using UnityEngine;
 namespace MyFramework
 {
     /// <summary>
-    /// 传统单利类
+    /// 单利模板类
     /// </summary>
     public class ClassicalSingleton<T> where T : class,new()
     {
