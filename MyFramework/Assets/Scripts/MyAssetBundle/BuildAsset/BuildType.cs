@@ -10,8 +10,6 @@ namespace MyAssetBundleEditor
 
      */
 
-
-
      /// <summary>
      /// 打包方式
      /// </summary>

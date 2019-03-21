@@ -12,9 +12,7 @@ public class ArrayBufferStruct<T> where T : struct
 {
     private T[] _bufferArray;
 
-
     private int _curIndex;
-
 
     private int _size;
 
